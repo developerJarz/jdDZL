@@ -1,0 +1,225 @@
+/* Print layouts: invoices (A4), POS receipt (80 mm), barcode labels. */
+html:has(.invoices),
+html:has(.receipt),
+html:has(.labels-page) {
+  background: #f3f0eb;
+  color-scheme: light;
+}
+.invoices,
+.receipt,
+.labels-page {
+  font-family: var(--font-urbanist), Arial, sans-serif;
+  color: #1f1a14;
+}
+.print-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: #1c1814;
+}
+.print-toolbar button {
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6d3f0e, #cb843b);
+  color: #fff;
+}
+.print-toolbar button.ghost {
+  background: #3a322b;
+}
+.invoice {
+  width: 210mm;
+  min-height: 287mm;
+  margin: 16px auto;
+  padding: 16mm 14mm;
+  background: #fff;
+  box-shadow: 0 6px 30px rgba(60, 35, 10, 0.12);
+  font-size: 12.5px;
+}
+.invoice header,
+.invoice .parties {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.invoice header {
+  border-bottom: 3px solid #cb843b;
+  padding-bottom: 14px;
+}
+.invoice h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #6d3f0e;
+}
+.invoice h2 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+.invoice h3 {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8a7560;
+  margin-bottom: 4px;
+}
+.invoice .parties {
+  margin: 18px 0;
+}
+.invoice table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.invoice .lines th {
+  background: #f7efe4;
+  text-align: left;
+  padding: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.invoice .lines td {
+  padding: 8px;
+  border-bottom: 1px solid #eee3d5;
+  vertical-align: top;
+}
+.invoice .lines small {
+  display: block;
+  color: #8a7560;
+}
+.invoice .totals {
+  width: 50%;
+  margin: 16px 0 0 auto;
+}
+.invoice .totals td {
+  padding: 5px 8px;
+}
+.invoice .totals td:last-child {
+  text-align: right;
+}
+.invoice .totals .total td {
+  border-top: 2px solid #1f1a14;
+  font-size: 15px;
+  font-weight: 800;
+}
+.invoice .totals .due td {
+  background: #fdf3e6;
+  font-weight: 800;
+  color: #6d3f0e;
+}
+.invoice .note {
+  margin-top: 16px;
+  padding: 10px;
+  background: #fffaf0;
+  border-left: 3px solid #cb843b;
+}
+.invoice footer {
+  margin-top: 28px;
+  text-align: center;
+  color: #8a7560;
+  font-size: 11px;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.receipt {
+  width: 76mm;
+  margin: 16px auto;
+  padding: 4mm;
+  background: #fff;
+  font-size: 12px;
+  font-family: "Courier New", monospace;
+}
+.receipt h1 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+.receipt table {
+  width: 100%;
+}
+.receipt td {
+  padding: 2px 0;
+  vertical-align: top;
+}
+.receipt .total td {
+  font-weight: 800;
+  font-size: 14px;
+}
+.receipt hr {
+  border: 0;
+  border-top: 1px dashed #999;
+  margin: 6px 0;
+}
+.labels {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50mm);
+  gap: 3mm;
+  justify-content: center;
+  padding: 10mm;
+}
+.label {
+  width: 50mm;
+  height: 30mm;
+  padding: 1.5mm;
+  background: #fff;
+  border: 1px dashed #d8cbbb;
+  text-align: center;
+  overflow: hidden;
+  break-inside: avoid;
+}
+.label svg {
+  max-width: 100%;
+  height: 14mm;
+}
+.label-store {
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a7560;
+}
+.label-name {
+  font-size: 8px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.label-price {
+  font-size: 10px;
+  font-weight: 800;
+}
+@media print {
+  html:has(.invoices),
+  html:has(.receipt),
+  html:has(.labels-page) {
+    background: #fff;
+  }
+  .print-toolbar {
+    display: none;
+  }
+  .invoice {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    min-height: auto;
+  }
+  .receipt {
+    margin: 0;
+  }
+  .label {
+    border-color: transparent;
+  }
+  @page {
+    margin: 0;
+  }
+}

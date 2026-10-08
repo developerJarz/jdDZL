@@ -1,0 +1,2554 @@
+{
+ "categories": [
+  {
+   "id": "9dccef57-2c97-4b9a-942c-1ce25fe846dd",
+   "slug": "phones",
+   "name": "Phones",
+   "image": {
+    "src": "/images/categories/catagory-phone-78cc7282-aeb7-4358-a1a3-f41ec2c80a1a.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": true,
+   "subCategories": [
+    {
+     "id": "9dccef57-3a14-4eb2-9941-43119b5264e0",
+     "slug": "vivo",
+     "name": "Vivo",
+     "image": {
+      "src": "/images/categories/vivo-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "445ea2123fd246378cda0fd8016513f5",
+     "slug": "meizu",
+     "name": "Meizu",
+     "image": null
+    },
+    {
+     "id": "019908d3-ac73-72eb-b078-074b989c87eb",
+     "slug": "zte",
+     "name": "ZTE",
+     "image": {
+      "src": "/images/categories/untitled-design-1.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "9dccef57-331e-4b0e-9102-1331f6eb9283",
+     "slug": "iphone",
+     "name": "iPhone",
+     "image": {
+      "src": "/images/categories/untitled-design-12-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-38ae-488a-8f2f-9c0ebf3b3a3e",
+     "slug": "oppo",
+     "name": "oppo",
+     "image": {
+      "src": "/images/categories/oppo-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-4b55-4548-88f0-e2b76ad2bd18",
+     "slug": "google",
+     "name": "Google",
+     "image": {
+      "src": "/images/categories/google-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-3ce8-417a-a3ae-200feef1b6ab",
+     "slug": "motorola",
+     "name": "Motorola",
+     "image": {
+      "src": "/images/categories/motorola-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-3e4b-404a-a478-54a634d19d04",
+     "slug": "realme",
+     "name": "Realme",
+     "image": {
+      "src": "/images/categories/realme-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-452c-4200-9ea1-f3171257682a",
+     "slug": "asus",
+     "name": "Asus",
+     "image": {
+      "src": "/images/categories/asus-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-469a-45a8-ba84-5ff1868b177e",
+     "slug": "infinix",
+     "name": "Infinix",
+     "image": {
+      "src": "/images/categories/infinix-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-4803-4131-968f-f9065c2da20c",
+     "slug": "tecno",
+     "name": "Tecno",
+     "image": {
+      "src": "/images/categories/tecno-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-4ad3-44ad-af22-15913f50bb99",
+     "slug": "poco",
+     "name": "Poco",
+     "image": {
+      "src": "/images/categories/poco-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-4c3a-49f8-b1ec-b5f9143308a5",
+     "slug": "iqoo",
+     "name": "iqoo",
+     "image": {
+      "src": "/images/categories/iqoo-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-432b-4b46-9031-39253d270b5b",
+     "slug": "samsung",
+     "name": "Samsung",
+     "image": {
+      "src": "/images/categories/samsung-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-4f5d-4f29-8981-7e53f80c94b6",
+     "slug": "xiaomi",
+     "name": "Xiaomi",
+     "image": {
+      "src": "/images/categories/xiaomi-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-5ad4-4b1f-b2b2-f8fa630bf065",
+     "slug": "oneplus",
+     "name": "OnePlus",
+     "image": {
+      "src": "/images/categories/oneplus-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-6274-4951-8865-68352f2f0cc8",
+     "slug": "honor",
+     "name": "Honor",
+     "image": {
+      "src": "/images/categories/honor-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-7395-4673-9bc9-358eedc04efc",
+     "slug": "huawei",
+     "name": "Huawei",
+     "image": {
+      "src": "/images/categories/huawei-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-88f7-4d52-9bf6-509d1c253b5a",
+     "slug": "nothing",
+     "name": "Nothing",
+     "image": {
+      "src": "/images/categories/nothing-01.png",
+      "width": 659,
+      "height": 800
+     }
+    }
+   ],
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "iqoo",
+    "oppo",
+    "asus",
+    "meizu",
+    "google",
+    "huawei",
+    "infinix",
+    "lg",
+    "motorola",
+    "nothing",
+    "oneplus",
+    "realme",
+    "sony",
+    "tecno",
+    "vivo",
+    "zte"
+   ]
+  },
+  {
+   "id": "9dccef57-3077-4ccd-9582-356e4f3820f1",
+   "slug": "tablet",
+   "name": "Tablet",
+   "image": {
+    "src": "/images/categories/catagory-tablet-099fbcd0-5c29-4abf-92fc-0c950db9217e.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": true,
+   "subCategories": [
+    {
+     "id": "04c67fbd9e354896805525d975c46e4f",
+     "slug": "oppo-2",
+     "name": "OPPO",
+     "image": null
+    },
+    {
+     "id": "e5838f74fd3d409f994b07255b5a92ce",
+     "slug": "tecno-2",
+     "name": "Tecno",
+     "image": null
+    },
+    {
+     "id": "0198efd8-5aab-70ce-94ba-4c53650eaa1b",
+     "slug": "zte-tablet",
+     "name": "ZTE Tablet",
+     "image": {
+      "src": "/images/categories/untitled-design.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "01994195-0e6c-72ca-b627-37398a105a33",
+     "slug": "motorola-tablet",
+     "name": "Motorola Tablet",
+     "image": {
+      "src": "/images/categories/75269-motorola-moto-pad-60-neo-1.jpg",
+      "width": 921,
+      "height": 1200
+     }
+    },
+    {
+     "id": "9dccef57-3b83-4b26-a035-fc887413a90d",
+     "slug": "oneplus-tab",
+     "name": "OnePlus Tab",
+     "image": {
+      "src": "/images/categories/oneplus-tablet-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-43ce-4b2e-bb51-4edf98d33e24",
+     "slug": "huawei-tablet",
+     "name": "Huawei Tablet",
+     "image": {
+      "src": "/images/categories/huawei-tablet-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-50a9-4cb5-a21e-857bbd2edd74",
+     "slug": "ipad",
+     "name": "iPad",
+     "image": {
+      "src": "/images/categories/untitled-design-10-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-56c4-4b4f-93e1-248c75ce3086",
+     "slug": "pixel-tablet",
+     "name": "Pixel Tablet",
+     "image": {
+      "src": "/images/categories/pixel-tablet-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-5991-4fa8-89c4-9d069309b485",
+     "slug": "amazon",
+     "name": "Amazon",
+     "image": {
+      "src": "/images/categories/amazon-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-8d24-4a3d-9590-41b122f8b853",
+     "slug": "samsung-tab",
+     "name": "Samsung TAB",
+     "image": {
+      "src": "/images/categories/samsung-tablet-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-9366-4ee0-9e08-67841ec0078c",
+     "slug": "xiaomi-tablet",
+     "name": "Xiaomi Tablet",
+     "image": {
+      "src": "/images/categories/xiaomi-tablet-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de93282-97ac-4963-ae8c-6bdcd6ef157b",
+     "slug": "honor-tab",
+     "name": "Honor TAB",
+     "image": {
+      "src": "/images/categories/honor-tablet-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9e172d0f-6ac5-4ad5-9e30-cb5adaf16efa",
+     "slug": "realme-tablet",
+     "name": "Realme Tablet",
+     "image": {
+      "src": "/images/categories/realme-pad-mini-2-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "9ef83ced-4525-4ac3-9f1f-a07208e734b8",
+     "slug": "iqoo-tablet",
+     "name": "iQOO Tablet",
+     "image": {
+      "src": "/images/categories/untitled-design-3-removebg-preview.png",
+      "width": 384,
+      "height": 384
+     }
+    },
+    {
+     "id": "9ef88bf9-341c-4546-9f87-f17b477238e1",
+     "slug": "infinix-tablet",
+     "name": "Infinix Tablet",
+     "image": {
+      "src": "/images/categories/infinix-xpad-20-price-in-bangladesh-rising-red-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "9f0a8749-9282-4a2d-8c5e-e224ca74fa65",
+     "slug": "vivo-tablet",
+     "name": "Vivo Tablet",
+     "image": {
+      "src": "/images/categories/untitled-design-42-1-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "019d2928-18b8-7157-a036-c733dac1a996",
+     "slug": "microsoft",
+     "name": "Microsoft",
+     "image": {
+      "src": "/images/categories/microsoft.png",
+      "width": 200,
+      "height": 132
+     }
+    }
+   ],
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "iqoo",
+    "oppo",
+    "google",
+    "amazon",
+    "huawei",
+    "infinix",
+    "lenovo",
+    "microsoft",
+    "motorola",
+    "oneplus",
+    "realme",
+    "tecno",
+    "vivo",
+    "zte"
+   ]
+  },
+  {
+   "id": "9dccef57-31bf-4509-a604-390796b7eb50",
+   "slug": "laptop",
+   "name": "Laptop",
+   "image": {
+    "src": "/images/categories/catagory-laptop-7ae13fd4-4518-4f35-8076-bc15c175fe7d.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": true,
+   "subCategories": [
+    {
+     "id": "019831ce-bc3d-714d-99a5-d90bf3d3cdfa",
+     "slug": "mac-mini",
+     "name": "Mac Mini",
+     "image": null
+    },
+    {
+     "id": "9dccef57-6126-4cb2-8312-1b1e90e4f8cd",
+     "slug": "apple-macbook",
+     "name": "Apple Macbook",
+     "image": {
+      "src": "/images/categories/macbook-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-62ab-41e8-a403-addbb303ef46",
+     "slug": "imac",
+     "name": "iMac",
+     "image": {
+      "src": "/images/categories/imac-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-641e-4579-8845-c289fc68ee23",
+     "slug": "gaming-laptop",
+     "name": "Gaming Laptop",
+     "image": {
+      "src": "/images/categories/gaming-laptop-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-6586-45af-a404-643af382359d",
+     "slug": "ultrabook-2-in-1-laptop",
+     "name": "Ultrabook, 2-in-1 Laptop",
+     "image": null
+    },
+    {
+     "id": "9dccef6c-9887-4f65-adc6-a81317c2565b",
+     "slug": "mac-studio",
+     "name": "Mac Studio",
+     "image": {
+      "src": "/images/categories/mac-studio.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9de9328a-3b5d-4001-a3ea-019759c91588",
+     "slug": "lenovo",
+     "name": "Lenovo",
+     "image": {
+      "src": "/images/categories/lenovo-ideapad-3-price-in-bangladesh-1.png",
+      "width": 1200,
+      "height": 1263
+     }
+    },
+    {
+     "id": "9de9328a-40dc-4c64-8012-5171839a35a4",
+     "slug": "samsung-laptop",
+     "name": "Samsung Laptop",
+     "image": {
+      "src": "/images/categories/samsung-galaxy-book3-pro-price-in-bangladesh-1.png",
+      "width": 1200,
+      "height": 1263
+     }
+    },
+    {
+     "id": "9de9328a-474d-46d3-bbd6-181313514ccd",
+     "slug": "asus-laptop",
+     "name": "Asus Laptop",
+     "image": {
+      "src": "/images/categories/asus-vivobook-15-r1504v-1-min.png",
+      "width": 2000,
+      "height": 2000
+     }
+    },
+    {
+     "id": "9de9328a-4be9-422c-b482-08a7fae909fc",
+     "slug": "acer",
+     "name": "Acer",
+     "image": null
+    },
+    {
+     "id": "9de9328a-50ae-4a82-8406-7d8adfac987d",
+     "slug": "dell",
+     "name": "Dell",
+     "image": {
+      "src": "/images/categories/untitled-design-1-2.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9de9328a-56cb-4f89-b98d-774a87909cab",
+     "slug": "msi",
+     "name": "MSI",
+     "image": null
+    },
+    {
+     "id": "9de9328a-5bdf-49cb-b718-2792a15540d4",
+     "slug": "hp",
+     "name": "HP",
+     "image": {
+      "src": "/images/categories/untitled-design-1-1.png",
+      "width": 256,
+      "height": 310
+     }
+    }
+   ],
+   "brands": [
+    "apple",
+    "samsung",
+    "asus",
+    "dell",
+    "hp",
+    "lenovo",
+    "msi",
+    "acer"
+   ]
+  },
+  {
+   "id": "9dccef57-6fc2-4a74-830f-5d4fa7093d1a",
+   "slug": "smart-watch",
+   "name": "Smart Watch",
+   "image": {
+    "src": "/images/categories/catagory-watch-3b712e42-8e1a-4070-b2a3-332f6bcbcfe3.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": false,
+   "subCategories": [
+    {
+     "id": "0197edd0-b6b9-72ed-96d5-dc2493b8d7ae",
+     "slug": "fastrack",
+     "name": "Fastrack",
+     "image": {
+      "src": "/images/categories/fastrack-optimus2-pro-price-in-bangladesh-beige-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "0197ee04-a6ae-7240-a45b-45efb08464b7",
+     "slug": "oneplus-watch",
+     "name": "OnePlus watch",
+     "image": {
+      "src": "/images/categories/oneplus-watch-2r-price-in-bangladesh-forest-green-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "0197ee13-f8bd-737b-8e02-a367956bac8c",
+     "slug": "motorola-watch",
+     "name": "Motorola watch",
+     "image": {
+      "src": "/images/categories/motorola-moto-watch-fit-price-in-bangladesh-0-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "0197ee17-04ea-73cf-804f-3967d7aff32d",
+     "slug": "oppo-watch",
+     "name": "Oppo Watch",
+     "image": {
+      "src": "/images/categories/oppo-watch-x2-mini-price-in-bangladesh-silver-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "0197eea1-4d76-731d-882f-1cd2d73a7054",
+     "slug": "vivo-watch",
+     "name": "Vivo Watch",
+     "image": {
+      "src": "/images/categories/vivo-watch-5-price-in-bangladesh-stainless-steel-silver-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "9dccef57-35ea-40c3-81a6-9cf74020875f",
+     "slug": "google-watch",
+     "name": "Google Watch",
+     "image": {
+      "src": "/images/categories/untitled-design-2-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-3fac-4d22-913a-c95e56ab5d99",
+     "slug": "honor-watch",
+     "name": "Honor Watch",
+     "image": {
+      "src": "/images/categories/haylo-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-4d9c-45d6-8cb8-301c5c7c8ca6",
+     "slug": "nothing-watch",
+     "name": "Nothing Watch",
+     "image": {
+      "src": "/images/categories/untitled-design-1-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-712a-4500-9387-bd1f18388056",
+     "slug": "apple-watch",
+     "name": "Apple Watch",
+     "image": {
+      "src": "/images/categories/untitled-design-7-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-72a0-4026-bbf7-8bb33b4178a3",
+     "slug": "samsung-galaxy-watch",
+     "name": "Samsung Galaxy Watch",
+     "image": {
+      "src": "/images/categories/samsung-galaxy-watch-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-740a-4401-acd7-ea474fd0b251",
+     "slug": "fitbit",
+     "name": "FitBit",
+     "image": {
+      "src": "/images/categories/fitbit-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-7571-4ef0-817e-368f437ad886",
+     "slug": "garmin",
+     "name": "Garmin",
+     "image": {
+      "src": "/images/categories/garmin-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-76d4-4efc-a822-8631d94fbaec",
+     "slug": "huawei-watch",
+     "name": "Huawei Watch",
+     "image": {
+      "src": "/images/categories/untitled-design-10-removebg-preview-2.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-782a-4b18-8e11-944bea75a0bb",
+     "slug": "amazfit",
+     "name": "Amazfit",
+     "image": {
+      "src": "/images/categories/amazfit-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-797d-4427-9422-e56f25e7d7e4",
+     "slug": "fossil",
+     "name": "Fossil",
+     "image": {
+      "src": "/images/categories/fossil-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-7ada-4ff3-ae34-5c0de4aa7a95",
+     "slug": "kieslect",
+     "name": "Kieslect",
+     "image": {
+      "src": "/images/categories/kieslect-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-7c3c-452b-b21c-53e9f7f044a8",
+     "slug": "mibro",
+     "name": "Mibro",
+     "image": {
+      "src": "/images/categories/mibro-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-7da1-422e-869b-31fa95161e19",
+     "slug": "xiaomi-watch",
+     "name": "Xiaomi Watch",
+     "image": {
+      "src": "/images/categories/untitled-design-11-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-8044-4624-93fd-032d90c9fc59",
+     "slug": "redmi-watch",
+     "name": "Redmi Watch",
+     "image": {
+      "src": "/images/categories/smart-watches-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-81aa-415e-bdfb-9ca5a3774e3f",
+     "slug": "realme-watch",
+     "name": "Realme Watch",
+     "image": {
+      "src": "/images/categories/realme-watch-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-88ed-419b-9a6c-06deb5b62cfa",
+     "slug": "zeblaze",
+     "name": "Zeblaze",
+     "image": {
+      "src": "/images/categories/zeblaze-diesel-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-8a46-42ac-9f8d-a17ec27d8759",
+     "slug": "noise",
+     "name": "Noise",
+     "image": {
+      "src": "/images/categories/noise-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-8b9d-481e-b8b9-4082484258b8",
+     "slug": "boat",
+     "name": "boAt",
+     "image": {
+      "src": "/images/categories/boat-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-8cf2-4ac7-acbd-45a0d049f67d",
+     "slug": "imilab",
+     "name": "iMilab",
+     "image": {
+      "src": "/images/categories/imilab-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-8e48-46e0-b437-17047f54398c",
+     "slug": "kospet",
+     "name": "Kospet",
+     "image": {
+      "src": "/images/categories/kospect-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-90f9-4acf-87bb-c4abefebaa8c",
+     "slug": "haylou",
+     "name": "Haylou",
+     "image": {
+      "src": "/images/categories/haylo-01-2.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef6c-bbff-4be3-a7f0-c051be7b0f02",
+     "slug": "qcy",
+     "name": "QCY",
+     "image": {
+      "src": "/images/categories/qcy-removebg-preview.png",
+      "width": 400,
+      "height": 400
+     }
+    },
+    {
+     "id": "9de93289-ab01-435b-85aa-c6b804bcf58f",
+     "slug": "hifuture-watch",
+     "name": "HiFuture Watch",
+     "image": {
+      "src": "/images/categories/untitled-design-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "DF71CECE-009A-4B2E-AE15-E361E208256F",
+     "slug": "",
+     "name": "Whoop Watches",
+     "image": null
+    }
+   ],
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "amazfit",
+    "oppo",
+    "boat",
+    "fastrack",
+    "garmin",
+    "google",
+    "haylou",
+    "hifuture",
+    "huawei",
+    "imilab",
+    "kieslect",
+    "kospet",
+    "mibro",
+    "motorola",
+    "noise",
+    "nothing",
+    "oneplus",
+    "qcy",
+    "realme",
+    "vivo",
+    "whoop",
+    "zeblaze"
+   ]
+  },
+  {
+   "id": "9dccef57-7edf-46ac-8334-a502946f3d55",
+   "slug": "gadget",
+   "name": "Gadget",
+   "image": {
+    "src": "/images/categories/catagory-gadget-bd23b472-2488-41c4-999e-07d3780d103f.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": false,
+   "subCategories": [
+    {
+     "id": "019c9984-5d25-71ba-9642-b70ee8ca1acf",
+     "slug": "health-and-fitness",
+     "name": "Health and Fitness",
+     "image": {
+      "src": "/images/categories/ejfj.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "019ce683-2662-71e5-a636-29e840d14af9",
+     "slug": "camera",
+     "name": "Camera",
+     "image": {
+      "src": "/images/categories/untitled-1.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "019da5cd-0a40-72b7-a977-007b18131a6b",
+     "slug": "lamps",
+     "name": "Lamps",
+     "image": {
+      "src": "/images/categories/untitled-design-1-3.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "019daf2b-aa64-73b8-8352-ca282dc92122",
+     "slug": "portable-power-station",
+     "name": "Portable Power Station",
+     "image": {
+      "src": "/images/categories/untitled-design-2.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "9dccef57-991a-4577-a97f-334ff01dc294",
+     "slug": "true-wireless-earbuds",
+     "name": "True Wireless Earbuds",
+     "image": {
+      "src": "/images/categories/untitled-design-22-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9de93283-5c5b-4e85-9158-0f820e609663",
+     "slug": "earbuds-xyz",
+     "name": "Earbuds XYZ",
+     "image": {
+      "src": "/images/categories/untitled-design-21-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9de93289-b378-4608-b164-60ba2278ef1d",
+     "slug": "hifuture-buds",
+     "name": "HiFuture Buds",
+     "image": {
+      "src": "/images/categories/hifuture-buds.png",
+      "width": 1537,
+      "height": 1536
+     }
+    },
+    {
+     "id": "9de93289-b88b-463d-8082-be5fe67c5783",
+     "slug": "hifuture-3",
+     "name": "HiFuture",
+     "image": {
+      "src": "/images/categories/untitled-design-18-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "01a027ed-12bf-70ba-b8c2-d760e85db72b",
+     "slug": "drone",
+     "name": "Drone",
+     "image": null
+    },
+    {
+     "id": "7c789dfc58764862af841ccf39bebc11",
+     "slug": "ai-assistant",
+     "name": "AI Assistant",
+     "image": null
+    },
+    {
+     "id": "01985520-76af-714c-9015-760242aa2442",
+     "slug": "bone-conduction-headphone",
+     "name": "Bone Conduction Headphone",
+     "image": {
+      "src": "/images/categories/shokz-openrun-price-in-bangladesh-red-removebg-preview.png",
+      "width": 487,
+      "height": 513
+     }
+    },
+    {
+     "id": "9dccef57-8418-47e9-babc-2468337f69f2",
+     "slug": "earbuds",
+     "name": "Earbuds",
+     "image": {
+      "src": "/images/categories/untitled-design-21-removebg-preview-2.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-93a8-471f-881d-13ba5b7f6c6e",
+     "slug": "fitness-trackers",
+     "name": "Fitness Trackers",
+     "image": {
+      "src": "/images/categories/fitness-trackers-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-97b7-4223-8cfb-a20890da4afc",
+     "slug": "charging-docks",
+     "name": "Charging Docks",
+     "image": {
+      "src": "/images/categories/charging-docks-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-9d62-458f-a320-a7682dfa5c62",
+     "slug": "in-ear-monitors",
+     "name": "In-Ear Monitors",
+     "image": {
+      "src": "/images/categories/in-ear-monitors-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef6c-901c-4aa8-ab17-0ebbc52ad625",
+     "slug": "in-ear-headphone",
+     "name": "In Ear Headphone",
+     "image": {
+      "src": "/images/categories/untitled-design-19-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-a029-4f6f-9447-168049bedeaa",
+     "slug": "gaming-console",
+     "name": "Gaming Console",
+     "image": {
+      "src": "/images/categories/playstation-5-ps5-digital-edition-3-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-a4e0-48ed-898d-e0dd2566be94",
+     "slug": "air-purifier",
+     "name": "Air Purifier",
+     "image": {
+      "src": "/images/categories/dyson-purifier-big-quiet-formaldehyde-bp04-1-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-a930-40de-a6ee-85c367da947a",
+     "slug": "insta360-camera",
+     "name": "Insta360 Camera",
+     "image": {
+      "src": "/images/categories/insta360.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9dccef57-8796-4ad4-86b9-20561cb0d5d5",
+     "slug": "airpods",
+     "name": "AirPods",
+     "image": {
+      "src": "/images/categories/airpods-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-94fe-4bfe-b81e-83fea2f4cd6c",
+     "slug": "smart-glasses",
+     "name": "Smart Glasses",
+     "image": {
+      "src": "/images/categories/smart-glasses-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-9a8b-4617-8851-81a22e2b3f8e",
+     "slug": "neckband",
+     "name": "Neckband",
+     "image": {
+      "src": "/images/categories/neckband-earphones-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef6c-84f2-4189-b721-e94ef2bd1b75",
+     "slug": "wired-earphones",
+     "name": "Wired Earphones",
+     "image": {
+      "src": "/images/categories/untitled-design-16-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-9b76-4d7b-a309-b1b96d6cbf53",
+     "slug": "gopro-action-camera",
+     "name": "GoPro Action Camera",
+     "image": {
+      "src": "/images/categories/gopro-hero13-black-3-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-a1bf-47c1-af4a-7adf3cbd5ce2",
+     "slug": "console-controller",
+     "name": "Console Controller",
+     "image": {
+      "src": "/images/categories/playstation-5-dualsens-controller-1-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-a649-4464-92da-b1ade0ff8522",
+     "slug": "air-purifier-filter",
+     "name": "Air Purifier Filter",
+     "image": {
+      "src": "/images/categories/dyson-360-combi-glass-hepa-and-carbon-air-purifier-filter-1-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-aac9-4137-9d7f-b90c44d8e309",
+     "slug": "smart-ring",
+     "name": "Smart Ring",
+     "image": {
+      "src": "/images/categories/smart-ring.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9dccef57-9253-4d47-9028-0bc3ab72aa16",
+     "slug": "bluetooth-headphones",
+     "name": "Bluetooth Headphones",
+     "image": {
+      "src": "/images/categories/untitled-design-14-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-9656-423b-91a6-aa275159e6f7",
+     "slug": "vr-headsets",
+     "name": "VR Headsets",
+     "image": {
+      "src": "/images/categories/vr-headsets-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-9bf5-4335-bb05-054d4eb8f2ae",
+     "slug": "over-ear-headphones",
+     "name": "Over-Ear Headphones",
+     "image": {
+      "src": "/images/categories/untitled-design-15-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-88ca-469c-b697-531893ee3c58",
+     "slug": "wireless-microphone",
+     "name": "Wireless Microphone",
+     "image": {
+      "src": "/images/categories/icon-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef6c-9cf8-400c-8359-3ec5f93b8128",
+     "slug": "tv-stick",
+     "name": "TV Stick",
+     "image": {
+      "src": "/images/categories/amazon-fire-tv-stick-lite-2-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-a357-48a0-9bd5-a30d28f437c6",
+     "slug": "cleaning-robot",
+     "name": "Cleaning Robot",
+     "image": {
+      "src": "/images/categories/dyson-360-vis-nav-robot-vacuum-8-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-a7ad-40e8-9ef7-ca37ecea0599",
+     "slug": "smart-desk-light",
+     "name": "Smart Desk light",
+     "image": {
+      "src": "/images/categories/dyson-solarcycle-task-light-1-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9ef4f07f-d2b6-4e25-b480-e2a20c8dd0d5",
+     "slug": "router",
+     "name": "Router",
+     "image": {
+      "src": "/images/categories/untitled-design-1-removebg-preview-2.png",
+      "width": 384,
+      "height": 384
+     }
+    }
+   ],
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "amazfit",
+    "dji",
+    "anker",
+    "bang-olufsen",
+    "belkin",
+    "baseus",
+    "beats",
+    "bose",
+    "devialet",
+    "dyson",
+    "ecoflow",
+    "fastrack",
+    "google",
+    "gopro",
+    "haylou",
+    "amazon",
+    "hoto",
+    "huawei",
+    "insta360",
+    "jbl",
+    "kooduu",
+    "marshall",
+    "meta",
+    "noise",
+    "nothing",
+    "oneplus",
+    "plaud",
+    "ray-ban",
+    "realme",
+    "shokz",
+    "skullcandy",
+    "sonos",
+    "sony",
+    "spacex",
+    "westinghouse",
+    "whoop"
+   ]
+  },
+  {
+   "id": "9dccef57-9eaa-4130-bac7-79d3019131d5",
+   "slug": "accessories",
+   "name": "Accessories",
+   "image": {
+    "src": "/images/categories/catagory-accessories-b27a218f-f3b5-449c-ba22-eebbff71908c.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": false,
+   "subCategories": [
+    {
+     "id": "257AD1B1-C6B6-468A-A615-91E2783AD13C",
+     "slug": "",
+     "name": "Headphone",
+     "image": null
+    },
+    {
+     "id": "1ed37b6a81554c65b7c2f07508377ad6",
+     "slug": "case",
+     "name": "Case",
+     "image": null
+    },
+    {
+     "id": "019d39f0-775d-7014-93b9-91c775e0ca69",
+     "slug": "airpods-case",
+     "name": "AirPods Case",
+     "image": {
+      "src": "/images/categories/ehb.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "019da5cc-5ad7-7021-b46b-060251d8e591",
+     "slug": "candle-holder",
+     "name": "Candle Holder",
+     "image": {
+      "src": "/images/categories/untitled-design-3.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "9dccef6c-8bbf-4333-8229-c058813397c6",
+     "slug": "macbook-case",
+     "name": "MacBook Case",
+     "image": {
+      "src": "/images/categories/macbook-cases-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-a179-4eb1-8275-31fceea6caef",
+     "slug": "cables",
+     "name": "Cables",
+     "image": {
+      "src": "/images/categories/cables-1.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9dccef57-a70b-4b53-9a19-08c16e18ee5b",
+     "slug": "screen-protectors",
+     "name": "Screen Protectors",
+     "image": {
+      "src": "/images/categories/screen-protector.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-ab12-402e-b31c-8d8649279319",
+     "slug": "keyboards",
+     "name": "Keyboards",
+     "image": {
+      "src": "/images/categories/keyboards-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-af09-4321-b2be-26b383bd9ecb",
+     "slug": "wireless-chargers",
+     "name": "Wireless Chargers",
+     "image": {
+      "src": "/images/categories/wireless-charging-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-b310-4743-b329-41898732fab2",
+     "slug": "hdmi-cables",
+     "name": "HDMI Cables",
+     "image": {
+      "src": "/images/categories/hdmi-cables-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-b760-4067-b08c-a5885ce9507a",
+     "slug": "webcams",
+     "name": "Webcams",
+     "image": {
+      "src": "/images/categories/webcams-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef6c-ac5f-4e4f-adf0-b4ca1b6fee6f",
+     "slug": "selfie-stick",
+     "name": "Selfie Stick",
+     "image": {
+      "src": "/images/categories/untitled-design-4-1.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9dccef6c-b1a9-4f71-9ce1-cd8ed37a9532",
+     "slug": "gps",
+     "name": "GPS",
+     "image": {
+      "src": "/images/categories/untitled-design-5-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-b677-4f69-a0a3-b0fecfc029a8",
+     "slug": "speaker-accessories",
+     "name": "Speaker Accessories",
+     "image": {
+      "src": "/images/categories/untitled-design-2-removebg-preview-2.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9e73c9fe-bbb6-4ac4-9e85-1129e3e0daa8",
+     "slug": "vr-accessories",
+     "name": "VR Accessories",
+     "image": {
+      "src": "/images/categories/mw2f3-removebg-preview.png",
+      "width": 384,
+      "height": 384
+     }
+    },
+    {
+     "id": "9dccef57-a2d0-4325-8973-22858cdde4c2",
+     "slug": "chargers",
+     "name": "Chargers",
+     "image": {
+      "src": "/images/categories/charger-1.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9dccef57-a85c-40d2-bc2f-898baef46d09",
+     "slug": "phone-cases",
+     "name": "Phone Cases",
+     "image": {
+      "src": "/images/categories/untitled-design-1-removebg-preview-3.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-ac67-44c2-935b-c9422430049d",
+     "slug": "mouse",
+     "name": "Mouse",
+     "image": {
+      "src": "/images/categories/mouse-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-b05a-47dc-947b-ad5e8bbce67a",
+     "slug": "external-hard-drives",
+     "name": "External Hard Drives",
+     "image": {
+      "src": "/images/categories/external-hard-drives-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-b466-4ed9-91f4-e85957df780a",
+     "slug": "bluetooth-trackers",
+     "name": "Bluetooth Trackers",
+     "image": {
+      "src": "/images/categories/bluetooth-trackers-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-b8b8-4c88-96c4-bae51f46ac5c",
+     "slug": "smartwatch-bands",
+     "name": "Smartwatch Bands",
+     "image": {
+      "src": "/images/categories/smartwatch-bands-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef6c-99ff-4442-b04c-6ca3086ffef1",
+     "slug": "mac-accessories",
+     "name": "Mac Accessories",
+     "image": {
+      "src": "/images/categories/untitled-design-5-removebg-preview-2.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-adf4-41e6-94be-8f62a8b9b81e",
+     "slug": "camera-accessories",
+     "name": "Camera Accessories",
+     "image": {
+      "src": "/images/categories/untitled-design-7-removebg-preview-2.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-b345-4d95-a551-98922b92c8ad",
+     "slug": "phone-accessories",
+     "name": "Phone Accessories",
+     "image": {
+      "src": "/images/categories/untitled-design-4-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9e2166e8-dbd1-470a-bbb0-541f10923b45",
+     "slug": "party-light",
+     "name": "Party Light",
+     "image": {
+      "src": "/images/categories/jbl-partylight-beam-bluetooth-projection-party-light-1-removebg-preview.png",
+      "width": 384,
+      "height": 404
+     }
+    },
+    {
+     "id": "9e73f076-34c5-4614-aa24-81d781b71940",
+     "slug": "ipad-accessories",
+     "name": "iPad Accessories",
+     "image": {
+      "src": "/images/categories/apple-smart-folio-for-ipad-mini-a17-pro-price-in-bangladesh-2-removebg-preview.png",
+      "width": 384,
+      "height": 404
+     }
+    },
+    {
+     "id": "9dccef57-a011-4ffd-bbdb-7989d041258b",
+     "slug": "adapters",
+     "name": "Adapters",
+     "image": null
+    },
+    {
+     "id": "9dccef57-a5b2-4c1e-91be-4b5853a2a82c",
+     "slug": "power-banks",
+     "name": "Power Banks",
+     "image": {
+      "src": "/images/categories/untitled-design-3-removebg-preview-2.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef57-a9b5-40ef-85d0-6dbabe6a3849",
+     "slug": "laptop-sleeves",
+     "name": "Laptop Sleeves",
+     "image": {
+      "src": "/images/categories/laptop-sleeves-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-adbb-4e47-96b3-a109d01325dc",
+     "slug": "stylus-pens",
+     "name": "Stylus Pens",
+     "image": {
+      "src": "/images/categories/stylus-pens-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-b1b8-4630-9f11-16e35ea3cc50",
+     "slug": "usb-hubs",
+     "name": "USB Hubs",
+     "image": {
+      "src": "/images/categories/hubs-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-b607-4ce3-a236-ceef7efec982",
+     "slug": "car-chargers",
+     "name": "Car Chargers",
+     "image": {
+      "src": "/images/categories/car-chargers-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef6c-8a45-4a2f-9385-bd8a68ecd5b4",
+     "slug": "camera-lens-protector",
+     "name": "Camera Lens Protector",
+     "image": {
+      "src": "/images/categories/camera-lens-protector.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "9dccef6c-9e91-4190-b3a7-a03f82504ed4",
+     "slug": "gimbal",
+     "name": "Gimbal",
+     "image": {
+      "src": "/images/categories/dji-osmo-mobile-6-3-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-af8a-4295-9eb2-19e3f77039b1",
+     "slug": "watch-accessories",
+     "name": "Watch Accessories",
+     "image": {
+      "src": "/images/categories/untitled-design-6-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-b4df-420a-a76c-5bcd9a0fdef5",
+     "slug": "tripod",
+     "name": "Tripod",
+     "image": {
+      "src": "/images/categories/untitled-design-3-removebg-preview-3.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9e3fe9f5-db6a-46a8-971b-6378fbe35a8a",
+     "slug": "stands",
+     "name": "Stands",
+     "image": {
+      "src": "/images/categories/ruittos-phone-tripod-adapter-smartphone-holder-clip-mount-removebg-preview.png",
+      "width": 384,
+      "height": 384
+     }
+    },
+    {
+     "id": "ED9136F8-D204-49D3-8F8B-5C9721B5C28C",
+     "slug": "",
+     "name": "Wired Earphone ",
+     "image": null
+    },
+    {
+     "id": "84D30D1D-5CF8-4FDB-A011-282FBF739A15",
+     "slug": "",
+     "name": "iPad Case",
+     "image": null
+    },
+    {
+     "id": "62EB440F-3E32-4F02-BAE5-F295672BA0CB",
+     "slug": "",
+     "name": "TWS",
+     "image": null
+    },
+    {
+     "id": "F499A308-A788-47EC-A8F3-14CFB49142B9",
+     "slug": "",
+     "name": "Mount",
+     "image": null
+    },
+    {
+     "id": "F76FE462-3B58-49F7-860E-93CE3A3F33BA",
+     "slug": "",
+     "name": "Multi Plug",
+     "image": null
+    }
+   ],
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "amazfit",
+    "dji",
+    "anker",
+    "belkin",
+    "baseus",
+    "a4tech",
+    "bellroy",
+    "blupebble",
+    "caseology",
+    "cg-mobile",
+    "araree",
+    "wiwu",
+    "devialet",
+    "esr",
+    "google",
+    "gopro",
+    "green-lion",
+    "guess",
+    "huawei",
+    "insta360",
+    "jbl",
+    "karl-lagerfeld",
+    "kooduu",
+    "kuzoom",
+    "le-prius",
+    "levelo",
+    "logitech",
+    "ajazz",
+    "mophie",
+    "nothing",
+    "obsbot",
+    "osprey",
+    "otterbox",
+    "pitaka",
+    "porodo",
+    "a-case",
+    "santa-barbara",
+    "sonix",
+    "sonos",
+    "spigen",
+    "tech21",
+    "torras",
+    "uag",
+    "ugreen",
+    "uniq",
+    "zhiyun",
+    "zuck-bear"
+   ]
+  },
+  {
+   "id": "9dccef57-66c7-4a7c-b045-f525a70295a7",
+   "slug": "sounds",
+   "name": "Sounds",
+   "image": {
+    "src": "/images/categories/catagory-speaker-48d3e8a0-2e2d-4288-8b96-2dc080c65095.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": false,
+   "subCategories": [
+    {
+     "id": "9dccef57-82df-4b7d-9bf4-b69598dec762",
+     "slug": "hifuture-speaker",
+     "name": "HiFuture Speaker",
+     "image": {
+      "src": "/images/categories/hifuture-smart-speaker.png",
+      "width": 1234,
+      "height": 1234
+     }
+    },
+    {
+     "id": "9dccef57-682d-4c80-9f81-9b6c315f4f5d",
+     "slug": "bluetooth-speakers",
+     "name": "Bluetooth Speakers",
+     "image": {
+      "src": "/images/categories/speakers-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-698c-4a4c-8577-9a2637451827",
+     "slug": "soundbars",
+     "name": "Soundbars",
+     "image": {
+      "src": "/images/categories/soundbars-01.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-6b9d-4120-b000-5620f48f58d9",
+     "slug": "home-theater-systems",
+     "name": "Home Theater Systems",
+     "image": {
+      "src": "/images/categories/home-theater-system-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-6d16-4f76-b771-e8e5d3f6d26c",
+     "slug": "smart-speakers",
+     "name": "Smart Speakers",
+     "image": {
+      "src": "/images/categories/speakers-01-2.png",
+      "width": 200,
+      "height": 243
+     }
+    },
+    {
+     "id": "9dccef57-6e80-427b-9dc6-8224fb314fd3",
+     "slug": "portable-speakers",
+     "name": "Portable Speakers",
+     "image": {
+      "src": "/images/categories/jbl-clip-4-ultra-portable-waterproof-speaker-price-in-bangladesh-blue-removebg-p.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-8ea7-4514-95fa-286b997bac04",
+     "slug": "wired-microphone",
+     "name": "Wired Microphone",
+     "image": {
+      "src": "/images/categories/untitled-design-17-removebg-preview.png",
+      "width": 487,
+      "height": 512
+     }
+    },
+    {
+     "id": "9dccef6c-bfc4-4b05-8f54-feb1d62ecf60",
+     "slug": "amplifier",
+     "name": "Amplifier",
+     "image": {
+      "src": "/images/categories/untitled-design-6-1.png",
+      "width": 256,
+      "height": 310
+     }
+    },
+    {
+     "id": "1EF2598E-C6A9-4CAC-957C-22942AD3626C",
+     "slug": "",
+     "name": "Voice Assistant Speaker",
+     "image": null
+    }
+   ],
+   "brands": [
+    "apple",
+    "xiaomi",
+    "anker",
+    "bang-olufsen",
+    "beats",
+    "bose",
+    "devialet",
+    "harman",
+    "hifuture",
+    "amazon",
+    "huawei",
+    "jbl",
+    "kooduu",
+    "marshall",
+    "qcy",
+    "saramonic",
+    "skullcandy",
+    "sonos",
+    "sony"
+   ]
+  },
+  {
+   "id": "9dccef57-5ad0-4291-ba86-822b49ba2558",
+   "slug": "smart-tv",
+   "name": "Smart TV",
+   "image": {
+    "src": "/images/categories/catagory-tv-b644bd62-7abf-4b55-930f-850b2ad71e8a.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": false,
+   "subCategories": [
+    {
+     "id": "9dccef57-3485-4393-b946-82419a4afbff",
+     "slug": "samsung-tv",
+     "name": "Samsung TV",
+     "image": {
+      "src": "/images/categories/samsung-tv-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-374e-475a-84bb-d6d6ed770bce",
+     "slug": "xiaomi-tv",
+     "name": "Xiaomi TV",
+     "image": {
+      "src": "/images/categories/xiaomi-tv-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9dccef57-426c-478a-aa77-ea9db46b8a6b",
+     "slug": "sony",
+     "name": "Sony",
+     "image": {
+      "src": "/images/categories/sony-tv-01.png",
+      "width": 659,
+      "height": 800
+     }
+    },
+    {
+     "id": "9de9328a-36c9-4f33-a50c-c241750a3416",
+     "slug": "hisense",
+     "name": "Hisense",
+     "image": {
+      "src": "/images/categories/411a614af6a9e15ff09648578a672266.png",
+      "width": 1920,
+      "height": 1678
+     }
+    }
+   ],
+   "brands": [
+    "samsung",
+    "xiaomi",
+    "hisense",
+    "sony"
+   ]
+  },
+  {
+   "id": "106ba64ec9ac4499a5068a15db6f594a",
+   "slug": "home-appliance",
+   "name": "Home Appliance",
+   "image": {
+    "src": "/images/categories/catagory-home-app-9dfb7956-44aa-4649-b504-8610932b6913.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": false,
+   "subCategories": [
+    {
+     "id": "9BEBFEC2-973B-4085-8FB8-E88045ADE4D0",
+     "slug": "coffee-maker",
+     "name": "Coffee Maker",
+     "image": null
+    },
+    {
+     "id": "8E71CB6C-6F2C-4F00-B8CC-86D4F1B07A1C",
+     "slug": "",
+     "name": "Humidifier",
+     "image": null
+    },
+    {
+     "id": "5931E79B-8E73-4E1B-9F72-8FA6D962FBB9",
+     "slug": "",
+     "name": "Massager ",
+     "image": null
+    },
+    {
+     "id": "CACC3421-803E-4675-8180-898960B41D35",
+     "slug": "",
+     "name": "Security & Surveillance",
+     "image": null
+    },
+    {
+     "id": "B5FCD1C0-FC82-40AC-A5E2-7433155BD13D",
+     "slug": "",
+     "name": "Hair Dryer",
+     "image": null
+    },
+    {
+     "id": "019c805a-32a1-7379-868c-b82d5a92a5a1",
+     "slug": "home-appliances",
+     "name": "Home Appliances",
+     "image": {
+      "src": "/images/categories/hfcnjh.png",
+      "width": 200,
+      "height": 132
+     }
+    },
+    {
+     "id": "42646f946de7432d9899266c1f4b7623",
+     "slug": "air-conditioner",
+     "name": "Air Conditioner",
+     "image": null
+    },
+    {
+     "id": "eeae571d9f2748ccbd2e9d9e951e301c",
+     "slug": "air-purifier-2",
+     "name": "Air Purifier",
+     "image": null
+    },
+    {
+     "id": "4AAE0549-F016-4430-98C1-3A6718CA20E1",
+     "slug": "air-fryer",
+     "name": "Air Fryer",
+     "image": null
+    },
+    {
+     "id": "9C287415-9ADF-4D7E-AE4A-94A6DE11ADA8",
+     "slug": "",
+     "name": "Washing Machine",
+     "image": null
+    },
+    {
+     "id": "BA9FEB30-A643-4A83-9DA2-3CE99E8101D7",
+     "slug": "",
+     "name": "Vacuum Cleaner",
+     "image": null
+    },
+    {
+     "id": "BE0E7551-BC31-405D-AACC-74C849BA4E44",
+     "slug": "",
+     "name": "Kitchen Stuff",
+     "image": null
+    },
+    {
+     "id": "8110c03f7bab4b63883eb2b18abc43cd",
+     "slug": "refrigerator-and-freezer",
+     "name": "Refrigerator & Freezer",
+     "image": null
+    }
+   ],
+   "brands": [
+    "samsung",
+    "xiaomi",
+    "bomidi",
+    "dyson",
+    "gree",
+    "haier",
+    "hisense",
+    "viomi"
+   ]
+  },
+  {
+   "id": "d3a23f736ecc42829b1868dca6a334c4",
+   "slug": "monitor",
+   "name": "Monitor",
+   "image": {
+    "src": "/images/categories/catagory-monitor-4d386406-54ed-4903-8e54-7528e7b83e1e.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "tradeIn": false,
+   "subCategories": [
+    {
+     "id": "abe481efc1db4cb68998495f4907ea04",
+     "slug": "hp-2",
+     "name": "HP",
+     "image": null
+    },
+    {
+     "id": "f5f96333fa5c43e39c6cfb1c087f417b",
+     "slug": "benq",
+     "name": "BenQ",
+     "image": null
+    },
+    {
+     "id": "7b270dabcc7a4138b4c67b3e4d79f975",
+     "slug": "msi-2",
+     "name": "MSI",
+     "image": null
+    },
+    {
+     "id": "20900DC8-E41E-4FFE-AF68-58970F7EA6B4",
+     "slug": "",
+     "name": "Xiaomi",
+     "image": null
+    },
+    {
+     "id": "b33b8f5269334334899f8a2480ed7c01",
+     "slug": "pc-power",
+     "name": "PC Power",
+     "image": null
+    },
+    {
+     "id": "f5339468bbcc48ca870d7d24f19845d7",
+     "slug": "dell-2",
+     "name": "Dell",
+     "image": null
+    },
+    {
+     "id": "687671f967b447e4b63b8db04fe2b377",
+     "slug": "aiwa",
+     "name": "Aiwa",
+     "image": null
+    }
+   ],
+   "brands": [
+    "xiaomi",
+    "benq",
+    "dell",
+    "aiwa",
+    "hp",
+    "msi",
+    "pc-power"
+   ]
+  }
+ ],
+ "exploreAll": [
+  {
+   "slug": "phones",
+   "name": "Phones",
+   "image": {
+    "src": "/images/categories/catagory-phone-78cc7282-aeb7-4358-a1a3-f41ec2c80a1a.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "iqoo",
+    "oppo",
+    "asus",
+    "meizu",
+    "google",
+    "huawei",
+    "infinix",
+    "lg",
+    "motorola",
+    "nothing",
+    "oneplus",
+    "realme",
+    "sony",
+    "tecno",
+    "vivo",
+    "zte"
+   ]
+  },
+  {
+   "slug": "tablet",
+   "name": "Tablet",
+   "image": {
+    "src": "/images/categories/catagory-tablet-099fbcd0-5c29-4abf-92fc-0c950db9217e.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "iqoo",
+    "oppo",
+    "google",
+    "amazon",
+    "huawei",
+    "infinix",
+    "lenovo",
+    "microsoft",
+    "motorola",
+    "oneplus",
+    "realme",
+    "tecno",
+    "vivo",
+    "zte"
+   ]
+  },
+  {
+   "slug": "laptop",
+   "name": "Laptop",
+   "image": {
+    "src": "/images/categories/catagory-laptop-7ae13fd4-4518-4f35-8076-bc15c175fe7d.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "apple",
+    "samsung",
+    "asus",
+    "dell",
+    "hp",
+    "lenovo",
+    "msi",
+    "acer"
+   ]
+  },
+  {
+   "slug": "smart-watch",
+   "name": "Smart Watch",
+   "image": {
+    "src": "/images/categories/catagory-watch-3b712e42-8e1a-4070-b2a3-332f6bcbcfe3.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "amazfit",
+    "oppo",
+    "boat",
+    "fastrack",
+    "garmin",
+    "google",
+    "haylou",
+    "hifuture",
+    "huawei",
+    "imilab",
+    "kieslect",
+    "kospet",
+    "mibro",
+    "motorola",
+    "noise",
+    "nothing",
+    "oneplus",
+    "qcy",
+    "realme",
+    "vivo",
+    "whoop",
+    "zeblaze"
+   ]
+  },
+  {
+   "slug": "gadget",
+   "name": "Gadget",
+   "image": {
+    "src": "/images/categories/catagory-gadget-bd23b472-2488-41c4-999e-07d3780d103f.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "amazfit",
+    "dji",
+    "anker",
+    "bang-olufsen",
+    "belkin",
+    "baseus",
+    "beats",
+    "bose",
+    "devialet",
+    "dyson",
+    "ecoflow",
+    "fastrack",
+    "google",
+    "gopro",
+    "haylou",
+    "amazon",
+    "hoto",
+    "huawei",
+    "insta360",
+    "jbl",
+    "kooduu",
+    "marshall",
+    "meta",
+    "noise",
+    "nothing",
+    "oneplus",
+    "plaud",
+    "ray-ban",
+    "realme",
+    "shokz",
+    "skullcandy",
+    "sonos",
+    "sony",
+    "spacex",
+    "westinghouse",
+    "whoop"
+   ]
+  },
+  {
+   "slug": "accessories",
+   "name": "Accessories",
+   "image": {
+    "src": "/images/categories/catagory-accessories-b27a218f-f3b5-449c-ba22-eebbff71908c.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "honor",
+    "amazfit",
+    "dji",
+    "anker",
+    "belkin",
+    "baseus",
+    "a4tech",
+    "bellroy",
+    "blupebble",
+    "caseology",
+    "cg-mobile",
+    "araree",
+    "wiwu",
+    "devialet",
+    "esr",
+    "google",
+    "gopro",
+    "green-lion",
+    "guess",
+    "huawei",
+    "insta360",
+    "jbl",
+    "karl-lagerfeld",
+    "kooduu",
+    "kuzoom",
+    "le-prius",
+    "levelo",
+    "logitech",
+    "ajazz",
+    "mophie",
+    "nothing",
+    "obsbot",
+    "osprey",
+    "otterbox",
+    "pitaka",
+    "porodo",
+    "a-case",
+    "santa-barbara",
+    "sonix",
+    "sonos",
+    "spigen",
+    "tech21",
+    "torras",
+    "uag",
+    "ugreen",
+    "uniq",
+    "zhiyun",
+    "zuck-bear"
+   ]
+  },
+  {
+   "slug": "sounds",
+   "name": "Sounds",
+   "image": {
+    "src": "/images/categories/catagory-speaker-48d3e8a0-2e2d-4288-8b96-2dc080c65095.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "apple",
+    "xiaomi",
+    "anker",
+    "bang-olufsen",
+    "beats",
+    "bose",
+    "devialet",
+    "harman",
+    "hifuture",
+    "amazon",
+    "huawei",
+    "jbl",
+    "kooduu",
+    "marshall",
+    "qcy",
+    "saramonic",
+    "skullcandy",
+    "sonos",
+    "sony"
+   ]
+  },
+  {
+   "slug": "smart-tv",
+   "name": "Smart TV",
+   "image": {
+    "src": "/images/categories/catagory-tv-b644bd62-7abf-4b55-930f-850b2ad71e8a.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "samsung",
+    "xiaomi",
+    "hisense",
+    "sony"
+   ]
+  },
+  {
+   "slug": "home-appliance",
+   "name": "Home Appliance",
+   "image": {
+    "src": "/images/categories/catagory-home-app-9dfb7956-44aa-4649-b504-8610932b6913.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "samsung",
+    "xiaomi",
+    "bomidi",
+    "dyson",
+    "gree",
+    "haier",
+    "hisense",
+    "viomi"
+   ]
+  },
+  {
+   "slug": "monitor",
+   "name": "Monitor",
+   "image": {
+    "src": "/images/categories/catagory-monitor-4d386406-54ed-4903-8e54-7528e7b83e1e.png",
+    "width": 1067,
+    "height": 1080
+   },
+   "brands": [
+    "xiaomi",
+    "benq",
+    "dell",
+    "aiwa",
+    "hp",
+    "msi",
+    "pc-power"
+   ]
+  },
+  {
+   "slug": "macbook-case",
+   "name": "MacBook Case",
+   "image": {
+    "src": "/images/categories/macbook-cases-01.png",
+    "width": 659,
+    "height": 800
+   },
+   "brands": [
+    "blupebble",
+    "levelo",
+    "otterbox",
+    "tech21"
+   ]
+  },
+  {
+   "slug": "earbuds",
+   "name": "Earbuds",
+   "image": {
+    "src": "/images/categories/untitled-design-21-removebg-preview-2.png",
+    "width": 487,
+    "height": 512
+   },
+   "brands": [
+    "samsung",
+    "xiaomi",
+    "honor",
+    "amazfit",
+    "anker",
+    "bang-olufsen",
+    "belkin",
+    "baseus",
+    "beats",
+    "bose",
+    "devialet",
+    "fastrack",
+    "google",
+    "haylou",
+    "huawei",
+    "jbl",
+    "marshall",
+    "noise",
+    "nothing",
+    "oneplus",
+    "realme",
+    "skullcandy",
+    "sony"
+   ]
+  },
+  {
+   "slug": "airpods",
+   "name": "AirPods",
+   "image": {
+    "src": "/images/categories/airpods-01.png",
+    "width": 659,
+    "height": 800
+   },
+   "brands": [
+    "apple"
+   ]
+  },
+  {
+   "slug": "phone-cases",
+   "name": "Phone Cases",
+   "image": {
+    "src": "/images/categories/untitled-design-1-removebg-preview-3.png",
+    "width": 487,
+    "height": 512
+   },
+   "brands": [
+    "apple",
+    "samsung",
+    "anker",
+    "belkin",
+    "blupebble",
+    "caseology",
+    "cg-mobile",
+    "araree",
+    "esr",
+    "green-lion",
+    "guess",
+    "karl-lagerfeld",
+    "le-prius",
+    "levelo",
+    "nothing",
+    "otterbox",
+    "pitaka",
+    "a-case",
+    "santa-barbara",
+    "sonix",
+    "spigen",
+    "tech21",
+    "torras",
+    "uag",
+    "uniq",
+    "zuck-bear"
+   ]
+  },
+  {
+   "slug": "over-ear-headphones",
+   "name": "Over-Ear Headphones",
+   "image": {
+    "src": "/images/categories/untitled-design-15-removebg-preview.png",
+    "width": 487,
+    "height": 512
+   },
+   "brands": [
+    "anker",
+    "bang-olufsen",
+    "belkin",
+    "beats",
+    "bose",
+    "dyson",
+    "fastrack",
+    "haylou",
+    "jbl",
+    "marshall",
+    "nothing",
+    "realme",
+    "sony"
+   ]
+  },
+  {
+   "slug": "adapters",
+   "name": "Adapters",
+   "image": null,
+   "brands": [
+    "apple",
+    "samsung",
+    "xiaomi",
+    "dji",
+    "anker",
+    "belkin",
+    "baseus",
+    "google",
+    "mophie",
+    "nothing",
+    "spigen"
+   ]
+  },
+  {
+   "slug": "power-banks",
+   "name": "Power Banks",
+   "image": {
+    "src": "/images/categories/untitled-design-3-removebg-preview-2.png",
+    "width": 487,
+    "height": 512
+   },
+   "brands": [
+    "samsung",
+    "xiaomi",
+    "anker",
+    "belkin",
+    "huawei",
+    "jbl",
+    "mophie"
+   ]
+  }
+ ]
+}

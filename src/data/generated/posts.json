@@ -1,0 +1,66 @@
+{
+ "careers": [
+  {
+   "slug": "content-writer",
+   "title": "Content Writer",
+   "category": "Technology",
+   "date": "23 February 2026",
+   "excerpt": "",
+   "image": {
+    "src": "/images/posts/whatsapp-image-2026-02-23-at-12-46-28-pm.jpg",
+    "width": 1080,
+    "height": 1200
+   }
+  },
+  {
+   "slug": "video-editor",
+   "title": "Video Editor",
+   "category": "Technology",
+   "date": "23 February 2026",
+   "excerpt": "",
+   "image": {
+    "src": "/images/posts/whatsapp-image-2026-02-23-at-12-42-12-pm-1.jpg",
+    "width": 1080,
+    "height": 1350
+   }
+  },
+  {
+   "slug": "graphics-designer",
+   "title": "Graphics Designer",
+   "category": "Technology",
+   "date": "23 February 2026",
+   "excerpt": "",
+   "image": {
+    "src": "/images/posts/whatsapp-image-2026-02-23-at-12-42-12-pm.jpg",
+    "width": 1024,
+    "height": 1024
+   }
+  },
+  {
+   "slug": "stock-auditor",
+   "title": "Stock Auditor",
+   "category": "Technology",
+   "date": "23 February 2026",
+   "excerpt": "",
+   "image": {
+    "src": "/images/posts/whatsapp-image-2026-02-23-at-12-42-11-pm.jpg",
+    "width": 1200,
+    "height": 1389
+   }
+  }
+ ],
+ "announcements": [
+  {
+   "slug": "welcome-to-the-new-dazzle-ecommerce",
+   "title": "🎉 স্বাগতম নতুন রূপে Dazzle E-Commerce",
+   "category": "Technology",
+   "date": "21 July 2026",
+   "excerpt": "আগের চেয়ে আরও দ্রুত লোডিং ও উন্নত পারফরম্যান্স",
+   "image": {
+    "src": "/images/blogs/dazzle-ecommerce-cb0ec190-689d-4b31-9eac-00900df9220c.jpg",
+    "width": 1920,
+    "height": 2358
+   }
+  }
+ ]
+}

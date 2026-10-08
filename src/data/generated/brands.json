@@ -1,0 +1,1450 @@
+[
+ {
+  "id": "9dccef90-faa8-4ae3-b3f9-d3b77aea097f",
+  "slug": "apple",
+  "name": "Apple",
+  "logo": {
+   "src": "/images/brands/apple-logo-png-seeklogo-427436-1711632b-37fb-4578-b054-449b5d7bf422.png",
+   "width": 320,
+   "height": 320
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef90-fc60-4f27-8782-d63dea8400cd",
+  "slug": "samsung",
+  "name": "Samsung",
+  "logo": {
+   "src": "/images/brands/classic-samsung-logo-png-0-4ff165b2-1ac9-41ec-96be-7cc294075f43.png",
+   "width": 1200,
+   "height": 625
+  },
+  "featured": true
+ },
+ {
+  "id": "9dccef90-fdc3-4ab9-8c87-896a5eac3bbc",
+  "slug": "xiaomi",
+  "name": "Xiaomi",
+  "logo": {
+   "src": "/images/brands/xiaomi-font-logo-vectorsvg-1e03e56f-2370-4496-b93a-72dbf8582084.png",
+   "width": 1200,
+   "height": 216
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1527-4ad3-be47-e7a19bb87464",
+  "slug": "honor",
+  "name": "Honor",
+  "logo": {
+   "src": "/images/brands/honor-brand-logowine-1-9c8947e6-cf3b-4d32-8448-5c9b682eb4da.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9ddef57a-deed-48de-abfb-878a08ecbcb2",
+  "slug": "iqoo",
+  "name": "iQOO",
+  "logo": {
+   "src": "/images/brands/iqoo-logo-d199f4d7-73a3-42ae-9f70-22fc4e9d1a2b.png",
+   "width": 1200,
+   "height": 284
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-003f-4edf-92ce-565d7d256560",
+  "slug": "amazfit",
+  "name": "Amazfit",
+  "logo": {
+   "src": "/images/brands/amazfit-logo-1-573652ce-b3f4-4f78-89f5-ca722174f960.png",
+   "width": 1200,
+   "height": 675
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-254f-4848-bfd7-a7dea211f6dd",
+  "slug": "oppo",
+  "name": "OPPO",
+  "logo": {
+   "src": "/images/brands/oppo-logowine-794226d6-8dc2-4326-832a-8a0cefaa6191.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-5295-466c-ad33-9278b774f686",
+  "slug": "dji",
+  "name": "DJI",
+  "logo": {
+   "src": "/images/brands/dji-logo-0.png",
+   "width": 1200,
+   "height": 1200
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-0178-46fc-8a16-bca59b01d9b9",
+  "slug": "anker",
+  "name": "Anker",
+  "logo": {
+   "src": "/images/brands/anker-logosvg-4517952d-9650-4ca8-836b-1f8d6917647e.webp",
+   "width": 640,
+   "height": 153
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-052e-4bb0-b942-578b1bf6d3e5",
+  "slug": "bang-olufsen",
+  "name": "Bang & Olufsen",
+  "logo": {
+   "src": "/images/brands/bang-olufsen-logo-da9532d0-29b5-422d-9b18-961b155d743f.png",
+   "width": 1200,
+   "height": 807
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-07a9-4d35-a7d3-b3c4853fa98d",
+  "slug": "belkin",
+  "name": "Belkin",
+  "logo": {
+   "src": "/images/brands/belkin.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-02b5-466b-b65f-2796cec25c5b",
+  "slug": "asus",
+  "name": "ASUS",
+  "logo": {
+   "src": "/images/brands/asus-logo-asus-icon-transparent-free-png-02008dcb-5f37-4050-9897-895443c9cac7.webp",
+   "width": 640,
+   "height": 640
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-03ef-4299-b2ae-90cf4d0f2367",
+  "slug": "aukey",
+  "name": "AUKEY",
+  "logo": {
+   "src": "/images/brands/aukey-logo-1781015646-87855e9b-6d25-4c2a-a350-839e1ce640e1.png",
+   "width": 400,
+   "height": 282
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-38b2-4751-9f3d-140e51350cf0",
+  "slug": "baseus",
+  "name": "Baseus",
+  "logo": {
+   "src": "/images/brands/baseus-logo-brandlogosnet-3wbfi-63ceaba4-8439-4be8-9a00-0bbe3a2a489c.png",
+   "width": 1200,
+   "height": 305
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-066c-42b5-b188-3ef0c0999c92",
+  "slug": "beats",
+  "name": "Beats",
+  "logo": {
+   "src": "/images/brands/beats-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "019daaa3-8f7b-702f-83c6-1749d635d48e",
+  "slug": "beko",
+  "name": "Beko",
+  "logo": {
+   "src": "/images/brands/new-beko-logosvg-f802912c-f980-4b71-8fbd-3304d720f9c0.webp",
+   "width": 640,
+   "height": 365
+  },
+  "featured": false
+ },
+ {
+  "id": "019d5c69-9e8c-73fe-8a09-8e14ac762ab2",
+  "slug": "a4tech",
+  "name": "A4TECH",
+  "logo": {
+   "src": "/images/brands/a4tech-logo-3f55bb7b-cefb-4c84-bef6-cce762fc0cbc.png",
+   "width": 1200,
+   "height": 268
+  },
+  "featured": false
+ },
+ {
+  "id": "53116ebc81f94a6aa639c1bc4cb53d54",
+  "slug": "meizu",
+  "name": "Meizu",
+  "logo": {
+   "src": "/images/brands/meizu-logo-blue-2015-8cfb23ca-6658-4b46-8997-e9a871dc75a1.png",
+   "width": 506,
+   "height": 105
+  },
+  "featured": false
+ },
+ {
+  "id": "9e73dd8f-74e3-4f89-b763-32990bf1a34a",
+  "slug": "bellroy",
+  "name": "Bellroy",
+  "logo": {
+   "src": "/images/brands/bellroy-logo-brandlogosnet-rmifb-512x313-12b6b2bc-bacb-4fb5-b600-4d8703c9587a.png",
+   "width": 512,
+   "height": 313
+  },
+  "featured": false
+ },
+ {
+  "id": "019d5c6b-e35e-7033-aa7b-1f98e509d4c2",
+  "slug": "benq",
+  "name": "BenQ",
+  "logo": {
+   "src": "/images/brands/benq-logosvg-375fd3dd-1fc1-4c51-8d6f-6b40bd5523a1.webp",
+   "width": 640,
+   "height": 192
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-4001-4554-8967-fedec4bbd30c",
+  "slug": "blupebble",
+  "name": "Blupebble",
+  "logo": {
+   "src": "/images/brands/1000011871.png",
+   "width": 366,
+   "height": 136
+  },
+  "featured": false
+ },
+ {
+  "id": "019790f5-6aa0-73ec-bc9d-65a2e2b013a1",
+  "slug": "boat",
+  "name": "boAt",
+  "logo": {
+   "src": "/images/brands/logo-2.jpg",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "019ca8be-b6a9-733e-be78-b5d9356f2601",
+  "slug": "bomidi",
+  "name": "BOMIDI",
+  "logo": {
+   "src": "/images/brands/bomidi-png-73c666dc-e2de-4394-b9d0-4f3611b2a656.webp",
+   "width": 500,
+   "height": 281
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-08e6-4556-be22-b2377dc5e44b",
+  "slug": "bose",
+  "name": "Bose",
+  "logo": {
+   "src": "/images/brands/bose-corporation-logowine-9f94b1be-9e44-42e9-af60-1e57036d375e.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-0b5a-498d-9072-05814f70cb24",
+  "slug": "case-mate",
+  "name": "Case Mate",
+  "logo": {
+   "src": "/images/brands/case-mate-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-0c94-4246-b5c5-a90e8213761c",
+  "slug": "caseology",
+  "name": "Caseology",
+  "logo": {
+   "src": "/images/brands/caselogy-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-0dd1-4ab7-a4e0-ee5026cd2b61",
+  "slug": "casio",
+  "name": "Casio",
+  "logo": {
+   "src": "/images/brands/casio-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9ddef58d-fbc4-4cdc-b530-0afa80ea47af",
+  "slug": "cg-mobile",
+  "name": "CG Mobile",
+  "logo": {
+   "src": "/images/brands/90b3b0e07876f89c59c1ca068b52b1cb-w320-h149.png",
+   "width": 320,
+   "height": 149
+  },
+  "featured": false
+ },
+ {
+  "id": "019daa9d-7748-7242-931c-9fb525bcdbd8",
+  "slug": "chigo",
+  "name": "Chigo",
+  "logo": {
+   "src": "/images/brands/untitled-design-5.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-39e9-4f1f-b4d5-a2f2258167ad",
+  "slug": "araree",
+  "name": "Araree",
+  "logo": {
+   "src": "/images/brands/images-2.png",
+   "width": 465,
+   "height": 108
+  },
+  "featured": false
+ },
+ {
+  "id": "019daaa3-63dc-73f8-bdd8-b9076fc3f4c4",
+  "slug": "daewoo",
+  "name": "DAEWOO",
+  "logo": {
+   "src": "/images/brands/untitled-design-1.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "019daaa3-051c-72c9-b766-622e908c8482",
+  "slug": "daikin",
+  "name": "Daikin",
+  "logo": {
+   "src": "/images/brands/untitled-design-2.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "e9699029ebb2490182557988eed5343a",
+  "slug": "wiwu",
+  "name": "WiWU",
+  "logo": null,
+  "featured": false
+ },
+ {
+  "id": "019daaa2-2828-71b1-8824-fe36fd978bae",
+  "slug": "danaaz",
+  "name": "Danaaz",
+  "logo": {
+   "src": "/images/brands/untitled-design-4.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "6210cd54-45e5-492d-8a26-7ec3af39c09c",
+  "slug": "dazzle",
+  "name": "Dazzle",
+  "logo": {
+   "src": "/images/brands/apple.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9de4a942-61e2-49b1-9690-b9ae13900947",
+  "slug": "dell",
+  "name": "Dell",
+  "logo": {
+   "src": "/images/brands/dell-logo-e029a93b-b9cd-4c0e-be9d-e0ea8c8538e9.png",
+   "width": 1200,
+   "height": 364
+  },
+  "featured": false
+ },
+ {
+  "id": "9e371ed5-0f6c-41d1-b741-5265d07d37e1",
+  "slug": "devialet",
+  "name": "Devialet",
+  "logo": {
+   "src": "/images/brands/untitled-design-114.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-53da-403a-8f86-1fb85fedb65c",
+  "slug": "dyson",
+  "name": "Dyson",
+  "logo": {
+   "src": "/images/brands/dyson-company-logowine-6d7fb5f7-0794-4ae5-bf11-1411aed5241c.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "019daf2d-b0b4-7257-8882-30d765313bba",
+  "slug": "ecoflow",
+  "name": "EcoFlow",
+  "logo": {
+   "src": "/images/brands/untitled-design-3.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9e37372d-3bc7-4874-82d7-33ea98a24492",
+  "slug": "esr",
+  "name": "ESR",
+  "logo": {
+   "src": "/images/brands/untitled-design-119.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3509-4553-8eff-bd6a4cd9d0c6",
+  "slug": "fastrack",
+  "name": "Fastrack",
+  "logo": {
+   "src": "/images/brands/fastrack-logo.png",
+   "width": 155,
+   "height": 74
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-0f0b-4c19-9de1-5c77c22d87b6",
+  "slug": "fitbit",
+  "name": "Fitbit",
+  "logo": {
+   "src": "/images/brands/fitbit-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9ddef591-8030-4b98-b121-1b0535534e14",
+  "slug": "fujifilm",
+  "name": "Fujifilm",
+  "logo": {
+   "src": "/images/brands/fujifilm-logo.png",
+   "width": 1200,
+   "height": 675
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1045-4380-a5ad-f5265bd8ac7d",
+  "slug": "garmin",
+  "name": "Garmin",
+  "logo": {
+   "src": "/images/brands/pngimgcom-garmin-png7-baff30b1-5634-4d11-addc-91f68cf7711e.png",
+   "width": 1200,
+   "height": 172
+  },
+  "featured": false
+ },
+ {
+  "id": "019da41b-1b29-71ea-b1b2-deea8e8237e0",
+  "slug": "general",
+  "name": "General",
+  "logo": {
+   "src": "/images/brands/untitled-design.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-117d-4be8-8b8c-fde31c4d8d7e",
+  "slug": "google",
+  "name": "Google",
+  "logo": {
+   "src": "/images/brands/google.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-515d-4f8f-962a-047f1e87cfc6",
+  "slug": "gopro",
+  "name": "GoPro",
+  "logo": {
+   "src": "/images/brands/untitled-design-12-removebg-preview.png",
+   "width": 487,
+   "height": 512
+  },
+  "featured": false
+ },
+ {
+  "id": "019d8b48-d844-735f-85f6-37210c3bb3df",
+  "slug": "gree",
+  "name": "Gree",
+  "logo": {
+   "src": "/images/brands/toppngcom-gree-logo-vector-free-download-400x400-145460f2-b54d-4c66-830a-36e2d08.png",
+   "width": 400,
+   "height": 400
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3c5a-4d26-b0e2-dcbba802a970",
+  "slug": "green-lion",
+  "name": "Green Lion",
+  "logo": {
+   "src": "/images/brands/unnamed.png",
+   "width": 512,
+   "height": 512
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-12b8-42ab-89a0-827cc37afff5",
+  "slug": "guess",
+  "name": "Guess",
+  "logo": {
+   "src": "/images/brands/logo.jpg",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "019d8b83-298d-700c-b032-e6b4d1be73ce",
+  "slug": "haier",
+  "name": "Haier",
+  "logo": {
+   "src": "/images/brands/untitled-design-5-2.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-13f0-4958-a840-b1e6163a1f44",
+  "slug": "harman",
+  "name": "Harman",
+  "logo": {
+   "src": "/images/brands/harman-kardon-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9e39e2b7-688b-43bd-93ad-a2b3fadc3a0d",
+  "slug": "haylou",
+  "name": "Haylou",
+  "logo": {
+   "src": "/images/brands/untitled-design-205.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-4af7-41d5-b45a-6eccaa11d333",
+  "slug": "hifuture",
+  "name": "HiFuture",
+  "logo": {
+   "src": "/images/brands/image.png",
+   "width": 1200,
+   "height": 1263
+  },
+  "featured": false
+ },
+ {
+  "id": "019d5c6c-1ff4-7352-a4e3-ce8a663b45eb",
+  "slug": "hikvision",
+  "name": "Hikvision",
+  "logo": {
+   "src": "/images/brands/untitled-design-10.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9ddef591-a857-41a1-a5ce-c56245d5ec66",
+  "slug": "hisense",
+  "name": "Hisense",
+  "logo": {
+   "src": "/images/brands/hisense-logo-726497b7-c371-48fb-9471-989e96482343.png",
+   "width": 1200,
+   "height": 675
+  },
+  "featured": false
+ },
+ {
+  "id": "019d5c6a-fdbf-73c4-bfe0-c0bc8c5fc862",
+  "slug": "aiwa",
+  "name": "Aiwa",
+  "logo": {
+   "src": "/images/brands/aiwa-logowine-7d3a8439-466c-41fd-9442-05d8df6238f7.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-0a1d-4c38-a8eb-3087aa195191",
+  "slug": "amazon",
+  "name": "Amazon",
+  "logo": {
+   "src": "/images/brands/amazon-logo-amazon-icon-transparent-free-png-1-d5bcf643-c259-4b0f-b848-6db5536fc.webp",
+   "width": 384,
+   "height": 170
+  },
+  "featured": false
+ },
+ {
+  "id": "019cfad2-8d69-71fb-a671-2c494a41c1de",
+  "slug": "hoto",
+  "name": "Hoto",
+  "logo": {
+   "src": "/images/brands/untitled-design-17.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9de8ce44-5b08-47e4-a93e-ebd67cbd65be",
+  "slug": "hp",
+  "name": "HP",
+  "logo": {
+   "src": "/images/brands/hewlett-packard-logowine-7d5200d4-bfb1-450b-8c3a-d4f22b667041.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1660-45fc-828a-8a9795b1cc6f",
+  "slug": "huawei",
+  "name": "Huawei",
+  "logo": {
+   "src": "/images/brands/huawei-logo-mobile-company-brand-official-icon-transparent-background-free-png-0.webp",
+   "width": 384,
+   "height": 384
+  },
+  "featured": false
+ },
+ {
+  "id": "019da448-083f-7389-b59c-7added823a00",
+  "slug": "hyundai",
+  "name": "Hyundai",
+  "logo": {
+   "src": "/images/brands/untitled-design-6.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9e3b2b8e-5dd4-4d37-9271-75737adc8b68",
+  "slug": "imilab",
+  "name": "Imilab",
+  "logo": {
+   "src": "/images/brands/untitled-design-186.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1798-4734-9e21-570b4fa4f8cb",
+  "slug": "infinix",
+  "name": "Infinix",
+  "logo": {
+   "src": "/images/brands/infinix.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-551e-4ac7-b630-a18c3461e383",
+  "slug": "insta360",
+  "name": "Insta360",
+  "logo": {
+   "src": "/images/brands/1000011830.png",
+   "width": 1200,
+   "height": 675
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-18d2-4a7a-9870-ade5d6a75a3a",
+  "slug": "jabra",
+  "name": "Jabra",
+  "logo": {
+   "src": "/images/brands/1000011876-removebg-preview.png",
+   "width": 856,
+   "height": 291
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1a0b-43ef-b36b-fbef0eb39e49",
+  "slug": "jbl",
+  "name": "JBL",
+  "logo": {
+   "src": "/images/brands/jbl-logowine-6f3f2350-3d18-4743-b7f3-171a278985ed.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-4dad-4f50-940a-d1862e1ad910",
+  "slug": "karl-lagerfeld",
+  "name": "Karl Lagerfeld",
+  "logo": {
+   "src": "/images/brands/images-3.png",
+   "width": 300,
+   "height": 168
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3643-48dc-b473-b82419e50e80",
+  "slug": "kieslect",
+  "name": "Kieslect",
+  "logo": {
+   "src": "/images/brands/lp62n0ql64c7630733310-1690788615-420x420-6236b95e-1c1d-4c24-844b-efacd3a53685.png",
+   "width": 420,
+   "height": 420
+  },
+  "featured": false
+ },
+ {
+  "id": "019da482-5306-7160-8feb-2252a7bce869",
+  "slug": "kooduu",
+  "name": "Kooduu",
+  "logo": {
+   "src": "/images/brands/untitled-design-7.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9e4145ab-7396-49a6-93c8-94a1867cf968",
+  "slug": "kospet",
+  "name": "Kospet",
+  "logo": {
+   "src": "/images/brands/untitled-design-328.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "0198266e-970b-7058-bacf-46d0b56d4a8d",
+  "slug": "kuzoom",
+  "name": "KUZOOM",
+  "logo": {
+   "src": "/images/brands/untitled-design-8.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-58d7-457a-9c28-f12bdbb4b17f",
+  "slug": "le-prius",
+  "name": "Le Prius",
+  "logo": {
+   "src": "/images/brands/images.png",
+   "width": 225,
+   "height": 225
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1b48-47a7-9625-55f068888f44",
+  "slug": "lenovo",
+  "name": "Lenovo",
+  "logo": {
+   "src": "/images/brands/images-c30ffbc9-7d25-47ac-8fde-9796cd81604d.png",
+   "width": 389,
+   "height": 129
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3b21-40c3-aab8-df19dbc6d487",
+  "slug": "levelo",
+  "name": "Levelo",
+  "logo": {
+   "src": "/images/brands/levelobrand-logo.png",
+   "width": 690,
+   "height": 369
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1c83-4ac5-af90-6a7584fb3e4e",
+  "slug": "lg",
+  "name": "LG",
+  "logo": {
+   "src": "/images/brands/lg-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1dc0-41a8-b06f-511a31eaca6b",
+  "slug": "logitech",
+  "name": "Logitech",
+  "logo": {
+   "src": "/images/brands/logitech.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3ec9-4481-9cb9-e2fa286fe850",
+  "slug": "marshall",
+  "name": "Marshall",
+  "logo": {
+   "src": "/images/brands/1000011872.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-4617-4203-98dc-e0938798147f",
+  "slug": "meta",
+  "name": "Meta",
+  "logo": {
+   "src": "/images/brands/meta-logo-3c62435c-b4f0-445a-846f-dbaf1efb4aae.png",
+   "width": 1200,
+   "height": 675
+  },
+  "featured": false
+ },
+ {
+  "id": "019d6284-e927-714c-90a1-5c45b98eec8f",
+  "slug": "ajazz",
+  "name": "Ajazz",
+  "logo": {
+   "src": "/images/brands/ajazz-logo-138713ef-a983-4e19-b4f1-ed97323bec32.png",
+   "width": 1200,
+   "height": 336
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-203b-4e93-887a-d64b9660fcf3",
+  "slug": "mibro",
+  "name": "Mibro",
+  "logo": {
+   "src": "/images/brands/mibro-logo-mid-489128e9-e3a6-4809-b952-bdcef4d43af6.png",
+   "width": 889,
+   "height": 237
+  },
+  "featured": false
+ },
+ {
+  "id": "019d2928-c877-7077-8ead-47d47342ec4c",
+  "slug": "microsoft",
+  "name": "Microsoft",
+  "logo": {
+   "src": "/images/brands/untitled-design-14.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "019d94a5-15cc-7026-b9f2-f21891bd6ee3",
+  "slug": "midea",
+  "name": "Midea",
+  "logo": {
+   "src": "/images/brands/untitled-design-4-2.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2177-4146-bb92-ba6eab20ad97",
+  "slug": "mophie",
+  "name": "Mophie",
+  "logo": {
+   "src": "/images/brands/mophie-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef90-ff03-403c-9ec8-1ad0e79a6638",
+  "slug": "motorola",
+  "name": "Motorola",
+  "logo": {
+   "src": "/images/brands/logo-2-2.jpg",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9de4a942-8175-4447-adcc-638fa630ffa5",
+  "slug": "msi",
+  "name": "MSI",
+  "logo": {
+   "src": "/images/brands/untitled-design-5-3.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "01979b45-52ca-725c-9751-abadcf278527",
+  "slug": "noise",
+  "name": "Noise",
+  "logo": {
+   "src": "/images/brands/logo-2-3.jpg",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-22d8-4c5b-82e2-4812ed80df2a",
+  "slug": "nokia",
+  "name": "Nokia",
+  "logo": {
+   "src": "/images/brands/nokia.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3778-43d9-a02c-8e2a1097573b",
+  "slug": "nothing",
+  "name": "Nothing",
+  "logo": {
+   "src": "/images/brands/nothing.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "019eb19c-a9b0-715c-9e4c-1f552b9296dc",
+  "slug": "obsbot",
+  "name": "OBSBOT",
+  "logo": {
+   "src": "/images/brands/untitled-design-3-2.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2416-485a-96f7-76d46bc2ae86",
+  "slug": "oneplus",
+  "name": "OnePlus",
+  "logo": {
+   "src": "/images/brands/oneplus-logowine-674634a4-33c2-4812-bbab-4553e74a38d3.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9e73d2bf-03b8-4e87-a8b6-e70b4502d290",
+  "slug": "osprey",
+  "name": "Osprey",
+  "logo": {
+   "src": "/images/brands/untitled-design-144.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-268b-41a6-8588-841e2e4bfc71",
+  "slug": "otterbox",
+  "name": "Otterbox",
+  "logo": {
+   "src": "/images/brands/otterbox-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "019d0098-2085-7111-b7cd-ef54005a85a7",
+  "slug": "pc-power",
+  "name": "PC Power",
+  "logo": {
+   "src": "/images/brands/untitled-design-15.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-1efd-4076-bd82-4e9a5b744af0",
+  "slug": "philips",
+  "name": "Philips",
+  "logo": {
+   "src": "/images/brands/philips.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-43a7-408d-be8c-55577cf69d4b",
+  "slug": "pitaka",
+  "name": "PITAKA",
+  "logo": {
+   "src": "/images/brands/1000011844.png",
+   "width": 1200,
+   "height": 868
+  },
+  "featured": false
+ },
+ {
+  "id": "019cf0c7-10c1-7301-8afb-2ab5cde889ed",
+  "slug": "plaud",
+  "name": "Plaud",
+  "logo": {
+   "src": "/images/brands/untitled-design-18.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "01990a50-0d67-711e-8c70-deceb291a25c",
+  "slug": "porodo",
+  "name": "Porodo",
+  "logo": {
+   "src": "/images/brands/logo-1.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-488a-4460-ad95-bc21fc102300",
+  "slug": "qcy",
+  "name": "QCY",
+  "logo": {
+   "src": "/images/brands/ce5f12c2436e9c1a3ff51f91c319d651-w400-h400.jpg",
+   "width": 400,
+   "height": 400
+  },
+  "featured": false
+ },
+ {
+  "id": "0199142e-bee2-700b-86a1-721be5dfc60a",
+  "slug": "ray-ban",
+  "name": "Ray-Ban",
+  "logo": {
+   "src": "/images/brands/toppngcom-ray-ban-vector-logo-400x400-c2a75629-4842-4054-9841-a55c1ad55333.png",
+   "width": 400,
+   "height": 400
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-27d9-4c89-9f98-5fa5d23b1fd1",
+  "slug": "razer",
+  "name": "Razer",
+  "logo": {
+   "src": "/images/brands/razer-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2934-46ce-be65-468474a004dd",
+  "slug": "realme",
+  "name": "Realme",
+  "logo": {
+   "src": "/images/brands/realme-logo-6510c22b-349f-4ca5-9484-e788a1238de7.png",
+   "width": 1200,
+   "height": 360
+  },
+  "featured": false
+ },
+ {
+  "id": "019d5c6c-98c4-7377-974f-935517ce3d29",
+  "slug": "realview",
+  "name": "RealView",
+  "logo": {
+   "src": "/images/brands/untitled-design-9.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-5799-4f26-82cf-e574f79400d8",
+  "slug": "a-case",
+  "name": "A-Case",
+  "logo": {
+   "src": "/images/brands/untitled-design-34-1.png",
+   "width": 1200,
+   "height": 1263
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-474f-44ee-b837-3f0f878d67b8",
+  "slug": "santa-barbara",
+  "name": "Santa Barbara",
+  "logo": {
+   "src": "/images/brands/1000011854.png",
+   "width": 975,
+   "height": 825
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-4270-42a6-b7ea-d02cbb310ecb",
+  "slug": "saramonic",
+  "name": "Saramonic",
+  "logo": {
+   "src": "/images/brands/1000011855.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2a76-4372-94eb-ab050f6c40a0",
+  "slug": "sennheiser",
+  "name": "Sennheiser",
+  "logo": {
+   "src": "/images/brands/1000011893.png",
+   "width": 487,
+   "height": 512
+  },
+  "featured": false
+ },
+ {
+  "id": "019daaa2-e4a3-73d0-bf6e-a22c3f5be21a",
+  "slug": "sharp",
+  "name": "Sharp",
+  "logo": {
+   "src": "/images/brands/untitled-design-3-3.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "019854e4-8df5-72bd-a415-05fa2d71a509",
+  "slug": "shokz",
+  "name": "Shokz",
+  "logo": {
+   "src": "/images/brands/logo-3.jpg",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2bb5-40e6-8d62-1ec7cb93d93f",
+  "slug": "skullcandy",
+  "name": "Skullcandy",
+  "logo": {
+   "src": "/images/brands/skullcandy-logo-vector.png",
+   "width": 155,
+   "height": 86
+  },
+  "featured": false
+ },
+ {
+  "id": "9e4757db-d106-4541-8142-0a4d9a3a122b",
+  "slug": "sonix",
+  "name": "Sonix",
+  "logo": {
+   "src": "/images/brands/untitled-design-11.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-5659-439e-b531-9655a7debd76",
+  "slug": "sonos",
+  "name": "Sonos",
+  "logo": {
+   "src": "/images/brands/sonos-logo-wine.png",
+   "width": 1200,
+   "height": 800
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2cf1-4963-9458-2c7f7c25e9ef",
+  "slug": "sony",
+  "name": "Sony",
+  "logo": {
+   "src": "/images/brands/toppngcom-sony-electronics-logo-png-2418x800-7b317778-4cb4-4560-aacf-f4c551c5aac.png",
+   "width": 1200,
+   "height": 397
+  },
+  "featured": false
+ },
+ {
+  "id": "9ef4f2f4-e182-4800-a487-690fd699b624",
+  "slug": "spacex",
+  "name": "SpaceX",
+  "logo": {
+   "src": "/images/brands/untitled-design-1573.jpg",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2ebe-4b2a-9782-b83dacdf5e79",
+  "slug": "spigen",
+  "name": "Spigen",
+  "logo": {
+   "src": "/images/brands/spigen-01.png",
+   "width": 646,
+   "height": 417
+  },
+  "featured": false
+ },
+ {
+  "id": "9e33c8df-43eb-4f92-b99e-1fbb86499c52",
+  "slug": "tech21",
+  "name": "Tech21",
+  "logo": {
+   "src": "/images/brands/untitled-design-75-1.png",
+   "width": 256,
+   "height": 310
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-2ffb-4408-8c3b-bed67b31d463",
+  "slug": "tecno",
+  "name": "Tecno",
+  "logo": {
+   "src": "/images/brands/tecno.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-44db-4952-8bfd-23fbf32a561c",
+  "slug": "torras",
+  "name": "Torras",
+  "logo": {
+   "src": "/images/brands/1000011833.png",
+   "width": 1200,
+   "height": 384
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-4137-4512-bc3a-5f8de779e0bb",
+  "slug": "uag",
+  "name": "UAG",
+  "logo": {
+   "src": "/images/brands/1000011889.png",
+   "width": 487,
+   "height": 512
+  },
+  "featured": false
+ },
+ {
+  "id": "019eb18e-56cc-7364-b66a-fd3470482c94",
+  "slug": "ugreen",
+  "name": "UGREEN",
+  "logo": {
+   "src": "/images/brands/untitled-design-2-2.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-5021-433a-bc32-b237312e5522",
+  "slug": "uniq",
+  "name": "Uniq",
+  "logo": {
+   "src": "/images/brands/images-4.png",
+   "width": 225,
+   "height": 225
+  },
+  "featured": false
+ },
+ {
+  "id": "019d5c6c-ce6e-7181-911b-18610a44b242",
+  "slug": "viewsonic",
+  "name": "ViewSonic",
+  "logo": {
+   "src": "/images/brands/untitled-design-8-2.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "019da42e-ac1b-7062-8e51-2146b378df01",
+  "slug": "viomi",
+  "name": "Viomi",
+  "logo": {
+   "src": "/images/brands/untitled-design-1-2.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3132-4a36-b3c0-3b2812f8065c",
+  "slug": "vivo",
+  "name": "Vivo",
+  "logo": {
+   "src": "/images/brands/vivo-logo-2019svg-df42f8fa-68e0-47a5-9c3f-0ed2dfddfe62.png",
+   "width": 1200,
+   "height": 315
+  },
+  "featured": false
+ },
+ {
+  "id": "019cfb27-a057-706e-b1c9-54001e80de49",
+  "slug": "westinghouse",
+  "name": "Westinghouse",
+  "logo": {
+   "src": "/images/brands/untitled-design-16.png",
+   "width": 75,
+   "height": 75
+  },
+  "featured": false
+ },
+ {
+  "id": "019c6618-5e78-732a-a142-0ff3a8aa6ea1",
+  "slug": "whoop",
+  "name": "Whoop",
+  "logo": {
+   "src": "/images/brands/whoop-logo-e4a3a163-38ab-4502-8b70-b81397616856.png",
+   "width": 1200,
+   "height": 675
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-326c-4b69-9f1d-7aea922f59ed",
+  "slug": "withings",
+  "name": "Withings",
+  "logo": {
+   "src": "/images/brands/1000011875.png",
+   "width": 1200,
+   "height": 469
+  },
+  "featured": false
+ },
+ {
+  "id": "019771eb-e248-710e-961a-41ab7c66c0f5",
+  "slug": "zeblaze",
+  "name": "Zeblaze",
+  "logo": {
+   "src": "/images/brands/logo-1.svg",
+   "width": null,
+   "height": null
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-3d90-4499-9ec6-063353300b45",
+  "slug": "zhiyun",
+  "name": "ZHIYUN",
+  "logo": {
+   "src": "/images/brands/1000011873.png",
+   "width": 1200,
+   "height": 675
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-33cd-4558-b399-a73ea35ee58d",
+  "slug": "zte",
+  "name": "ZTE",
+  "logo": {
+   "src": "/images/brands/zte.jpg",
+   "width": 155,
+   "height": 100
+  },
+  "featured": false
+ },
+ {
+  "id": "9dccef91-4ee8-47ca-8102-377d004021dd",
+  "slug": "zuck-bear",
+  "name": "Zuck Bear",
+  "logo": {
+   "src": "/images/brands/6820792677.jpg",
+   "width": 210,
+   "height": 210
+  },
+  "featured": false
+ },
+ {
+  "id": "9de4a942-0a2b-4f17-80ee-1f1885f0e8a5",
+  "slug": "acer",
+  "name": "Acer",
+  "logo": {
+   "src": "/images/brands/acer-logo-acer-icon-transparent-free-png-65ce2a17-a378-4b30-a535-79094e726da9.webp",
+   "width": 256,
+   "height": 256
+  },
+  "featured": false
+ }
+]

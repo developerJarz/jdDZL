@@ -1,0 +1,139 @@
+/*
+ * Dazzle admin design tokens. Components are built with Tailwind + shadcn/ui; the token
+ * names are mapped to Tailwind colours in globals.css. Tokens are set on <html> while the
+ * dashboard is mounted so Radix portals (dialogs, menus, popovers) inherit them too.
+ * Palette follows the storefront: espresso #222, brown #6D3F0E, gold #CB843B, sand #E9CCAE.
+ */
+html:has(.admin-root) {
+  --background: #faf6f0;
+  --foreground: #24190e;
+  --card: #ffffff;
+  --card-foreground: #24190e;
+  --popover: #ffffff;
+  --popover-foreground: #24190e;
+  --primary: #6d3f0e;
+  --primary-foreground: #fffaf3;
+  --secondary: #f5ece0;
+  --secondary-foreground: #4b2c0a;
+  --muted: #f4ede4;
+  --muted-foreground: #7d6851;
+  --accent: #f6e9d8;
+  --accent-foreground: #4b2c0a;
+  --destructive: #c0392b;
+  --border: #ebe1d3;
+  --input: #e2d4c2;
+  --ring: #cb843b;
+  --brand: #cb843b;
+  --brand-soft: #f7e8d5;
+  --success: #2c8a56;
+  --warning: #c27a10;
+  --info: #2f6db5;
+  --chart-1: #a8661f;
+  --chart-2: #6d3f0e;
+  --chart-3: #e3bb8c;
+  --chart-4: #3f7a6b;
+  --chart-5: #a3542f;
+  --sidebar: #1c1814;
+  --sidebar-foreground: #cdbca6;
+  --sidebar-primary: #e4a967;
+  --sidebar-primary-foreground: #1c1309;
+  --sidebar-accent: #2a241e;
+  --sidebar-accent-foreground: #f7ecdd;
+  --sidebar-border: #2e2822;
+  color-scheme: light;
+}
+
+html.dark:has(.admin-root) {
+  --background: #12100e;
+  --foreground: #f2e9dd;
+  --card: #1b1815;
+  --card-foreground: #f2e9dd;
+  --popover: #1f1b18;
+  --popover-foreground: #f2e9dd;
+  --primary: #e0a462;
+  --primary-foreground: #1d1207;
+  --secondary: #29231e;
+  --secondary-foreground: #f2e9dd;
+  --muted: #25201b;
+  --muted-foreground: #a7937d;
+  --accent: #2d251f;
+  --accent-foreground: #f6e7d3;
+  --destructive: #e5604f;
+  --border: #2e2823;
+  --input: #3a322b;
+  --ring: #cb843b;
+  --brand: #e0a462;
+  --brand-soft: #3a2b1c;
+  --success: #52c084;
+  --warning: #e6a43c;
+  --info: #6fa8ea;
+  --chart-1: #c98238;
+  --chart-2: #b9773a;
+  --chart-3: #f0d2ad;
+  --chart-4: #5fae99;
+  --chart-5: #d77a50;
+  --sidebar: #0d0b0a;
+  --sidebar-foreground: #bfae98;
+  --sidebar-primary: #e4a967;
+  --sidebar-primary-foreground: #1c1309;
+  --sidebar-accent: #221d19;
+  --sidebar-accent-foreground: #f7ecdd;
+  --sidebar-border: #24201b;
+  color-scheme: dark;
+}
+
+html:has(.admin-root) body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.admin-root {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-urbanist), "Urbanist", system-ui, sans-serif;
+  font-feature-settings: "tnum" 1;
+}
+
+.admin-root *,
+html:has(.admin-root) [data-radix-popper-content-wrapper] *,
+html:has(.admin-root) [role="dialog"] * {
+  border-color: var(--border);
+}
+
+/* Gold gradient used for headings, echoing the storefront section titles. */
+.text-gold {
+  background: linear-gradient(90deg, #6d3f0e 0%, #cb843b 55%, #b57908 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+html.dark .text-gold {
+  background: linear-gradient(90deg, #f3dcc0 0%, #e0a462 55%, #cb843b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bg-brand-gradient {
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(233, 204, 174, 0.35) 0%, transparent 55%),
+    linear-gradient(135deg, #3b2209 0%, #6d3f0e 45%, #a8661f 100%);
+}
+
+.admin-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--input) transparent;
+}
+
+/* Recharts focus outlines are noisy on click; keyboard focus stays visible elsewhere. */
+.admin-root .recharts-wrapper *:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-root *,
+  html:has(.admin-root) [role="dialog"] {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

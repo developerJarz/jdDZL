@@ -1,0 +1,310 @@
+{
+ "marquee": [
+  {
+   "label": "🎉 Welcome to Dazzle Commerce",
+   "href": "/"
+  },
+  {
+   "label": "🔥 Mega Sale – Up to 70% OFF on Selected Products",
+   "href": "/offer"
+  },
+  {
+   "label": "🚚 Free Delivery on Orders Above ৳999",
+   "href": "/delivery-policy"
+  },
+  {
+   "label": "📱 Download the Dazzle Mobile App Today",
+   "href": "/"
+  },
+  {
+   "label": "💳 Secure Payment with bKash, Nagad & Cards",
+   "href": "/"
+  }
+ ],
+ "heroSlides": [
+  {
+   "image": {
+    "src": "/images/banners/main-banner-v2-1-f78f73f8-fbf2-47fe-b7a3-ef0a2543e272.webp",
+    "width": 1920,
+    "height": 903
+   },
+   "href": "/offer/latest-apple-release-pre-order-campaign",
+   "newTab": false
+  },
+  {
+   "image": {
+    "src": "/images/banners/salman-5ce224cb-7e67-4847-a240-8c7b88f33f2c.jpg",
+    "width": 1920,
+    "height": 903
+   },
+   "href": "/categories/phones",
+   "newTab": false
+  },
+  {
+   "image": {
+    "src": "/images/banners/main-banner-1-846c7758-bd3e-4eb3-8a0a-939f6680e144.jpg",
+    "width": 1920,
+    "height": 903
+   },
+   "href": "#",
+   "newTab": false
+  }
+ ],
+ "categorySlugs": [
+  "phones",
+  "tablet",
+  "laptop",
+  "smart-watch",
+  "gadget",
+  "accessories",
+  "sounds",
+  "smart-tv",
+  "home-appliance",
+  "monitor"
+ ],
+ "flashSale": {
+  "title": "Flash Sale",
+  "endsAt": "2026-10-15T23:59:59.000Z",
+  "href": "/offer/limited-time-offer",
+  "tabs": [
+   {
+    "label": "Newest",
+    "productSlugs": [
+     "iphone-18-pro-max-price-in-bangladesh",
+     "iphone-17-pro-price-in-bangladesh",
+     "iphone-18-pro-price-in-bangladesh",
+     "iphone-17-pro-max-price-in-bangladesh",
+     "apple-macbook-air-m5-13-inch-10-core-cpu-8-core-gpu-price-in-bangladesh",
+     "vivo-x300-pro-price-in-bangladesh",
+     "oneplus-15-price-in-bangladesh",
+     "apple-ipad-11th-generation-2025",
+     "redmi-note-15-5g",
+     "redmi-note-15-pro-5g"
+    ]
+   },
+   {
+    "label": "Popular",
+    "productSlugs": [
+     "apple-20w-usb-c-power-adapter-3-pin",
+     "samsung-25w-usb-c-power-adapter-3-pin",
+     "xiaomi-redmi-note-14-4g",
+     "belkin-25w-usb-c-wall-charger-with-pps-3-pin",
+     "apple-usb-c-to-usb-c-cable-1m-price-in-bangladesh",
+     "honor-200-5g",
+     "honor-600-price-in-bangladesh"
+    ]
+   }
+  ]
+ },
+ "offerBanners": {
+  "afterFlashSale": [
+   {
+    "image": {
+     "src": "/images/banners/12757-e663cad8-d8d3-496d-b99a-4f08c2d4666c.webp",
+     "width": 1920,
+     "height": 1050
+    },
+    "href": "#"
+   },
+   {
+    "image": {
+     "src": "/images/banners/12795-704c1d20-a287-42f9-8075-3b217b69b1ab.webp",
+     "width": 1920,
+     "height": 1050
+    },
+    "href": "#"
+   }
+  ],
+  "afterClipToCart": [
+   {
+    "image": {
+     "src": "/images/banners/4b0b5851-6786-4257-90ce-69313e06542a.webp",
+     "width": 1920,
+     "height": 1050
+    },
+    "href": "#"
+   },
+   {
+    "image": {
+     "src": "/images/banners/e06dedd5-fe2c-4536-9cd9-ebac2271c747.webp",
+     "width": 1920,
+     "height": 1050
+    },
+    "href": "#"
+   }
+  ],
+  "afterNewArrivals": [
+   {
+    "image": {
+     "src": "/images/banners/c03152f5-3c04-4539-8b91-1fe3c1a19823.webp",
+     "width": 1080,
+     "height": 590
+    },
+    "href": "#"
+   },
+   {
+    "image": {
+     "src": "/images/banners/d1222e1a-2011-48d0-b1d4-393fad434555.webp",
+     "width": 1080,
+     "height": 590
+    },
+    "href": "#"
+   }
+  ],
+  "mostPopular": [
+   {
+    "image": {
+     "src": "/images/banners/1fe0db3e-f24e-43de-ac3e-ca2ad0c18ace.webp",
+     "width": 1080,
+     "height": 1603
+    },
+    "href": "#",
+    "newTab": false
+   },
+   {
+    "image": {
+     "src": "/images/banners/77a05c9a-7001-4fb5-840e-f41b3d3e6f56.webp",
+     "width": 1080,
+     "height": 1603
+    },
+    "href": "#",
+    "newTab": false
+   },
+   {
+    "image": {
+     "src": "/images/banners/93c448da-1067-40ca-99f4-d2b324280641.webp",
+     "width": 640,
+     "height": 950
+    },
+    "href": "#",
+    "newTab": false
+   }
+  ],
+  "afterFeatured": [
+   {
+    "image": {
+     "src": "/images/banners/9a5d0d08-0d34-42a0-b170-aed98522a2e5.webp",
+     "width": 1920,
+     "height": 2168
+    },
+    "href": "#"
+   },
+   {
+    "image": {
+     "src": "/images/banners/b6d8ca36-d6ec-4c20-a049-abad57df1130.webp",
+     "width": 1920,
+     "height": 2880
+    },
+    "href": "#"
+   }
+  ]
+ },
+ "shopByBrandSlugs": [
+  "apple",
+  "samsung",
+  "xiaomi",
+  "honor",
+  "iqoo",
+  "amazfit",
+  "oppo",
+  "dji",
+  "anker",
+  "bang-olufsen",
+  "belkin",
+  "asus",
+  "aukey",
+  "baseus",
+  "beats",
+  "beko"
+ ],
+ "newArrivals": {
+  "tabs": [
+   {
+    "label": "Newest",
+    "productSlugs": [
+     "haylou-w1-earbuds",
+     "haylou-x1-pro-true-wireless-earbuds",
+     "haylou-x1c-earbuds",
+     "haylou-x1-plus-true-wireless-earphones",
+     "haylou-s35-anc-headphone",
+     "haylou-s30-anc-headphone",
+     "haylou-mori-pro-earbuds",
+     "samsung-galaxy-tab-s10-plus-official",
+     "samsung-galaxy-tab-a9-plus-5g-official",
+     "samsung-galaxy-tab-a9-official"
+    ]
+   },
+   {
+    "label": "Popular",
+    "productSlugs": [
+     "honor-magic9-super-price-in-bangladesh",
+     "xiaomi-pad-9-price-in-bangladesh",
+     "xiaomi-pad-9-pro-price-in-bangladesh",
+     "xiaomi-pad-9-pro-max-price-in-bangladesh",
+     "motorola-edge-70-plus-price-in-bangladesh",
+     "motorola-signature-27-price-in-bangladesh",
+     "xiaomi-poco-x8-power-price-in-bangladesh",
+     "xiaomi-poco-x8-5g-price-in-bangladesh",
+     "honor-magic9-pro-max-price-in-bangladesh",
+     "xiaomi-18-fold-price-in-bangladesh"
+    ]
+   }
+  ]
+ },
+ "mostPopularSlugs": [
+  "samsung-galaxy-a57-5g-price-in-bangladesh",
+  "samsung-galaxy-a17-5g",
+  "redmi-15c",
+  "samsung-galaxy-a37-5g-price-in-bangladesh",
+  "redmi-turbo-5-max-price-in-bangladesh"
+ ],
+ "hotDealSlugs": [
+  "vivo-x300-price-in-bangladesh",
+  "oneplus-15-price-in-bangladesh",
+  "oppo-find-x9-pro",
+  "vivo-iqoo-neo11-price-in-bangladesh",
+  "vivo-iqoo-z11-turbo-price-in-bangladesh",
+  "vivo-iqoo-z11-price-in-bangladesh",
+  "iqoo-z10-turbo-pro",
+  "redmi-turbo-5-max-price-in-bangladesh",
+  "redmi-turbo-5-5g-price-in-bangladesh"
+ ],
+ "featuredSlugs": [
+  "samsung-galaxy-tab-a11-price-in-bangladesh",
+  "lenovo-ideapad-slim-3-15irh10-13th-gen-intel-core-i7-13620h-intel-integrated-uhd-graphics-153-laptop-price-in-bangladesh",
+  "hp-victus-15-fa2013dx-intel-core-i5-13420h-rtx-3050-156-fhd-gaming-laptop-price-in-bangladesh",
+  "samsung-galaxy-tab-a11-plus-price-in-bangladesh",
+  "xiaomi-pad-7"
+ ],
+ "latestBlogs": [
+  "iqoo-neo-10r-price-specs-review-features",
+  "vivo-v30-price-specs-camera-full-review",
+  "redmi-note-14-pro-plus-review-specs"
+ ],
+ "seoCards": [
+  {
+   "title": "Dazzle - The Best Smartphone Shop in Bangladesh",
+   "html": "Dazzle offers an extensive selection of smartphones from leading brands to suit every preference and budget. We feature top global brands like <a href=\"/brands/apple\">Apple iPhone</a>, <a href=\"/brands/samsung\">Samsung</a>, <a href=\"/brands/google\">Google</a>, <a href=\"/brands/xiaomi\">Xiaomi</a>, <a href=\"/brands/oppo\">Oppo</a>, <a href=\"/brands/vivo\">Vivo</a>, <a href=\"/brands/oneplus\">OnePlus</a>, <a href=\"/brands/motorola\">Motorola</a>, <a href=\"/brands/realme\">Realme</a>, <a href=\"/brands/honor\">Honor</a>, Nokia, Sony, Huawei, Asus, Infinix, Tecno, ZTE, Poco, iQOO, Nothing and many more. With each purchase, enjoy the assurance of 100% authenticity, competitive prices, and official warranties, making Dazzle the best smartphone retailer in Bangladesh."
+  },
+  {
+   "title": "Best Tablet and iPad Shop in Bangladesh",
+   "html": "Our tablet collection includes popular models like <a href=\"/categories/tablet/ipad\">Apple iPad</a>, <a href=\"/categories/tablet/samsung-1\">Samsung Tablets</a>, <a href=\"/categories/tablet/xiaomi-1\">Xiaomi Tablets</a>, <a href=\"/categories/tablet/honor-1\">Honor Tablets</a>, <a href=\"/categories/tablet/huawei-1\">Huawei Tablets</a>, <a href=\"/categories/tablet/pixel-tablet\">Google Pixel Tablets</a>, <a href=\"/categories/tablet/oneplus-1\">OnePlus Tablets</a>, and <a href=\"/categories/tablet/amazon\">Amazon Fire Tablets</a>, catering to professionals, students, and casual users alike. With options from Amazon, OnePlus, and Honor, Dazzle ensures a variety of choices for entertainment, productivity, and creative needs, complete with reliable after-sales support and fast delivery."
+  },
+  {
+   "title": "Best Laptop Selling Shop in Bangladesh",
+   "html": "Whether you’re looking for an <a href=\"/categories/laptop/apple-macbook\">Apple MacBook</a>, <a href=\"/categories/laptop/imac\">iMac</a>, <a href=\"/categories/laptop/gaming-laptop\">Gaming Laptop</a>, <a href=\"/categories/laptop/ultrabook-2-in-1-laptop\">Ultrabook</a> and <a href=\"/categories/laptop/ultrabook-2-in-1-laptop\">2-in-1 Laptops</a>, or <a href=\"/categories/laptop/mac-studio\">Mac Studio</a>, Dazzle’s laptop selection has it all. We carry premium brands, offering models for gaming, business, or casual use. Our laptops are available with flexible EMI options, official warranties, and knowledgeable support to help you choose the perfect device for your needs."
+  },
+  {
+   "title": "Best MacBook and iMac Selling Shop in Bangladesh",
+   "html": "As a top retailer of Apple products, Dazzle offers a range of MacBooks, iMacs, and Mac Studios. Our Apple inventory caters to professionals seeking high-performance devices for creative tasks, from video editing to design work. Every Apple product at Dazzle includes official warranties and access to our premium support team for a seamless experience."
+  },
+  {
+   "title": "Best Apple Gadget Shop in Bangladesh",
+   "html": "Dazzle’s Apple gadget selection extends beyond phones and laptops, offering iPhones, AirPods, Apple Watches,iPads, MacBooks, and iMacs that complete your Apple ecosystem. With our Dazzle Care+ program, enjoy the peace of mind of a direct replacement within a year for many Apple devices, alongside competitive pricing and top-quality customer service."
+  },
+  {
+   "title": "Best Online Mobile Shop in Bangladesh",
+   "html": "Dazzle’s online store provides a full range of devices and accessories with the convenience of nationwide delivery. We offer thousands of products, from flagship smartphones to essential accessories, all available online with secure shopping and authentic product guarantees. Experience the quality of Dazzle from the comfort of your home."
+  }
+ ]
+}

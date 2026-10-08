@@ -1,0 +1,120 @@
+.invoice-document {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  color: #25342b;
+  border: 1px solid #e0e6df;
+  border-radius: 16px;
+}
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+.invoice-header > div {
+  max-width: 50%;
+}
+.invoice-header h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+.invoice-header h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.invoice-header h3 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.invoice-header p {
+  line-height: 1.8;
+  font-size: 13px;
+}
+.invoice-print {
+  padding: 10px 16px;
+  background: #35543f;
+  color: white;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+.invoice-document table {
+  width: 100%;
+  font-size: 13px;
+  text-align: left;
+  border-collapse: collapse;
+}
+.invoice-document th,
+.invoice-document td {
+  padding: 16px 10px;
+  border-bottom: 1px solid #dde5da;
+}
+.invoice-document th {
+  background: #edf2e9;
+}
+.invoice-document small {
+  display: block;
+}
+.invoice-document dl {
+  max-width: 350px;
+  margin: 30px 0 30px auto;
+}
+.invoice-document dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.invoice-document dl > div:last-child {
+  font-weight: 750;
+  background: #edf2e9;
+}
+.invoice-footnote {
+  font-size: 12px;
+  color: #687560;
+  line-height: 1.7;
+  border-top: 1px solid #dbe4d6;
+  padding-top: 20px;
+}
+.invoice-table-wrap {
+  overflow: auto;
+}
+@media (max-width: 600px) {
+  .invoice-document {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+  .invoice-header {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .invoice-header > div {
+    max-width: 100%;
+  }
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  body .invoice-document,
+  body .invoice-document * {
+    visibility: visible;
+  }
+  .invoice-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 15mm;
+    border: 0;
+  }
+  .invoice-print {
+    display: none;
+  }
+  .invoice-table-wrap {
+    overflow: visible;
+  }
+}

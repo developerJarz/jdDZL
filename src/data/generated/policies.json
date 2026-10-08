@@ -1,0 +1,58 @@
+{
+ "affiliate-policy": {
+  "endpoint": "affiliate_policy",
+  "title": "Affiliate Policy"
+ },
+ "cancellation-policy": {
+  "endpoint": "cancellation_policy",
+  "title": "Cancellation Policy"
+ },
+ "cookies-policy": {
+  "endpoint": "cookies_policy",
+  "title": "Cookies Policy"
+ },
+ "data-protection-policy": {
+  "endpoint": "data_protection_policy",
+  "title": "Data Protection Policy"
+ },
+ "delivery-policy": {
+  "endpoint": "delivery_policy",
+  "title": "Delivery Policy"
+ },
+ "exchange-policy": {
+  "endpoint": "exchange_policy",
+  "title": "Exchange Policy"
+ },
+ "faq": {
+  "endpoint": "faq",
+  "title": "FAQ"
+ },
+ "loyalty-program-policy": {
+  "endpoint": "loyalty_program_policy",
+  "title": "Loyalty Program Policy"
+ },
+ "membership-policy": {
+  "endpoint": "membership_policy",
+  "title": "Membership Policy"
+ },
+ "pre-order-policy": {
+  "endpoint": "pre_order_policy",
+  "title": "Pre-order Policy"
+ },
+ "privacy-policy": {
+  "endpoint": "privacy_policy",
+  "title": "Privacy Policy"
+ },
+ "product-disclaimer-policy": {
+  "endpoint": "product_disclaimer_policy",
+  "title": "Product Disclaimer Policy"
+ },
+ "refund-policy": {
+  "endpoint": "refund_policy",
+  "title": "Refund Policy"
+ },
+ "warranty-policy": {
+  "endpoint": "warranty_policy",
+  "title": "Warranty Policy"
+ }
+}

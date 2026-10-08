@@ -1,0 +1,240 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Class-based dark mode, toggled from the header (same as the reference build). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fff;
+  --light_background: #f8f8f8;
+  --foreground: #111;
+  --primary: #222;
+  --gold: #e9ccae;
+  --them_text_color: #222;
+}
+
+.dark {
+  --background: #2e2b28;
+  --light_background: #393430;
+  --foreground: #ededed;
+  --primary: #fff;
+  --them_text_color: #fff;
+  --gold: #e9ccae;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-light_bg: var(--light_background);
+  --color-primary: var(--primary);
+  --color-primary_color: var(--them_text_color);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-urbanist), "Urbanist", sans-serif;
+
+  /* Semantic tokens for the admin dashboard (shadcn/ui). Values live in admin/admin.css. */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-urbanist), "Urbanist", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 639px) {
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ---- utilities carried over from the reference stylesheet ---- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gradient-text {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #e9ccae, #e0e361 43%, #cb843b);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.section-px {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media (min-width: 640px) {
+  .section-px {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-px {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.marquee-track {
+  width: max-content;
+  animation: 60s linear infinite marquee-rtl;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee-rtl {
+  0% {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ---- carousel pagination (matches the reference ".mySwiper" bullets) ---- */
+.dz-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.dz-bullet {
+  opacity: 1;
+  cursor: pointer;
+  background: #d1d5db;
+  border-radius: 999px;
+  width: 8px;
+  height: 8px;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.35s, transform 0.2s;
+}
+.dz-bullet[aria-current="true"] {
+  background: linear-gradient(90deg, #d4a017 0%, #f5c842 50%, #d4a017 100%);
+  width: 28px;
+  transform: scaleY(1.1);
+  box-shadow: 0 0 8px #d4a0178c;
+}
+.dz-bullet:not([aria-current="true"]):hover {
+  background: #9ca3af;
+  transform: scale(1.2);
+}
+
+/* ---- CMS html (product descriptions, blog posts, SEO blocks) ---- */
+.cms-content img {
+  height: auto;
+}
+.cms-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cms-content a {
+  color: #1155cc;
+}
+.cms-content ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.cms-content ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+
+.dark .dark-html-content * {
+  color: #e5e5e5 !important;
+  background-color: #0000 !important;
+  border-color: #3a2f28 !important;
+}
+.dark .dark-html-content table {
+  background-color: #1a1613 !important;
+}
+.dark .dark-html-content thead,
+.dark .dark-html-content th {
+  color: #f0f0f0 !important;
+  background-color: #2a211c !important;
+  border-color: #3a2f28 !important;
+}
+.dark .dark-html-content td {
+  color: #e0e0e0 !important;
+  background-color: #221a16 !important;
+  border-color: #3a2f28 !important;
+}
+.dark .dark-html-content tr:nth-child(2n) td {
+  background-color: #1e1712 !important;
+}
+.dark .dark-html-content a {
+  color: #d4a97a !important;
+}
+.dark .dark-html-content strong,
+.dark .dark-html-content b {
+  color: #fff !important;
+}
+.dark .dark-html-content h1,
+.dark .dark-html-content h2,
+.dark .dark-html-content h3,
+.dark .dark-html-content h4,
+.dark .dark-html-content h5,
+.dark .dark-html-content h6 {
+  color: #fff !important;
+  background-color: #0000 !important;
+}
