@@ -2,6 +2,7 @@
 
 The storefront now has a working commerce backend and an administrator dashboard at `/admin`.
 See [BACKEND.md](BACKEND.md) for setup, initial administrator access, inventory import, API behavior, deployment, and tests.
+For Netlify deployment settings and public-URL secret scanning errors, see [Deploy on Netlify](BACKEND.md#deploy-on-netlify).
 
 A clean Next.js rebuild of the **dazzle.com.bd** storefront UI, reconstructed from the
 HTTrack snapshot in `C:\My Web Sites\dazzle`.

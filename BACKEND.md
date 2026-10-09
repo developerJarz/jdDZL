@@ -110,6 +110,28 @@ npm start
 
 Email delivery, SMS OTP login, Google OAuth, and automated password-recovery delivery are not implemented. Payments, couriers, SMS, and the Conversions API need the credentials listed above; until they are added, those features report that they are not configured instead of sending fake messages or accepting pretend payments. Historical orders/customers cannot be recovered from an HTTrack website copy.
 
+## Deploy on Netlify
+
+Use `npm run build` as the build command and `.next` as the publish directory. Netlify automatically configures its Next.js adapter; this application needs server functions, so do not export it as a static-only site. Use Node.js 24 for consistency with local setup.
+
+In **Project configuration → Environment variables**, configure the production values separately from your ignored local `.env.local` file:
+
+| Variable | Production value | Secret? |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Your public HTTPS origin, such as `https://your-store.netlify.app` | No; embedded in metadata, sitemap and robots.txt |
+| `APP_ORIGIN` | The same public HTTPS origin | No; used for origin checks and payment callbacks |
+| `NEXT_PUBLIC_ALLOW_INDEXING` | `false` until ready to launch, then `true` | No |
+| `MONGODB_URI` | Your MongoDB connection string | Yes; server-only, available to Functions |
+| `MONGODB_DB` | Your database name | No; contains no credentials |
+
+Make `NEXT_PUBLIC_*` variables available to Builds, and server variables available to Functions (and Builds if used while prerendering). Keep administrator bootstrap credentials private; `npm run db:setup` is a separate setup step, not the Netlify build command. Never put credentials in a `NEXT_PUBLIC_*` variable.
+
+If a deploy reports secret matches in `src/lib/seo.ts:3`, local-server examples in this documentation, `robots.txt`, and `sitemap.xml`, it can be matching the public `NEXT_PUBLIC_SITE_URL` value. The checked-in `netlify.toml` sets `SECRETS_SCAN_OMIT_KEYS=NEXT_PUBLIC_SITE_URL,APP_ORIGIN` for these public origins only, keeping scanning active for actual secrets. Do not omit `.netlify`, JavaScript bundles, or the entire repository from scanning, and do not set `SECRETS_SCAN_ENABLED=false`.
+
+If you already set `SECRETS_SCAN_OMIT_KEYS` in Netlify's UI, preserve any existing intentional exceptions and include these two public URL keys there as well. For newly created public variables, leave **Contains secret values** unchecked. Netlify does not allow removing that flag from an existing variable; the narrow scanning exception handles variables already flagged. See [Netlify's secrets scanning documentation](https://docs.netlify.com/build/environment-variables/secrets-controller/#configure-secret-scanning).
+
+Commit and push the configuration, update the production origins in Netlify, and trigger a new deploy. A local build does not run Netlify's secret scanner; the deploy log confirms whether other keys are flagged. If another match appears, check the `Secret env var "KEY"` line immediately above its file list before adding any exception.
+
 ## Validation
 
 ```sh
