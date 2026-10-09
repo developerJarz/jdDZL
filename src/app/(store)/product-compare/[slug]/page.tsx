@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/product-compare/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const product = await getProduct(slug);
-  return { title: product ? `Compare ${product.name} | Dazzle` : "Product Compare | Dazzle", robots: { index: false } };
+  return { title: product ? `Compare ${product.name} | dazzle.bd` : "Product Compare | dazzle.bd", robots: { index: false } };
 }
 
 export default function ComparePage({ params }: PageProps<"/product-compare/[slug]">) {

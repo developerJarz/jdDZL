@@ -1,52 +1,57 @@
 {
  "marquee": [
   {
-   "label": "🎉 Welcome to Dazzle Commerce",
-   "href": "/"
+   "label": "dazzle.bd — tech that fits your day",
+   "href": "/about-us"
   },
   {
-   "label": "🔥 Mega Sale – Up to 70% OFF on Selected Products",
-   "href": "/offer"
+   "label": "Build a shortlist. Compare your next device.",
+   "href": "/categories"
   },
   {
-   "label": "🚚 Free Delivery on Orders Above ৳999",
-   "href": "/delivery-policy"
+   "label": "Practical buying guides for your everyday setup",
+   "href": "/blogs"
   },
   {
-   "label": "📱 Download the Dazzle Mobile App Today",
-   "href": "/"
-  },
-  {
-   "label": "💳 Secure Payment with bKash, Nagad & Cards",
-   "href": "/"
+   "label": "Questions about a model? Start with Support.",
+   "href": "/support"
   }
  ],
  "heroSlides": [
   {
    "image": {
-    "src": "/images/banners/main-banner-v2-1-f78f73f8-fbf2-47fe-b7a3-ef0a2543e272.webp",
-    "width": 1920,
-    "height": 903
+    "src": "/images/brand/tech.svg",
+    "width": 1000,
+    "height": 600
    },
-   "href": "/offer/latest-apple-release-pre-order-campaign",
+   "headline": "Tech that fits your day.",
+   "text": "Phones, laptops and everyday gadgets. Start with what you need; compare the details that matter.",
+   "eyebrow": "Meet dazzle.bd",
+   "href": "/categories",
    "newTab": false
   },
   {
    "image": {
-    "src": "/images/banners/salman-5ce224cb-7e67-4847-a240-8c7b88f33f2c.jpg",
-    "width": 1920,
-    "height": 903
+    "src": "/images/brand/tech.svg",
+    "width": 1000,
+    "height": 600
    },
+   "headline": "Your next phone, on your terms.",
+   "text": "Shortlist by budget, check the selected variant and find a model for your daily routine.",
+   "eyebrow": "Make your next move",
    "href": "/categories/phones",
    "newTab": false
   },
   {
    "image": {
-    "src": "/images/banners/main-banner-1-846c7758-bd3e-4eb3-8a0a-939f6680e144.jpg",
-    "width": 1920,
-    "height": 903
+    "src": "/images/brand/tech.svg",
+    "width": 1000,
+    "height": 600
    },
-   "href": "#",
+   "headline": "Make room for better work.",
+   "text": "Explore laptops, tablets and accessories for the desk, the classroom and the commute.",
+   "eyebrow": "Build your everyday setup",
+   "href": "/categories/laptop",
    "newTab": false
   }
  ],
@@ -63,12 +68,12 @@
   "monitor"
  ],
  "flashSale": {
-  "title": "Flash Sale",
-  "endsAt": "2026-10-15T23:59:59.000Z",
+  "title": "Explore the price drops",
+  "endsAt": null,
   "href": "/offer/limited-time-offer",
   "tabs": [
    {
-    "label": "Newest",
+    "label": "Start here",
     "productSlugs": [
      "iphone-18-pro-max-price-in-bangladesh",
      "iphone-17-pro-price-in-bangladesh",
@@ -83,7 +88,7 @@
     ]
    },
    {
-    "label": "Popular",
+    "label": "More to compare",
     "productSlugs": [
      "apple-20w-usb-c-power-adapter-3-pin",
      "samsung-25w-usb-c-power-adapter-3-pin",
@@ -100,102 +105,143 @@
   "afterFlashSale": [
    {
     "image": {
-     "src": "/images/banners/12757-e663cad8-d8d3-496d-b99a-4f08c2d4666c.webp",
-     "width": 1920,
-     "height": 1050
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "A phone for your routine",
+    "text": "Explore smartphones by brand and budget.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/phones",
+    "newTab": false
    },
    {
     "image": {
-     "src": "/images/banners/12795-704c1d20-a287-42f9-8075-3b217b69b1ab.webp",
-     "width": 1920,
-     "height": 1050
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "Your desk, your way",
+    "text": "Find laptops and the accessories to go with them.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/laptop",
+    "newTab": false
    }
   ],
   "afterClipToCart": [
    {
     "image": {
-     "src": "/images/banners/4b0b5851-6786-4257-90ce-69313e06542a.webp",
-     "width": 1920,
-     "height": 1050
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "Turn up your downtime",
+    "text": "Compare earbuds, headphones and speakers.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/sounds",
+    "newTab": false
    },
    {
     "image": {
-     "src": "/images/banners/e06dedd5-fe2c-4536-9cd9-ebac2271c747.webp",
-     "width": 1920,
-     "height": 1050
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "Small additions. Useful changes.",
+    "text": "Explore cases, cables and everyday accessories.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/accessories",
+    "newTab": false
    }
   ],
   "afterNewArrivals": [
    {
     "image": {
-     "src": "/images/banners/c03152f5-3c04-4539-8b91-1fe3c1a19823.webp",
-     "width": 1080,
-     "height": 590
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "A screen for the task",
+    "text": "Browse tablets for work and entertainment.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/tablet",
+    "newTab": false
    },
    {
     "image": {
-     "src": "/images/banners/d1222e1a-2011-48d0-b1d4-393fad434555.webp",
-     "width": 1080,
-     "height": 590
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "Keep your day in view",
+    "text": "Find a wearable to match your phone and routine.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/smart-watch",
+    "newTab": false
    }
   ],
   "mostPopular": [
    {
     "image": {
-     "src": "/images/banners/1fe0db3e-f24e-43de-ac3e-ca2ad0c18ace.webp",
-     "width": 1080,
-     "height": 1603
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#",
+    "headline": "Focus on your workspace",
+    "text": "Compare monitors for your setup.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/monitor",
     "newTab": false
    },
    {
     "image": {
-     "src": "/images/banners/77a05c9a-7001-4fb5-840e-f41b3d3e6f56.webp",
-     "width": 1080,
-     "height": 1603
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#",
+    "headline": "Find your next gadget",
+    "text": "Explore useful additions to your tech collection.",
+    "eyebrow": "dazzle.bd",
+    "href": "/categories/gadget",
     "newTab": false
    },
    {
     "image": {
-     "src": "/images/banners/93c448da-1067-40ca-99f4-d2b324280641.webp",
-     "width": 640,
-     "height": 950
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#",
+    "headline": "Questions before checkout?",
+    "text": "Find practical advice in our buying guides.",
+    "eyebrow": "dazzle.bd",
+    "href": "/blogs",
     "newTab": false
    }
   ],
   "afterFeatured": [
    {
     "image": {
-     "src": "/images/banners/9a5d0d08-0d34-42a0-b170-aed98522a2e5.webp",
-     "width": 1920,
-     "height": 2168
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "Buy with a clearer shortlist",
+    "text": "Read the questions worth asking before your next tech purchase.",
+    "eyebrow": "dazzle.bd",
+    "href": "/blogs",
+    "newTab": false
    },
    {
     "image": {
-     "src": "/images/banners/b6d8ca36-d6ec-4c20-a049-abad57df1130.webp",
-     "width": 1920,
-     "height": 2880
+     "src": "/images/brand/tech.svg",
+     "width": 1000,
+     "height": 600
     },
-    "href": "#"
+    "headline": "Need a particular model?",
+    "text": "Send a product enquiry with the configuration you have in mind.",
+    "eyebrow": "dazzle.bd",
+    "href": "/pre-order",
+    "newTab": false
    }
   ]
  },
@@ -220,7 +266,7 @@
  "newArrivals": {
   "tabs": [
    {
-    "label": "Newest",
+    "label": "In the catalogue",
     "productSlugs": [
      "haylou-w1-earbuds",
      "haylou-x1-pro-true-wireless-earbuds",
@@ -235,7 +281,7 @@
     ]
    },
    {
-    "label": "Popular",
+    "label": "Browse more",
     "productSlugs": [
      "honor-magic9-super-price-in-bangladesh",
      "xiaomi-pad-9-price-in-bangladesh",
@@ -277,34 +323,34 @@
   "xiaomi-pad-7"
  ],
  "latestBlogs": [
-  "iqoo-neo-10r-price-specs-review-features",
-  "vivo-v30-price-specs-camera-full-review",
-  "redmi-note-14-pro-plus-review-specs"
+  "choose-a-phone-for-your-everyday-routine",
+  "laptop-shortlist-for-study-and-work",
+  "tablet-or-laptop-for-your-next-device"
  ],
  "seoCards": [
   {
-   "title": "Dazzle - The Best Smartphone Shop in Bangladesh",
-   "html": "Dazzle offers an extensive selection of smartphones from leading brands to suit every preference and budget. We feature top global brands like <a href=\"/brands/apple\">Apple iPhone</a>, <a href=\"/brands/samsung\">Samsung</a>, <a href=\"/brands/google\">Google</a>, <a href=\"/brands/xiaomi\">Xiaomi</a>, <a href=\"/brands/oppo\">Oppo</a>, <a href=\"/brands/vivo\">Vivo</a>, <a href=\"/brands/oneplus\">OnePlus</a>, <a href=\"/brands/motorola\">Motorola</a>, <a href=\"/brands/realme\">Realme</a>, <a href=\"/brands/honor\">Honor</a>, Nokia, Sony, Huawei, Asus, Infinix, Tecno, ZTE, Poco, iQOO, Nothing and many more. With each purchase, enjoy the assurance of 100% authenticity, competitive prices, and official warranties, making Dazzle the best smartphone retailer in Bangladesh."
+   "title": "Compare smartphone prices in Bangladesh",
+   "html": "Your next phone should suit your day as well as your budget. Browse <a href=\"/categories/phones\">smartphones</a> by brand and price, then review the exact storage, colour and availability. Keep a shortlist of a few models so you can compare the details without losing track of the overall purchase."
   },
   {
-   "title": "Best Tablet and iPad Shop in Bangladesh",
-   "html": "Our tablet collection includes popular models like <a href=\"/categories/tablet/ipad\">Apple iPad</a>, <a href=\"/categories/tablet/samsung-1\">Samsung Tablets</a>, <a href=\"/categories/tablet/xiaomi-1\">Xiaomi Tablets</a>, <a href=\"/categories/tablet/honor-1\">Honor Tablets</a>, <a href=\"/categories/tablet/huawei-1\">Huawei Tablets</a>, <a href=\"/categories/tablet/pixel-tablet\">Google Pixel Tablets</a>, <a href=\"/categories/tablet/oneplus-1\">OnePlus Tablets</a>, and <a href=\"/categories/tablet/amazon\">Amazon Fire Tablets</a>, catering to professionals, students, and casual users alike. With options from Amazon, OnePlus, and Honor, Dazzle ensures a variety of choices for entertainment, productivity, and creative needs, complete with reliable after-sales support and fast delivery."
+   "title": "Choose a laptop for the work you do",
+   "html": "Start with the applications you need, where you will work and the equipment you already own. Explore <a href=\"/categories/laptop\">laptops</a> and check the listed configuration, ports and dimensions. Factor in any accessories before deciding what fits your budget."
   },
   {
-   "title": "Best Laptop Selling Shop in Bangladesh",
-   "html": "Whether you’re looking for an <a href=\"/categories/laptop/apple-macbook\">Apple MacBook</a>, <a href=\"/categories/laptop/imac\">iMac</a>, <a href=\"/categories/laptop/gaming-laptop\">Gaming Laptop</a>, <a href=\"/categories/laptop/ultrabook-2-in-1-laptop\">Ultrabook</a> and <a href=\"/categories/laptop/ultrabook-2-in-1-laptop\">2-in-1 Laptops</a>, or <a href=\"/categories/laptop/mac-studio\">Mac Studio</a>, Dazzle’s laptop selection has it all. We carry premium brands, offering models for gaming, business, or casual use. Our laptops are available with flexible EMI options, official warranties, and knowledgeable support to help you choose the perfect device for your needs."
+   "title": "Find a tablet for reading, notes or entertainment",
+   "html": "A tablet can play different roles in your setup. Compare the selected variant and any required keyboard or pen, rather than judging the device by its starting price alone. Browse <a href=\"/categories/tablet\">tablets and iPads</a> with your main task in mind."
   },
   {
-   "title": "Best MacBook and iMac Selling Shop in Bangladesh",
-   "html": "As a top retailer of Apple products, Dazzle offers a range of MacBooks, iMacs, and Mac Studios. Our Apple inventory caters to professionals seeking high-performance devices for creative tasks, from video editing to design work. Every Apple product at Dazzle includes official warranties and access to our premium support team for a seamless experience."
+   "title": "Build an everyday audio setup",
+   "html": "Where you listen matters. Explore <a href=\"/categories/sounds\">headphones, earbuds and speakers</a> for your work area, commute or downtime. Check device compatibility, included accessories and the controls you expect to use before placing an order."
   },
   {
-   "title": "Best Apple Gadget Shop in Bangladesh",
-   "html": "Dazzle’s Apple gadget selection extends beyond phones and laptops, offering iPhones, AirPods, Apple Watches,iPads, MacBooks, and iMacs that complete your Apple ecosystem. With our Dazzle Care+ program, enjoy the peace of mind of a direct replacement within a year for many Apple devices, alongside competitive pricing and top-quality customer service."
+   "title": "Check the accessories that connect your devices",
+   "html": "A charger, cable or case is useful only when it suits the exact device. Browse <a href=\"/categories/accessories\">tech accessories</a>, review the model and required connections, and include them in the full cost of your setup."
   },
   {
-   "title": "Best Online Mobile Shop in Bangladesh",
-   "html": "Dazzle’s online store provides a full range of devices and accessories with the convenience of nationwide delivery. We offer thousands of products, from flagship smartphones to essential accessories, all available online with secure shopping and authentic product guarantees. Experience the quality of Dazzle from the comfort of your home."
+   "title": "A clearer way to shop at dazzle.bd",
+   "html": "Use search, price filters and product comparisons to narrow your options. Our <a href=\"/blogs\">buying guides</a> explain useful questions to ask before checkout. If a listing leaves a detail unclear, <a href=\"/support\">send a support enquiry</a> with the model you are considering."
   }
  ]
 }

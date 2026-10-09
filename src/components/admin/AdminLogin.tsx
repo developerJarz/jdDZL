@@ -22,7 +22,7 @@ export function AdminLogin() {
       <section className="bg-brand-gradient relative hidden overflow-hidden p-12 text-white lg:flex lg:flex-col">
         <div className="pointer-events-none absolute -right-24 -bottom-24 size-[420px] rounded-full bg-[#e9ccae]/15 blur-3xl" />
         <Link href="/" className="relative bg-[linear-gradient(90deg,#fff,#f3dcc0_60%,#e0a462)] bg-clip-text text-4xl font-extrabold tracking-tight text-transparent">
-          dazzle<sup className="text-sm">®</sup>
+          dazzle.bd
         </Link>
         <div className="relative my-auto max-w-lg">
           <p className="text-[11px] font-bold tracking-[0.22em] text-[#f3dcc0] uppercase">Commerce admin</p>
@@ -46,7 +46,7 @@ export function AdminLogin() {
             ))}
           </ul>
         </div>
-        <p className="relative text-xs text-white/50">© {new Date().getFullYear()} Dazzle Commerce</p>
+        <p className="relative text-xs text-white/50">© {new Date().getFullYear()} dazzle.bd Commerce</p>
       </section>
       <section className="flex items-center justify-center px-5 py-12">
         <form
@@ -65,7 +65,7 @@ export function AdminLogin() {
                 await api("auth/logout", { method: "POST" });
                 throw new Error("This account does not have administrator access.");
               }
-              router.push("/admin");
+              router.push(result.role === "staff" ? "/admin/workspace" : "/admin");
               router.refresh();
             } catch (err) {
               setError((err as Error).message);
@@ -80,7 +80,7 @@ export function AdminLogin() {
             </span>
             <p className="text-[11px] font-bold tracking-[0.2em] text-brand uppercase">Welcome back</p>
             <h2 className="mt-1.5 text-3xl font-extrabold tracking-tight">Sign in to your workspace</h2>
-            <p className="mt-1.5 text-sm text-muted-foreground">Use your administrator account to continue.</p>
+            <p className="mt-1.5 text-sm text-muted-foreground">Use your staff or administrator account to continue.</p>
           </div>
           <div className="grid gap-2">
             <Label htmlFor="email">Email address</Label>

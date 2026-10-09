@@ -25,6 +25,10 @@ import { adminCatalog, productFields } from "@/server/admin-catalog";
 import { overview } from "@/server/admin-overview";
 import { adminOps, handlesAdminOps } from "@/server/admin-ops";
 import { publicApi } from "@/server/public-api";
+import { cleanStoreIdentity } from "@/server/content-brand";
+import { sanitizeProductImages } from "@/lib/product-images";
+import { staffDashboard } from "@/server/staff-dashboard";
+import { customerOrderView } from "@/lib/customer-order";
 
 export const runtime = "nodejs";
 type Context = { params: Promise<{ path: string[] }> };
@@ -50,6 +54,7 @@ export async function GET(request: Request, context: Context) {
     const path = (await context.params).path;
     if (path[0] === "admin") {
       const staff = await authorizeAdmin(path.slice(1), "GET");
+      if (path[1] === "workspace" && path.length === 2) return staffDashboard(staff);
       if (handlesAdminOps(path, "GET")) {
         const handled = await adminOps(request, path, staff as Parameters<typeof adminOps>[2]);
         if (handled) return handled;
@@ -138,17 +143,18 @@ export async function GET(request: Request, context: Context) {
           .find(filter)
           .sort({ createdAt: -1 })
           .limit(100)
-          .toArray(),
+          .toArray()
+          .then(items => items.map(customerOrderView)),
       });
     }
     if (path[0] !== "admin") throw new HttpError(404, "Endpoint not found.");
     const resource = path[1];
-    if (resource === "settings")
+    if (resource === "settings") {
+      const settings = await database.collection("settings").findOne({ key: "store" });
       return json({
-        settings: await database
-          .collection("settings")
-          .findOne({ key: "store" }),
+        settings: settings ? { ...settings, ...cleanStoreIdentity(settings) } : null,
       });
+    }
     if (resource === "overview")
       return json(
         await overview(
@@ -166,7 +172,7 @@ export async function GET(request: Request, context: Context) {
       const ordered = await database
         .collection("orders")
         .countDocuments({ "items.slug": item.slug });
-      return json({ item, ordered });
+      return json({ item: sanitizeProductImages(item), ordered });
     }
     const params = new URL(request.url).searchParams;
     const page = Math.max(1, Math.floor(Number(params.get("page")) || 1));
@@ -273,7 +279,7 @@ export async function GET(request: Request, context: Context) {
         : null,
     ]);
     return json({
-      items,
+      items: resource === "products" ? items.map(sanitizeProductImages) : items,
       total,
       page,
       pages: Math.max(1, Math.ceil(total / limit)),
@@ -523,7 +529,7 @@ export async function POST(request: Request, context: Context) {
       const input = checkoutSchema
         .pick({ items: true, coupon: true, delivery: true, city: true, zone: true })
         .parse(await body(request));
-      return json(await quote(input));
+      return json(customerOrderView(await quote(input)));
     }
     if (path[0] === "admin" && ["products", "coupons"].includes(path[1])) {
       const current = await requireUser(true);

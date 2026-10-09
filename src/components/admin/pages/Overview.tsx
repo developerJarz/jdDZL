@@ -161,7 +161,7 @@ export function OverviewPage() {
         <div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-[11px] font-bold tracking-[0.2em] text-[#f3dcc0] uppercase">{greeting()}</p>
-            <h1 className="mt-2 text-[28px] leading-tight font-extrabold tracking-tight md:text-[34px]">Here&apos;s how Dazzle is doing</h1>
+            <h1 className="mt-2 text-[28px] leading-tight font-extrabold tracking-tight md:text-[34px]">Here&apos;s how dazzle.bd is doing</h1>
             <p className="mt-2 max-w-xl text-sm text-white/75">
               {data.pendingOrders
                 ? `${data.pendingOrders} order${data.pendingOrders === 1 ? " is" : "s are"} waiting for confirmation. `

@@ -1,15 +1,15 @@
-// Static navigation copied from the reference header / footer markup.
+// dazzle.bd storefront navigation. Existing routes remain compatible with saved links.
 
 export const topBarLinks = [
-  { label: "New Blogs", href: "/blogs" },
-  { label: "EMI Policy", href: "/emi-policy" },
+  { label: "Buying guides", href: "/blogs" },
+  { label: "Shopping help", href: "/faq" },
 ];
 
 export const headerLinks: { label: string; href: string; highlight?: boolean }[] = [
-  { label: "Brand", href: "/brands" },
-  { label: "Online Exclusive", href: "/online-exclusive" },
-  { label: "Offer", href: "/offer", highlight: true },
-  { label: "Pre-Order", href: "/pre-order" },
+  { label: "Tech brands", href: "/brands" },
+  { label: "Online picks", href: "/online-exclusive" },
+  { label: "Offers", href: "/offer", highlight: true },
+  { label: "Product enquiry", href: "/pre-order" },
 ];
 
 export const footerColumns: { title: string; links: { label: string; href: string }[] }[] = [
@@ -18,9 +18,9 @@ export const footerColumns: { title: string; links: { label: string; href: strin
     links: [
       { label: "About Us", href: "/about-us" },
       { label: "Career", href: "/career" },
-      { label: "Our Brand", href: "/brands" },
-      { label: "Blogs", href: "/blogs" },
-      { label: "Press Coverage", href: "/press-coverage" },
+      { label: "Explore brands", href: "/brands" },
+      { label: "Buying guides", href: "/blogs" },
+      { label: "Media enquiries", href: "/press-coverage" },
       { label: "Order Tracking", href: "/order-tracking" },
       { label: "Trade In", href: "/trade-in" },
       { label: "Product Disclaimer Policy", href: "/product-disclaimer-policy" },
@@ -32,9 +32,9 @@ export const footerColumns: { title: string; links: { label: string; href: strin
     title: "Help Center",
     links: [
       { label: "FAQ", href: "/faq" },
-      { label: "Support System", href: "/support" },
-      { label: "Announcement", href: "/announcement" },
-      { label: "Corporate", href: "/corporate" },
+      { label: "Ask for support", href: "/support" },
+      { label: "Store updates", href: "/announcement" },
+      { label: "Business enquiries", href: "/corporate" },
       { label: "Feedback", href: "/feedback" },
       { label: "Sitemap", href: "/sitemap.xml" },
       { label: "Affiliate Policy", href: "/affiliate-policy" },
@@ -61,12 +61,8 @@ export const footerColumns: { title: string; links: { label: string; href: strin
 
 export const mobileNav = [
   { label: "Home", href: "/", icon: "home" },
-  { label: "Offer", href: "/offer", icon: "offer" },
-  { label: "Category", href: "/categories", icon: "category" },
-  { label: "Pre-order", href: "/pre-order", icon: "preorder" },
-  { label: "Profile", href: "/auth/login", icon: "profile" },
+  { label: "Offers", href: "/offer", icon: "offer" },
+  { label: "Browse", href: "/categories", icon: "category" },
+  { label: "Enquire", href: "/pre-order", icon: "preorder" },
+  { label: "Account", href: "/auth/login", icon: "profile" },
 ] as const;
-
-export const appLinks = {
-  googlePlay: "https://play.google.com/store/apps/details?id=com.bd.com.dazzle.app&hl=en",
-};

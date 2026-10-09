@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { appLinks, footerColumns } from "@/data/navigation";
+import { footerColumns } from "@/data/navigation";
 import type { SiteSettings } from "@/types";
 import { FacebookIcon, FooterCurve, InstagramIcon, LinkedinIcon, YoutubeIcon } from "@/components/icons";
 import { Img } from "@/components/ui/Img";
 import { NewsletterForm } from "./NewsletterForm";
 import { BranchList } from "./BranchList";
-import { GooglePlayBadge } from "./GooglePlayBadge";
 
 /** Splits the CMS "footerText" ("Branch 1: …\n\nBranch 2: …") into entries. */
 function parseBranches(text: string) {
@@ -30,7 +29,7 @@ const MessengerIcon = () => glyph("M12 2C6.4 2 2 6.1 2 11.7c0 2.9 1.2 5.5 3.2 7.
 
 export function Footer({ site, extraLinks = [] }: { site: SiteSettings; extraLinks?: { label: string; href: string }[] }) {
   const branches = parseBranches(site.branchesText);
-  const intro = site.branchesText.slice(0, 140).replace(/\s+/g, " ");
+  const intro = "Tech that fits your day. Explore phones, laptops and everyday gadgets, compare your shortlist and find a setup that works for you.";
   const social = [
     { href: site.social.facebook, label: "Facebook", icon: <FacebookIcon /> },
     { href: site.social.instagram, label: "Instagram", icon: <InstagramIcon /> },
@@ -51,8 +50,8 @@ export function Footer({ site, extraLinks = [] }: { site: SiteSettings; extraLin
         <div className="mx-3.75">
           <div className="relative z-10 mx-auto max-w-4xl rounded-[28px] bg-background px-4 py-6 sm:px-6 sm:py-8 shadow-lg md:px-10">
             <div className="text-center">
-              <h2 className="text-sm sm:text-lg lg:text-2xl font-semibold tracking-wide text-primary uppercase">Subscribe To Our Newsletter</h2>
-              <p className="mt-2 text-sm text-gray-500">Get all the latest information on Events, Sales and Offers.</p>
+              <h2 className="text-sm sm:text-lg lg:text-2xl font-semibold tracking-wide text-primary">Keep a little tech inspiration in your inbox</h2>
+              <p className="mt-2 text-sm text-gray-500">Sign up for buying ideas, catalogue updates and news from dazzle.bd.</p>
             </div>
             <NewsletterForm />
           </div>
@@ -80,14 +79,7 @@ export function Footer({ site, extraLinks = [] }: { site: SiteSettings; extraLin
                   </a>
                 ))}
               </div>
-              <div className="mt-4 sm:mt-6">
-                <p className="mb-2 sm:mb-3 text-sm text-gray-300">Download Our App:</p>
-                <div className="flex flex-wrap gap-1 sm:gap-2">
-                  <a href={appLinks.googlePlay} target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
-                    <GooglePlayBadge />
-                  </a>
-                </div>
-              </div>
+              <Link href="/support" className="mt-6 inline-block text-sm text-[#e9b865] underline underline-offset-4">Talk to us about your next device</Link>
             </div>
             <div className="md:col-span-8 lg:col-span-9">
               <div className="grid gap-6 sm:gap-8 lg:gap-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -106,8 +98,12 @@ export function Footer({ site, extraLinks = [] }: { site: SiteSettings; extraLin
                   </div>
                 ))}
                 <div className="relative z-10">
-                  <h3 className="mb-5 border-b border-gray-800 pb-3 text-base font-medium">Branch location</h3>
-                  <BranchList branches={branches} />
+                  <h3 className="mb-5 border-b border-gray-800 pb-3 text-base font-medium">Let’s find your next device</h3>
+                  <p className="text-sm leading-7 text-gray-300">Have a model in mind? Send its name and the configuration you need.</p>
+                  {site.email && <a className="mt-4 block text-sm text-[#e9b865]" href={`mailto:${site.email}`}>{site.email}</a>}
+                  {site.phone && <a className="mt-3 block text-sm text-[#e9b865]" href={`tel:${site.phone}`}>{site.phone}</a>}
+                  {site.address && <p className="mt-4 text-sm leading-7 text-gray-300">{site.address}</p>}
+                  {branches.length > 0 && <BranchList branches={branches} />}
                 </div>
               </div>
             </div>

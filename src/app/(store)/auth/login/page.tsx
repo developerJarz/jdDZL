@@ -3,7 +3,7 @@ import { LoginForm } from "@/components/auth/AuthForms";
 import { AuthShell } from "@/components/auth/AuthShell";
 import { getSiteSettings } from "@/services/content";
 
-export const metadata: Metadata = { title: "Login | Dazzle", robots: { index: false } };
+export const metadata: Metadata = { title: "Login | dazzle.bd", robots: { index: false } };
 
 export default async function LoginPage() {
   const site = await getSiteSettings();

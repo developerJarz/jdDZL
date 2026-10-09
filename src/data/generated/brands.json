@@ -370,17 +370,6 @@
   "featured": false
  },
  {
-  "id": "6210cd54-45e5-492d-8a26-7ec3af39c09c",
-  "slug": "dazzle",
-  "name": "Dazzle",
-  "logo": {
-   "src": "/images/brands/apple.jpg",
-   "width": 155,
-   "height": 100
-  },
-  "featured": false
- },
- {
   "id": "9de4a942-61e2-49b1-9690-b9ae13900947",
   "slug": "dell",
   "name": "Dell",

@@ -3,7 +3,7 @@
   {
    "id": "9dccef57-2c97-4b9a-942c-1ce25fe846dd",
    "slug": "phones",
-   "name": "Phones",
+   "name": "Smartphones",
    "image": {
     "src": "/images/categories/catagory-phone-78cc7282-aeb7-4358-a1a3-f41ec2c80a1a.png",
     "width": 1067,
@@ -224,7 +224,7 @@
   {
    "id": "9dccef57-3077-4ccd-9582-356e4f3820f1",
    "slug": "tablet",
-   "name": "Tablet",
+   "name": "Tablets",
    "image": {
     "src": "/images/categories/catagory-tablet-099fbcd0-5c29-4abf-92fc-0c950db9217e.png",
     "width": 1067,
@@ -419,7 +419,7 @@
   {
    "id": "9dccef57-31bf-4509-a604-390796b7eb50",
    "slug": "laptop",
-   "name": "Laptop",
+   "name": "Laptops",
    "image": {
     "src": "/images/categories/catagory-laptop-7ae13fd4-4518-4f35-8076-bc15c175fe7d.png",
     "width": 1067,
@@ -556,7 +556,7 @@
   {
    "id": "9dccef57-6fc2-4a74-830f-5d4fa7093d1a",
    "slug": "smart-watch",
-   "name": "Smart Watch",
+   "name": "Smart watches",
    "image": {
     "src": "/images/categories/catagory-watch-3b712e42-8e1a-4070-b2a3-332f6bcbcfe3.png",
     "width": 1067,
@@ -883,7 +883,7 @@
   {
    "id": "9dccef57-7edf-46ac-8334-a502946f3d55",
    "slug": "gadget",
-   "name": "Gadget",
+   "name": "Gadgets",
    "image": {
     "src": "/images/categories/catagory-gadget-bd23b472-2488-41c4-999e-07d3780d103f.png",
     "width": 1067,
@@ -1734,7 +1734,7 @@
   {
    "id": "9dccef57-66c7-4a7c-b045-f525a70295a7",
    "slug": "sounds",
-   "name": "Sounds",
+   "name": "Audio",
    "image": {
     "src": "/images/categories/catagory-speaker-48d3e8a0-2e2d-4288-8b96-2dc080c65095.png",
     "width": 1067,
@@ -1854,7 +1854,7 @@
   {
    "id": "9dccef57-5ad0-4291-ba86-822b49ba2558",
    "slug": "smart-tv",
-   "name": "Smart TV",
+   "name": "Smart TVs",
    "image": {
     "src": "/images/categories/catagory-tv-b644bd62-7abf-4b55-930f-850b2ad71e8a.png",
     "width": 1067,
@@ -1913,7 +1913,7 @@
   {
    "id": "106ba64ec9ac4499a5068a15db6f594a",
    "slug": "home-appliance",
-   "name": "Home Appliance",
+   "name": "Home appliances",
    "image": {
     "src": "/images/categories/catagory-home-app-9dfb7956-44aa-4649-b504-8610932b6913.png",
     "width": 1067,
@@ -2018,7 +2018,7 @@
   {
    "id": "d3a23f736ecc42829b1868dca6a334c4",
    "slug": "monitor",
-   "name": "Monitor",
+   "name": "Monitors",
    "image": {
     "src": "/images/categories/catagory-monitor-4d386406-54ed-4903-8e54-7528e7b83e1e.png",
     "width": 1067,
@@ -2083,7 +2083,7 @@
  "exploreAll": [
   {
    "slug": "phones",
-   "name": "Phones",
+   "name": "Smartphones",
    "image": {
     "src": "/images/categories/catagory-phone-78cc7282-aeb7-4358-a1a3-f41ec2c80a1a.png",
     "width": 1067,
@@ -2114,7 +2114,7 @@
   },
   {
    "slug": "tablet",
-   "name": "Tablet",
+   "name": "Tablets",
    "image": {
     "src": "/images/categories/catagory-tablet-099fbcd0-5c29-4abf-92fc-0c950db9217e.png",
     "width": 1067,
@@ -2143,7 +2143,7 @@
   },
   {
    "slug": "laptop",
-   "name": "Laptop",
+   "name": "Laptops",
    "image": {
     "src": "/images/categories/catagory-laptop-7ae13fd4-4518-4f35-8076-bc15c175fe7d.png",
     "width": 1067,
@@ -2162,7 +2162,7 @@
   },
   {
    "slug": "smart-watch",
-   "name": "Smart Watch",
+   "name": "Smart watches",
    "image": {
     "src": "/images/categories/catagory-watch-3b712e42-8e1a-4070-b2a3-332f6bcbcfe3.png",
     "width": 1067,
@@ -2199,7 +2199,7 @@
   },
   {
    "slug": "gadget",
-   "name": "Gadget",
+   "name": "Gadgets",
    "image": {
     "src": "/images/categories/catagory-gadget-bd23b472-2488-41c4-999e-07d3780d103f.png",
     "width": 1067,
@@ -2312,7 +2312,7 @@
   },
   {
    "slug": "sounds",
-   "name": "Sounds",
+   "name": "Audio",
    "image": {
     "src": "/images/categories/catagory-speaker-48d3e8a0-2e2d-4288-8b96-2dc080c65095.png",
     "width": 1067,
@@ -2342,7 +2342,7 @@
   },
   {
    "slug": "smart-tv",
-   "name": "Smart TV",
+   "name": "Smart TVs",
    "image": {
     "src": "/images/categories/catagory-tv-b644bd62-7abf-4b55-930f-850b2ad71e8a.png",
     "width": 1067,
@@ -2357,7 +2357,7 @@
   },
   {
    "slug": "home-appliance",
-   "name": "Home Appliance",
+   "name": "Home appliances",
    "image": {
     "src": "/images/categories/catagory-home-app-9dfb7956-44aa-4649-b504-8610932b6913.png",
     "width": 1067,
@@ -2376,7 +2376,7 @@
   },
   {
    "slug": "monitor",
-   "name": "Monitor",
+   "name": "Monitors",
    "image": {
     "src": "/images/categories/catagory-monitor-4d386406-54ed-4903-8e54-7528e7b83e1e.png",
     "width": 1067,

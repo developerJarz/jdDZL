@@ -6,8 +6,15 @@ import type { Banner } from "@/types";
 
 function BannerLink({ banner, children, className }: { banner: Banner; children: React.ReactNode; className?: string }) {
   return (
-    <Link href={banner.href} target={banner.newTab ? "_blank" : undefined} className={className} aria-label="Offer banner">
-      {children}
+    <Link href={banner.href} target={banner.newTab ? "_blank" : undefined} className={className} aria-label={banner.headline || "Explore collection"}>
+      {banner.headline ? (
+        <div className="flex h-full min-h-44 sm:min-h-56 flex-col justify-center rounded-xl bg-[#171d21] p-4 sm:p-7 text-white">
+          <span className="text-[10px] sm:text-xs uppercase tracking-widest text-[#e9b865]">{banner.eyebrow}</span>
+          <h3 className="mt-3 text-base sm:text-2xl font-bold leading-tight">{banner.headline}</h3>
+          <p className="mt-3 text-xs sm:text-sm leading-relaxed text-white/80">{banner.text}</p>
+          <span className="mt-5 text-xs font-semibold text-[#e9b865]">Take a closer look →</span>
+        </div>
+      ) : children}
     </Link>
   );
 }

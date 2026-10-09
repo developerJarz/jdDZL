@@ -9,5 +9,5 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function AnnouncementPage() {
   const posts = await getPosts("announcements");
-  return <PostGridPage crumb="Announcement" title="Announcement" posts={posts} basePath="/announcement" emptyText="No announcements at the moment." />;
+  return <PostGridPage crumb="Store updates" title="What’s new at dazzle.bd" posts={posts} basePath="/announcement" emptyText="New store updates will appear here." />;
 }

@@ -9,5 +9,5 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function CareerPage() {
   const posts = await getPosts("careers");
-  return <PostGridPage crumb="Career" title="Latest Job Posts" posts={posts} basePath="/career" emptyText="No job openings at the moment." />;
+  return <PostGridPage crumb="Careers" title="Working with dazzle.bd" posts={posts} basePath="/career" emptyText="There are no published vacancies right now. Future opportunities will appear here." />;
 }

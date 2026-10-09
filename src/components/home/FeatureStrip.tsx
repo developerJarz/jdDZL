@@ -1,11 +1,11 @@
 import { BestPriceIcon, GenuineIcon, InstallmentIcon, ReplacementIcon, RocketIcon } from "@/components/icons";
 
 const features = [
-  { icon: GenuineIcon, lines: ["100% Genuine", "Products"] },
-  { icon: RocketIcon, lines: ["Super fast", "Delivery"] },
-  { icon: InstallmentIcon, lines: ["36 Months", "Installments"] },
-  { icon: ReplacementIcon, lines: ["2 Years", "Replacement"] },
-  { icon: BestPriceIcon, lines: ["Best Price in", "Bangladesh"] },
+  { icon: GenuineIcon, lines: ["Explore models", "and variants"] },
+  { icon: RocketIcon, lines: ["Follow orders", "in your account"] },
+  { icon: InstallmentIcon, lines: ["Compare prices", "in BDT"] },
+  { icon: ReplacementIcon, lines: ["Ask about", "product coverage"] },
+  { icon: BestPriceIcon, lines: ["Find a fit", "for your budget"] },
 ];
 
 /** Trust badges row above the footer SEO copy. */

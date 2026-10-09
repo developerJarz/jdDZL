@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { BRAND_NAME, BRAND_DESCRIPTION } from "@/data/content/brand";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dazzle.bd";
 
 /** Build page metadata from the reference page's <head> (title / description / keywords). */
 export function buildMetadata(opts: {
@@ -10,14 +11,16 @@ export function buildMetadata(opts: {
   path: string;
   image?: string | null;
 }): Metadata {
-  const title = opts.title?.trim() || "Dazzle";
-  const description = opts.description?.trim() || undefined;
+  const pageTitle = opts.title?.trim() || BRAND_NAME;
+  const title = pageTitle.includes(BRAND_NAME) ? pageTitle : `${pageTitle} | ${BRAND_NAME}`;
+  const description = opts.description?.trim() || BRAND_DESCRIPTION;
   return {
     title,
     description,
     keywords: opts.keywords?.trim() || undefined,
     alternates: { canonical: opts.path },
     openGraph: {
+      siteName: BRAND_NAME,
       title,
       description,
       url: opts.path,

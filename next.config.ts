@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     rules: {
       "*.css": {
+        // Keep component CSS modules scoped by Next.js; the Tailwind loader
+        // emits global CSS and is only needed for regular stylesheets.
+        condition: { not: { path: /\.module\.css$/ } },
         loaders: ["@tailwindcss/turbopack"],
         as: "*.css",
       },

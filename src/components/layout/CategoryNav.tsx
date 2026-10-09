@@ -1,159 +1,318 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+} from "react";
 import type { NavigationData } from "@/services/navigation";
-import { ChevronDownBoldIcon, ChevronDownIcon } from "@/components/icons";
+import {
+  ChevronDownBoldIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
+} from "@/components/icons";
 import { Img } from "@/components/ui/Img";
+import { useDropdownHeight } from "./useDropdownHeight";
+import styles from "./HeaderMenus.module.css";
 
-/** Desktop category bar: "EXPLORE ALL" panel + per-category hover mega menu. */
+type MenuLink = {
+  slug: string;
+  name: string;
+  href: string;
+  children?: MenuLink[];
+};
+
+/** All desktop dropdowns share the navigation bar's bounds, rather than a link's position. */
 export function CategoryNav({ nav }: { nav: NavigationData }) {
-  const [exploreOpen, setExploreOpen] = useState(false);
+  const [menu, setMenu] = useState({ slug: "explore", open: false });
   const [active, setActive] = useState(nav.explore[0]?.slug);
-  const [hovered, setHovered] = useState<string | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement | HTMLAnchorElement | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useDropdownHeight(rootRef, menu.open);
+
+  const cancelClose = useCallback(() => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = null;
+  }, []);
+  const dismiss = useCallback(() => {
+    cancelClose();
+    setMenu((current) => ({ ...current, open: false }));
+  }, [cancelClose]);
+  useEffect(() => cancelClose, [cancelClose]);
 
   useEffect(() => {
-    if (!exploreOpen) return;
-    const onDown = (e: MouseEvent) => {
-      if (panelRef.current && !panelRef.current.contains(e.target as Node)) setExploreOpen(false);
+    if (!menu.open) return;
+    const onDown = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) dismiss();
     };
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setExploreOpen(false);
-    document.addEventListener("mousedown", onDown);
+    const onKey = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      if (rootRef.current?.contains(document.activeElement))
+        triggerRef.current?.focus();
+      dismiss();
+    };
+    document.addEventListener("pointerdown", onDown);
     document.addEventListener("keydown", onKey);
     return () => {
-      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("pointerdown", onDown);
       document.removeEventListener("keydown", onKey);
     };
-  }, [exploreOpen]);
-
-  const activeExplore = nav.explore.find((e) => e.slug === active) ?? nav.explore[0];
+  }, [menu.open, dismiss]);
 
   const open = (slug: string) => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    setHovered(slug);
+    cancelClose();
+    setMenu({ slug, open: true });
   };
-  const close = () => {
-    closeTimer.current = setTimeout(() => setHovered(null), 120);
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = setTimeout(() => {
+      // Keep a menu available while its links have keyboard focus.
+      if (!panelRef.current?.contains(document.activeElement)) dismiss();
+    }, 180);
   };
+  const onTriggerKey = (
+    event: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>,
+    slug: string,
+  ) => {
+    if (event.key !== "ArrowDown") return;
+    event.preventDefault();
+    triggerRef.current = event.currentTarget;
+    open(slug);
+    requestAnimationFrame(() =>
+      panelRef.current?.querySelector<HTMLElement>("a, button")?.focus(),
+    );
+  };
+
+  const explore = menu.slug === "explore";
+  const activeExplore =
+    nav.explore.find((item) => item.slug === active) ?? nav.explore[0];
+  const category = nav.categories.find((item) => item.slug === menu.slug);
+  const title = explore ? activeExplore?.name : category?.name;
+  const slug = explore ? activeExplore?.slug : category?.slug;
+  const menuLinks: MenuLink[] = explore
+    ? [
+        // Preserve the collection route as a plain link when browsing brands.
+        ...(slug
+          ? [
+              {
+                slug: "collection",
+                name: `All ${title}`,
+                href: `/categories/${slug}`,
+              },
+            ]
+          : []),
+        ...(activeExplore?.brands
+          .slice()
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((brand) => ({
+            slug: brand.slug,
+            name: brand.name,
+            href: `/brands/${brand.slug}`,
+          })) ?? []),
+      ]
+    : (category?.subCategories
+        .slice()
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((item) => ({
+          slug: item.slug,
+          name: item.name,
+          href: `/categories/${category.slug}/${item.slug}`,
+          children: item.children
+            ?.slice()
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((child) => ({
+              slug: child.slug,
+              name: child.name,
+              href: `/categories/${category.slug}/${item.slug}/${child.slug}`,
+            })),
+        })) ?? []);
+  // Fill each column from top to bottom, keeping a category and its children together.
+  const columns = Array.from({ length: 5 }, (_, index) => {
+    const size = Math.floor(menuLinks.length / 5);
+    const extra = menuLinks.length % 5;
+    const start = index * size + Math.min(index, extra);
+    return menuLinks.slice(start, start + size + (index < extra ? 1 : 0));
+  });
 
   return (
-    <div className="flex items-center gap-3 py-2.5 w-full">
-      <div className="relative shrink-0" ref={panelRef}>
-        <button
-          type="button"
-          aria-expanded={exploreOpen}
-          aria-haspopup="true"
-          onClick={() => setExploreOpen((o) => !o)}
-          className="flex items-center gap-2 bg-[#D4A97A] hover:bg-[#c89a6b] text-gray-900 font-bold text-[12.5px] tracking-wide px-[18px] py-[14px] rounded-[9px] transition-colors"
-        >
-          EXPLORE ALL
-          <ChevronDownBoldIcon className={"transition-transform duration-300 " + (exploreOpen ? "rotate-180" : "")} />
-        </button>
+    <div
+      ref={rootRef}
+      className={styles.categoryBar}
+      onMouseEnter={cancelClose}
+      onMouseLeave={scheduleClose}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null))
+          dismiss();
+      }}
+    >
+      <button
+        type="button"
+        aria-expanded={menu.open && explore}
+        aria-controls="desktop-category-panel"
+        onKeyDown={(event) => onTriggerKey(event, "explore")}
+        onClick={(event) => {
+          triggerRef.current = event.currentTarget;
+          if (menu.open && explore) dismiss();
+          else open("explore");
+        }}
+        className={styles.exploreTrigger}
+      >
+        Explore all
+        <ChevronDownBoldIcon className={styles.chevron} />
+      </button>
 
-        {exploreOpen && (
-          <div className="absolute left-0 top-full mt-2 z-[1000] flex bg-white dark:bg-[#2e2b28] rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
-            <ul className="w-[214px] py-2 px-2 border-r border-gray-100 dark:border-gray-700 max-h-[70vh] overflow-y-auto no-scrollbar">
-              {nav.explore.map((c) => (
-                <li key={c.slug}>
-                  <Link
-                    href={`/categories/${c.slug}`}
-                    onMouseEnter={() => setActive(c.slug)}
-                    onFocus={() => setActive(c.slug)}
-                    onClick={() => setExploreOpen(false)}
-                    className={
-                      "flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm transition-colors " +
-                      (c.slug === activeExplore?.slug
-                        ? "bg-[#F5EBE0] text-[#222] dark:bg-[#3a312a] dark:text-white"
-                        : "text-[#222] dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5")
-                    }
-                  >
-                    <span className="relative w-5 h-5 shrink-0">
-                      {c.image && <Img asset={c.image} alt="" fill sizes="20px" className="object-contain" />}
-                    </span>
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="p-5 w-[364px] max-h-[70vh] overflow-y-auto no-scrollbar">
-              {activeExplore && activeExplore.brands.length > 0 ? (
-                <div className="grid grid-cols-3 gap-3">
-                  {activeExplore.brands.map((b) => (
-                    <Link
-                      key={b.slug}
-                      href={`/brands/${b.slug}`}
-                      onClick={() => setExploreOpen(false)}
-                      className="flex flex-col items-center justify-center gap-2 h-[90px] rounded-xl border border-gray-200 dark:border-gray-600 hover:border-[#D4A97A] transition-colors px-2"
-                    >
-                      <span className="relative w-full h-9">
-                        {b.logo ? (
-                          <Img asset={b.logo} alt={b.name} fill sizes="90px" className="object-contain" />
-                        ) : (
-                          <span className="flex h-full items-center justify-center text-sm font-bold text-[#222] dark:text-white">{b.name}</span>
-                        )}
-                      </span>
-                      <span className="text-[11px] text-[#222] dark:text-gray-200 text-center leading-tight line-clamp-1">{b.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              ) : (
-                <p className="text-sm text-gray-500">No brands listed for this category.</p>
-              )}
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div className="w-px h-6 bg-gray-200 dark:bg-white/10" />
-
-      <nav className="items-center rounded-lg flex-1 bg-background py-1.5 px-5 w-[90%] relative z-99" aria-label="Categories">
-        <ul className="flex items-center gap-1 list-none">
-          {nav.categories.map((c) => {
-            const isOpen = hovered === c.slug && c.subCategories.length > 0;
+      <nav className={styles.categoryNav} aria-label="Categories">
+        <ul className={styles.categoryList}>
+          {nav.categories.map((item) => {
+            const isOpen = menu.open && menu.slug === item.slug;
             return (
-              <li key={c.slug} className="relative" onMouseEnter={() => open(c.slug)} onMouseLeave={close}>
+              <li
+                key={item.slug}
+                className={styles.categoryItem}
+                data-active={isOpen}
+                onPointerEnter={(event) => {
+                  if (event.pointerType !== "mouse") return;
+                  if (item.subCategories.length) {
+                    triggerRef.current =
+                      event.currentTarget.querySelector("button");
+                    open(item.slug);
+                  } else dismiss();
+                }}
+              >
                 <Link
-                  href={`/categories/${c.slug}`}
-                  aria-expanded={c.subCategories.length ? isOpen : undefined}
-                  className="flex dark:bg-light_bg items-center gap-1 text-sm text-primary font-bold hover:text-[#222222] dark:hover:text-[#ba975f] whitespace-nowrap px-3 py-1.5 rounded-lg transition-colors duration-150 no-underline"
+                  href={`/categories/${item.slug}`}
+                  onClick={dismiss}
+                  onKeyDown={(event) => onTriggerKey(event, item.slug)}
+                  className={styles.categoryLink}
                 >
-                  {c.name}
-                  <ChevronDownIcon className={"w-3.5 h-3.5 transition-transform duration-300 ease-in-out " + (isOpen ? "rotate-180" : "rotate-0")} />
+                  {item.name}
                 </Link>
-                {isOpen && (
-                  <div className="absolute left-0 top-full pt-3 z-[1000]">
-                    <ul className="grid grid-cols-3 gap-x-4 min-w-[480px] max-w-[640px] bg-white dark:bg-[#2e2b28] rounded-b-xl rounded-t-sm shadow-2xl px-1.5 py-1.5">
-                      {c.subCategories.map((s) => (
-                        <li key={s.slug}>
-                          <Link
-                            href={`/categories/${c.slug}/${s.slug}`}
-                            onClick={() => setHovered(null)}
-                            className="block px-5 py-2 text-sm font-medium text-[#222] dark:text-gray-100 rounded-lg hover:bg-[#F5EBE0] dark:hover:bg-white/5 hover:text-[#CB843B] whitespace-nowrap"
-                          >
-                            {s.name}
-                          </Link>
-                          {s.children?.map((k) => (
-                            <Link
-                              key={k.slug}
-                              href={`/categories/${c.slug}/${s.slug}/${k.slug}`}
-                              onClick={() => setHovered(null)}
-                              className="block pl-8 pr-5 py-1 text-[13px] text-gray-500 dark:text-gray-300 rounded-lg hover:bg-[#F5EBE0] dark:hover:bg-white/5 hover:text-[#CB843B] whitespace-nowrap"
-                            >
-                              {k.name}
-                            </Link>
-                          ))}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                {item.subCategories.length > 0 && (
+                  <button
+                    type="button"
+                    aria-label={`Browse ${item.name}`}
+                    aria-expanded={isOpen}
+                    aria-controls="desktop-category-panel"
+                    className={styles.categoryToggle}
+                    onKeyDown={(event) => onTriggerKey(event, item.slug)}
+                    onClick={(event) => {
+                      triggerRef.current = event.currentTarget;
+                      if (isOpen) dismiss();
+                      else open(item.slug);
+                    }}
+                  >
+                    <ChevronDownIcon className={styles.chevron} />
+                  </button>
                 )}
               </li>
             );
           })}
         </ul>
       </nav>
+
+      <div
+        id="desktop-category-panel"
+        ref={panelRef}
+        className={`${styles.dropdown} ${styles.desktopDropdown}`}
+        data-open={menu.open}
+        aria-hidden={!menu.open}
+        inert={!menu.open}
+        onMouseEnter={cancelClose}
+      >
+        <div className={styles.desktopPanel}>
+          {explore && (
+            <nav
+              className={styles.exploreSidebar}
+              aria-label="Explore categories"
+            >
+              <p className={styles.eyebrow}>Shop by category</p>
+              <ul>
+                {nav.explore.map((item) => (
+                  <li key={item.slug}>
+                    <button
+                      type="button"
+                      onPointerEnter={(event) => {
+                        if (event.pointerType === "mouse") setActive(item.slug);
+                      }}
+                      onFocus={() => setActive(item.slug)}
+                      onClick={() => setActive(item.slug)}
+                      aria-pressed={item.slug === activeExplore?.slug}
+                      className={styles.exploreCategory}
+                    >
+                      <span className="relative w-6 h-6 shrink-0">
+                        {item.image && (
+                          <Img
+                            asset={item.image}
+                            alt=""
+                            fill
+                            sizes="24px"
+                            className="object-contain"
+                          />
+                        )}
+                      </span>
+                      <span className="flex-1 text-left">{item.name}</span>
+                      <ChevronRightIcon className="w-3.5 h-3.5 shrink-0" />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
+          <div className={styles.menuContent}>
+            <ul
+              className={styles.menuLinks}
+              aria-label={`${title ?? "Shop"} ${explore ? "brands" : "categories"}`}
+              key={slug}
+            >
+              {columns.map((items, index) => (
+                <li
+                  key={index}
+                  className={styles.menuColumn}
+                  aria-hidden={items.length ? undefined : true}
+                >
+                  <ul>
+                    {items.map((item) => (
+                      <li key={item.slug}>
+                        <Link
+                          href={item.href}
+                          onClick={dismiss}
+                          className={styles.menuTextLink}
+                        >
+                          {item.name}
+                        </Link>
+                        {!!item.children?.length && (
+                          <ul className={styles.childLinks}>
+                            {item.children.map((child) => (
+                              <li key={child.slug}>
+                                <Link href={child.href} onClick={dismiss}>
+                                  {child.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+            {explore && !activeExplore?.brands.length && (
+              <p className={styles.emptyMessage}>
+                Explore the full {title?.toLowerCase()} collection using the
+                collection link.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

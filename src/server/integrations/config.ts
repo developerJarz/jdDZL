@@ -1,4 +1,5 @@
 import type { Document } from "mongodb";
+import { cleanStoreIdentity } from "../content-brand";
 import { z } from "zod";
 import { db } from "../db";
 
@@ -105,11 +106,9 @@ export async function saveIntegrations(input: unknown) {
 /** Public store settings with safe defaults for fields added after the original import. */
 export async function getStoreSettings() {
   const s: Document = (await (await db()).collection("settings").findOne({ key: "store" })) ?? {};
+  const identity = cleanStoreIdentity(s);
   return {
-    name: (s.name as string) ?? "Dazzle",
-    phone: (s.phone as string) ?? "",
-    email: (s.email as string) ?? "",
-    address: (s.address as string) ?? "",
+    ...identity,
     shippingFee: (s.shippingFee as number) ?? 120,
     outsideDhakaFee: (s.outsideDhakaFee as number) ?? (s.shippingFee as number) ?? 120,
     pickupEnabled: Boolean(s.pickupEnabled),
@@ -122,7 +121,6 @@ export async function getStoreSettings() {
       value: 0,
     },
     tracking: (s.tracking as { pixelId: string; gtmId: string }) ?? { pixelId: "", gtmId: "" },
-    social: (s.social as Record<string, string>) ?? {},
     stockAlert: (s.stockAlert as { smsEnabled: boolean; phone: string }) ?? { smsEnabled: false, phone: "" },
   };
 }

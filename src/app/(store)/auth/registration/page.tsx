@@ -3,7 +3,7 @@ import { RegisterForm } from "@/components/auth/AuthForms";
 import { AuthShell } from "@/components/auth/AuthShell";
 import { getSiteSettings } from "@/services/content";
 
-export const metadata: Metadata = { title: "Create Account | Dazzle", robots: { index: false } };
+export const metadata: Metadata = { title: "Create Account | dazzle.bd", robots: { index: false } };
 
 export default async function RegistrationPage() {
   const site = await getSiteSettings();

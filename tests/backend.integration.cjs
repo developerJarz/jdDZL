@@ -65,7 +65,7 @@ async function main() {
       200,
     );
     pass("administrator authentication");
-    assert.ok((await request("admin/overview")).data.products >= 992);
+    assert.equal((await request("admin/overview")).data.products, await database.collection("products").countDocuments({ active: { $ne: false } }));
     pass("imported catalog and live analytics");
     const product = {
       name: prefix + " Phone",

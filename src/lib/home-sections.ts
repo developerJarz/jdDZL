@@ -4,19 +4,19 @@
 export const HOME_SECTIONS = [
   { id: "marquee", label: "Announcement ticker", title: "" },
   { id: "hero", label: "Hero slider", title: "" },
-  { id: "categories", label: "Categories", title: "Categories" },
+  { id: "categories", label: "Categories", title: "Start with what you need" },
   { id: "flashSale", label: "Flash sale", title: "" },
   { id: "offersAfterFlash", label: "Offer banners (after flash sale)", title: "" },
-  { id: "trending", label: "Trending now", title: "Trending Now" },
-  { id: "clipToCart", label: "Clip to cart", title: "Clip to Cart" },
+  { id: "trending", label: "Trending now", title: "Find your next favourite" },
+  { id: "clipToCart", label: "Clip to cart", title: "A closer look at your options" },
   { id: "offersAfterClip", label: "Offer banners (after clip to cart)", title: "" },
-  { id: "brands", label: "Shop by brand", title: "Shop by Brand" },
-  { id: "newArrivals", label: "New arrivals", title: "New Arrivals" },
+  { id: "brands", label: "Shop by brand", title: "Explore the brands on your list" },
+  { id: "newArrivals", label: "New arrivals", title: "Fresh ideas for your setup" },
   { id: "offersAfterNew", label: "Offer banners (after new arrivals)", title: "" },
-  { id: "mostPopular", label: "Most popular", title: "Most Popular" },
-  { id: "hotDeal", label: "Hot deal of the day", title: "Hot Deal of the Day" },
-  { id: "featured", label: "Feature products", title: "Feature Products" },
-  { id: "blog", label: "Latest blog & trust badges", title: "Latest Blog" },
+  { id: "mostPopular", label: "Most popular", title: "More models to compare" },
+  { id: "hotDeal", label: "Hot deal of the day", title: "Compare the price reductions" },
+  { id: "featured", label: "Feature products", title: "Make your everyday setup work better" },
+  { id: "blog", label: "Latest blog & trust badges", title: "A little guidance before you choose" },
 ] as const;
 
 export type HomeSectionId = (typeof HOME_SECTIONS)[number]["id"];

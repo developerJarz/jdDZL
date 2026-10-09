@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function CorporatePage() {
   return (
-    <FormPage crumb="Corporate" title="Integrate Smartphones & Gadgets for Corporate Connectivity">
+    <FormPage crumb="Business enquiries" title="Tell us about the tech your team needs">
       <ContactForm
         kind="corporate"
         fields={[

@@ -13,6 +13,7 @@ import { enabledGateways, startPayment, type Gateway } from "./integrations/paym
 import { assertNotBlocked, clientIp } from "./integrations/fraud";
 import { clientContext, trackPurchase } from "./integrations/pixel";
 import { orderSideEffects } from "./admin-ops";
+import { customerOrderView } from "@/lib/customer-order";
 
 const origin = (request: Request) => process.env.APP_ORIGIN || new URL(request.url).origin;
 
@@ -100,7 +101,7 @@ export async function publicApi(request: Request, path: string[]): Promise<Respo
         paymentError = (error as Error).message;
       }
     }
-    return json({ ok: true, order, paymentUrl, paymentError }, 201);
+    return json({ ok: true, order: customerOrderView(order), paymentUrl, paymentError }, 201);
   }
 
   // Customers can retry an unpaid online payment / advance from their account.

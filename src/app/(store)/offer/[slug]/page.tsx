@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps<"/offer/[slug]">): 
   const { slug } = await params;
   const meta = await getPageMeta(`/offer/${slug}`);
   const campaign = slug === FLASH_SALE ? null : await getCampaign(slug);
-  const title = meta?.title && meta.title !== "Dazzle" ? meta.title : campaign?.name ?? "Flash Sale | Dazzle";
+  const title = meta?.title && meta.title !== "dazzle.bd" ? meta.title : campaign?.name ?? "Flash Sale | dazzle.bd";
   return buildMetadata({ title, description: meta?.description || campaign?.description, path: `/offer/${slug}`, image: campaign?.image?.src });
 }
 
@@ -52,7 +52,7 @@ async function OfferContent({ params }: { params: PageProps<"/offer/[slug]">["pa
           <div className="bg-[#6d3f0e] px-4 rounded-sm mb-6">
             <div className="w-full flex md:flex-row gap-4 lg:py-6 py-4 justify-between items-center">
               <div className="flex md:flex-row gap-4 items-center flex-wrap">
-                <h1 className="md:text-[32px] text-[18px] font-bold text-white hover:text-[#CB843B]">Flash Sale</h1>
+                <h1 className="md:text-[32px] text-[18px] font-bold text-white hover:text-[#CB843B]">Compare current price reductions</h1>
                 {sale.endsAt && <Countdown endsAt={sale.endsAt} />}
               </div>
             </div>

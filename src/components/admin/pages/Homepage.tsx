@@ -59,6 +59,9 @@ function BannerList({ value, onChange, max, hint }: { value: Banner[]; onChange:
               <ImageField wide value={banner.image} onChange={(img) => img && update(i, { image: img })} />
             </div>
             <div className="grid flex-1 gap-2">
+              <Input value={banner.eyebrow ?? ""} maxLength={80} onChange={(e) => update(i, { eyebrow: e.target.value })} placeholder="Small label (optional)" aria-label="Banner label" />
+              <Input value={banner.headline ?? ""} maxLength={160} onChange={(e) => update(i, { headline: e.target.value })} placeholder="Headline (leave empty to show image only)" aria-label="Banner headline" />
+              <Input value={banner.text ?? ""} maxLength={600} onChange={(e) => update(i, { text: e.target.value })} placeholder="Supporting text (optional)" aria-label="Banner supporting text" />
               <Input value={banner.href} onChange={(e) => update(i, { href: e.target.value })} placeholder="/offer/eid-sale, https://… or # for no link" aria-label="Banner link" />
               <label className="flex w-fit items-center gap-2 text-xs text-muted-foreground">
                 <Switch checked={Boolean(banner.newTab)} onCheckedChange={(newTab) => update(i, { newTab })} /> Open in a new tab

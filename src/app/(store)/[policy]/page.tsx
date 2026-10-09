@@ -59,8 +59,7 @@ async function Policy({ params }: { params: PageProps<"/[policy]">["params"] }) 
           <div className="cms-content dark-html-content text-[#222] dark:text-white leading-relaxed" dangerouslySetInnerHTML={{ __html: html }} />
         ) : (
           <p className="text-sm text-gray-600 dark:text-gray-300 py-10 text-center">
-            This page hasn&apos;t been written yet. Store staff can publish it from Dashboard → Pages using the slug{" "}
-            <code className="text-xs">{policy}</code>.
+            Please contact Support for the information you need about this topic.
           </p>
         )}
       </div>

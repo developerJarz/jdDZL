@@ -11,9 +11,11 @@ npm run db:setup
 npm run dev
 ```
 
-Open `http://localhost:3000/admin`. The initial account uses the email and password in `.admin-credentials.txt`, which is ignored by Git. Change the password in Dashboard → Settings after signing in. `ADMIN_EMAIL` and `ADMIN_PASSWORD` are bootstrap values, not a second login mechanism; rerunning setup does not reset an existing user's password.
+Open `http://localhost:3000/admin`. The initial account uses the email and password in `.admin-credentials.txt`, which is ignored by Git. Change your password in Dashboard → My profile after signing in. `ADMIN_EMAIL` and `ADMIN_PASSWORD` are bootstrap values, not a second login mechanism; rerunning setup does not reset an existing user's password.
 
-Setup creates indexes and imports the 992 copied products into the `dazzle_store` database. It uses insert-only upserts, preserving existing edits and orders. Imported stock defaults to **zero**. Set actual stock levels through Inventory before taking orders. Importing copied availability badges does not establish physical inventory.
+Customers use `/account`; staff use `/admin/workspace` and `/admin/profile`. See [customer and staff dashboards](docs/customer-staff-dashboards.md) for features, demo credentials and isolated browser/backend verification.
+
+Setup creates indexes and imports the 264 retained seed products into the `dazzle_store` database. It uses insert-only upserts, preserving existing edits and orders. Imported stock defaults to **10 units per product**; `IMPORT_INITIAL_STOCK` can override it. The product cleanup policy excludes the 725 products whose photos were deleted, so rerunning setup does not restore them. Adjust quantities through Inventory as needed.
 
 ## Administrator features
 

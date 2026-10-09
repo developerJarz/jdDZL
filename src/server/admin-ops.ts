@@ -491,7 +491,7 @@ export async function adminOps(request: Request, path: string[], current: Actor)
       }
       if (method === "POST" && recordId === "test-sms") {
         const { phone } = z.object({ phone: z.string().max(20) }).parse(input);
-        return json(await sendSms(phone, "Test message from your Dazzle dashboard.", { kind: "test", actorId }));
+        return json(await sendSms(phone, "Test message from your dazzle.bd dashboard.", { kind: "test", actorId }));
       }
       break;
     }

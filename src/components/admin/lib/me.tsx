@@ -1,6 +1,6 @@
 "use client";
 import { createContext, useContext } from "react";
-import { can, canAny, SECTION_PERMISSIONS, type Permission } from "@/lib/permissions";
+import { can, canAccessSection, type Permission } from "@/lib/permissions";
 
 export interface Me {
   id: string;
@@ -20,6 +20,6 @@ export function useCan() {
   return {
     me,
     can: (permission: Permission) => can(me, permission),
-    section: (name: string) => (me?.role === "admin" ? true : canAny(me, SECTION_PERMISSIONS[name] ?? [])),
+    section: (name: string) => canAccessSection(me, name),
   };
 }

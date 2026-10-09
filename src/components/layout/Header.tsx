@@ -45,22 +45,22 @@ export function Header({ site, nav }: { site: SiteSettings; nav: NavigationData 
             ))}
           </nav>
           <div className="flex items-center gap-6">
-            <a href={`tel:${site.phone}`} className="flex items-center gap-2 text-xs text-primary hover:text-black transition-colors dark:hover:text-[#ba975f]">
+            {site.phone && <a href={`tel:${site.phone}`} className="flex items-center gap-2 text-xs text-primary hover:text-black transition-colors dark:hover:text-[#ba975f]">
               <PhoneIcon />
               <span>{site.phone}</span>
-            </a>
-            <Link href="/shop-location" className="flex items-center gap-2 text-xs text-primary hover:text-black transition-colors dark:hover:text-[#ba975f]">
+            </a>}
+            <Link href="/support" className="flex items-center gap-2 text-xs text-primary hover:text-black transition-colors dark:hover:text-[#ba975f]">
               <StoreLocationIcon />
-              <span>Store locations</span>
+              <span>Ask a product question</span>
             </Link>
           </div>
         </div>
       </div>
 
-      {/* main row (tablet + desktop) */}
+      {/* main row (desktop) */}
       <div className="border-b border-white/5">
         <div className="max-w-350 mx-auto lg:px-9 px-4">
-          <div className="hidden md:flex items-center gap-6 py-4">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-6 py-4">
             <Logo site={site} eager />
             <nav className="flex items-center gap-1" aria-label="Shop">
               {headerLinks.map((l) => (
@@ -68,7 +68,7 @@ export function Header({ site, nav }: { site: SiteSettings; nav: NavigationData 
                   <Link
                     href={l.href}
                     className={
-                      "text-sm px-3 py-1.5 rounded-lg transition-colors font-medium whitespace-nowrap " +
+                      "text-sm px-2 xl:px-3 py-1.5 rounded-lg transition-colors font-medium whitespace-nowrap " +
                       (l.highlight
                         ? "border border-[#DEB475] text-white hover:bg-[#C084FC]/10 bg-[#FFC04A4D]"
                         : "text-gray-300 hover:text-white hover:bg-white/5")
@@ -79,11 +79,11 @@ export function Header({ site, nav }: { site: SiteSettings; nav: NavigationData 
                 </div>
               ))}
             </nav>
-            <div className="flex-1 relative">
+            <div className="flex-1 min-w-0 relative">
               <HeaderSearch />
             </div>
             <div className="flex items-center gap-2 shrink-0">
-              <div className="flex gap-3 lg:mr-12.5">
+              <div className="flex gap-2 xl:gap-3 xl:mr-6">
                 <Link
                   href="/account"
                   aria-label="My account"
@@ -106,7 +106,7 @@ export function Header({ site, nav }: { site: SiteSettings; nav: NavigationData 
         </div>
       </div>
 
-      {/* phone */}
+      {/* phone and tablet */}
       <MobileHeader site={site} nav={nav} />
     </header>
   );

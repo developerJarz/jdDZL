@@ -3,7 +3,7 @@ import { ForgotPasswordForm } from "@/components/auth/AuthForms";
 import { AuthShell } from "@/components/auth/AuthShell";
 import { getSiteSettings } from "@/services/content";
 
-export const metadata: Metadata = { title: "Forgot Password | Dazzle", robots: { index: false } };
+export const metadata: Metadata = { title: "Forgot Password | dazzle.bd", robots: { index: false } };
 
 export default async function ForgotPasswordPage() {
   const site = await getSiteSettings();

@@ -24,7 +24,7 @@ export interface CartLine {
   regularPrice: number;
   qty: number;
   variant?: string;
-  /** optional add-ons such as Dazzle Care plans */
+  /** optional add-ons such as dazzle.bd Care plans */
   extras?: { label: string; price: number }[];
 }
 

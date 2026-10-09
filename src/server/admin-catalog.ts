@@ -13,6 +13,8 @@ import {
 } from "./schemas";
 import { defaultHomeSections, resolveHomeSections } from "@/lib/home-sections";
 import { home as homeSnapshot } from "@/data/catalog";
+import { cleanHomeContent } from "./content-brand";
+import { can, type StaffUser } from "@/lib/permissions";
 
 const oid = (value: string | undefined) => {
   if (!/^[a-f0-9]{24}$/i.test(value || ""))
@@ -79,8 +81,7 @@ async function homeDocument(database: Db) {
   void _id;
   void key;
   return {
-    ...homeSnapshot,
-    ...rest,
+    ...cleanHomeContent(homeSnapshot, rest),
     sections: resolveHomeSections(rest.sections),
     updatedAt: updatedAt ?? null,
   };
@@ -168,16 +169,17 @@ export async function adminCatalog(
         products.countDocuments({ active: { $ne: false } }),
         database.collection("incompleteOrders").countDocuments({ status: "new" }),
       ]);
+      const staff = current as unknown as StaffUser;
       return json({
-        pendingOrders,
-        newMessages,
-        openTickets,
-        pendingReviews,
-        lowStock,
-        outOfStock,
-        archived,
-        activeProducts,
-        incompleteOrders,
+        pendingOrders: can(staff, "orders") ? pendingOrders : 0,
+        newMessages: can(staff, "engagement") ? newMessages : 0,
+        openTickets: can(staff, "engagement") ? openTickets : 0,
+        pendingReviews: can(staff, "engagement") ? pendingReviews : 0,
+        lowStock: can(staff, "inventory") || can(staff, "products") ? lowStock : 0,
+        outOfStock: can(staff, "inventory") || can(staff, "products") ? outOfStock : 0,
+        archived: can(staff, "products") ? archived : 0,
+        activeProducts: can(staff, "products") || can(staff, "inventory") ? activeProducts : 0,
+        incompleteOrders: can(staff, "orders") ? incompleteOrders : 0,
       });
     }
     if (resource === "taxonomy") {

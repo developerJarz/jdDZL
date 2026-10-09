@@ -4,6 +4,7 @@ import Image from "next/image";
 import { createContext, useCallback, useContext, useId, useState } from "react";
 import { ChevronLeft, ChevronRight, ImageOff, Loader2, Search, X } from "lucide-react";
 import type { ImageAsset } from "@/types";
+import { resolveImageAsset } from "@/lib/product-images";
 import { cn } from "../lib/utils";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
@@ -124,6 +125,7 @@ export function EmptyState({
 }
 
 export function Thumb({ image, size = 40, className }: { image?: ImageAsset | null; size?: number; className?: string }) {
+  image = resolveImageAsset(image);
   return (
     <span
       className={cn(

@@ -7,7 +7,11 @@ export interface NavCategory {
   slug: string;
   name: string;
   image: ImageAsset | null;
-  subCategories: { slug: string; name: string; children?: { slug: string; name: string }[] }[];
+  subCategories: {
+    slug: string;
+    name: string;
+    children?: { slug: string; name: string }[];
+  }[];
 }
 
 export interface NavExplore {
@@ -24,18 +28,31 @@ export interface NavigationData {
 
 /** Compact menu data passed to the client-side header (mega menu, explore-all, mobile menu). */
 export async function getNavigationData(): Promise<NavigationData> {
-  const [categories, explore, brands] = await Promise.all([getCategories(), getExploreAll(), getBrands()]);
+  const [categories, explore, brands] = await Promise.all([
+    getCategories(),
+    getExploreAll(),
+    getBrands(),
+  ]);
   const brandBySlug = new Map(brands.map((b) => [b.slug, b]));
   return {
     categories: categories.map((c) => ({
       slug: c.slug,
       name: c.name,
       image: c.image,
-      subCategories: c.subCategories.map((s) => ({
-        slug: s.slug,
-        name: s.name,
-        ...(s.children?.length ? { children: s.children.map((k) => ({ slug: k.slug, name: k.name })) } : {}),
-      })),
+      // Imported entries without a route slug cannot be useful menu links.
+      subCategories: c.subCategories
+        .filter((s) => Boolean(s.slug?.trim()))
+        .map((s) => ({
+          slug: s.slug,
+          name: s.name,
+          ...(s.children?.length
+            ? {
+                children: s.children
+                  .filter((k) => Boolean(k.slug?.trim()))
+                  .map((k) => ({ slug: k.slug, name: k.name })),
+              }
+            : {}),
+        })),
     })),
     explore: explore.map((e) => ({
       slug: e.slug,

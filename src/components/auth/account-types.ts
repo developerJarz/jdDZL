@@ -1,4 +1,5 @@
 import type { Order } from "@/components/admin/types";
+import type { ImageAsset } from "@/types";
 export interface Address {
   id: string;
   label: string;
@@ -25,5 +26,5 @@ export interface AccountData {
   profile: { name: string; email: string; phone: string; addresses: Address[] };
   orders: Order[];
   tickets: Ticket[];
-  wishlist: { slug: string; name: string; price: number; inStock: boolean }[];
+  wishlist: { slug: string; name: string; price: number; inStock: boolean; image?: ImageAsset | null }[];
 }

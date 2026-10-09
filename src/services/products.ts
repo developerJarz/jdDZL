@@ -4,6 +4,7 @@ import { productDetails, products } from "@/data/catalog";
 import type { Paginated, Product, ProductDetail, ProductQuery } from "@/types";
 import { liveProducts } from "@/server/catalog";
 import { db } from "@/server/db";
+import { isImportedProductField } from "@/server/content-brand";
 
 // API (reference frontend):
 //   GET /products?categorySlug=&brandSlug=&page=&limit=
@@ -21,17 +22,17 @@ export async function getProductDetail(slug: string): Promise<ProductDetail | nu
   if (!product) return null;
   const escape = (value: string) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;").replaceAll("\n", "<br />");
   const base: ProductDetail = snapshot || { slug, shortDescriptionHtml: "", descriptionHtml: "", minBookingPrice: 0, purchasePoints: 0, isFreeShipping: false, profitRatio: 0, soldCount: 0, totalReviews: 0, reviewPoints: 0, seo: { title: product.name, description: "", keywords: "" }, variants: [] };
-  const descriptionHtml = product.description !== undefined ? escape(product.description) : base.descriptionHtml;
+  const descriptionHtml = product.description !== undefined && !isImportedProductField(slug, "description", product.description) ? escape(product.description) : base.descriptionHtml;
   // Specifications entered in the dashboard render as an escaped two-column table.
   const specs = (product.specs ?? []) as { label: string; value: string }[];
   const specsHtml = specs.length
     ? `<h3>Specifications</h3><table><tbody>${specs.map((s) => `<tr><th style="text-align:left;padding:6px 12px 6px 0;width:35%">${escape(s.label)}</th><td style="padding:6px 0">${escape(s.value)}</td></tr>`).join("")}</tbody></table>`
     : "";
-  const seo = product.seo as Partial<ProductDetail["seo"]> | undefined;
+  const seo = isImportedProductField(slug, "seo", product.seo) ? undefined : product.seo as Partial<ProductDetail["seo"]> | undefined;
   return {
     ...base,
     descriptionHtml: descriptionHtml + specsHtml,
-    ...(product.shortDescription !== undefined ? { shortDescriptionHtml: escape(product.shortDescription) } : {}),
+    ...(product.shortDescription !== undefined && !isImportedProductField(slug, "shortDescription", product.shortDescription) ? { shortDescriptionHtml: escape(product.shortDescription) } : {}),
     ...(product.variants !== undefined ? { variants: product.variants } : {}),
     seo: {
       title: seo?.title || base.seo.title,

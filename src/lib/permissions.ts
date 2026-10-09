@@ -53,6 +53,8 @@ export const canAny = (user: StaffUser | null | undefined, list: Permission[]) =
 
 /** Dashboard section → permissions that unlock it. */
 export const SECTION_PERMISSIONS: Record<string, Permission[]> = {
+  workspace: [],
+  profile: [],
   overview: ["overview"],
   reports: ["reports"],
   orders: ["orders"],
@@ -85,6 +87,12 @@ export const SECTION_PERMISSIONS: Record<string, Permission[]> = {
   settings: ["settings"],
 };
 
+export function canAccessSection(user: StaffUser | null | undefined, name: string) {
+  if (!(name in SECTION_PERMISSIONS)) return false;
+  if (name === "workspace" || name === "profile") return isStaffRole(user?.role);
+  return canAny(user, SECTION_PERMISSIONS[name]);
+}
+
 /**
  * API path (after `/api/commerce/admin/`) → permissions that may call it. Read-only lookups
  * that many screens need (product search, taxonomy) are open to several roles. Unknown
@@ -97,6 +105,7 @@ export function apiPermissions(path: string[], method: string): Permission[] | "
     case "badges":
     case "taxonomy":
     case "me":
+    case "workspace":
       return "any-staff";
     case "overview":
       return ["overview"];

@@ -70,7 +70,7 @@ function CouponEditor({ coupon, onClose, onSaved }: { coupon: Coupon | null; onC
               <button
                 type="button"
                 className="flex items-center gap-1 text-xs font-semibold text-primary hover:underline dark:text-brand"
-                onClick={() => setCode(`DAZZLE${Math.random().toString(36).slice(2, 7).toUpperCase()}`)}
+                onClick={() => setCode(`DBD${Math.random().toString(36).slice(2, 7).toUpperCase()}`)}
               >
                 <Wand2 className="size-3" /> Generate
               </button>

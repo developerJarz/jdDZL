@@ -1,6 +1,7 @@
 ﻿import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { SITE_URL } from "@/lib/seo";
+import { BRAND_NAME, BRAND_DESCRIPTION } from "@/data/content/brand";
 import "./globals.css";
 const urbanist = localFont({
   src: [
@@ -16,9 +17,9 @@ const urbanist = localFont({
 });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Dazzle", template: "%s" },
-  description: "Shop electronics and gadgets at Dazzle.",
-  applicationName: "Dazzle",
+  title: { default: BRAND_NAME, template: "%s" },
+  description: BRAND_DESCRIPTION,
+  applicationName: BRAND_NAME,
   robots:
     process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true"
       ? undefined

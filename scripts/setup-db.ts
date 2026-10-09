@@ -90,18 +90,20 @@ async function setup() {
   const products = JSON.parse(
     readFileSync("src/data/generated/products.json", "utf8"),
   );
-  const stock = Number(process.env.IMPORT_INITIAL_STOCK || 0);
+  const imagePolicy = JSON.parse(readFileSync("src/data/content/product-image-policy.json", "utf8"));
+  const retiredProductSlugs = new Set<string>(imagePolicy.removedProductSlugs || []);
+  const stock = Number(process.env.IMPORT_INITIAL_STOCK || imagePolicy.initialStock || 0);
   if (!Number.isSafeInteger(stock) || stock < 0)
     throw new Error("IMPORT_INITIAL_STOCK must be a nonnegative integer.");
   const result = await database.collection("products").bulkWrite(
-    products.map((p: { slug: string }) => ({
+    products.filter((p: { slug: string }) => !retiredProductSlugs.has(p.slug)).map((p: { slug: string; isTba?: boolean; endOfLife?: boolean }) => ({
       updateOne: {
         filter: { slug: p.slug },
         update: {
           $setOnInsert: {
             ...p,
             stock,
-            inStock: stock > 0,
+            inStock: stock > 0 && !p.isTba && !p.endOfLife,
             active: true,
             createdAt: new Date(),
             updatedAt: new Date(),

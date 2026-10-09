@@ -85,7 +85,7 @@ function AdjustStock({ product, onDone }: { product: AdminProduct; onDone: () =>
             <strong className={result < 0 ? "text-destructive" : ""}>{result}</strong> units
           </p>
           <Field label="Reason">
-            <Input list="stock-reasons" value={reason} minLength={5} maxLength={300} required onChange={(e) => setReason(e.target.value)} />
+            <Input aria-label="Reason" list="stock-reasons" value={reason} minLength={5} maxLength={300} required onChange={(e) => setReason(e.target.value)} />
             <datalist id="stock-reasons">
               {REASONS.map((r) => (
                 <option key={r} value={r} />

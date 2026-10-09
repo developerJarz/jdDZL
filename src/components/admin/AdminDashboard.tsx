@@ -29,6 +29,7 @@ import { BlogPage, PagesPage } from "./pages/Content";
 import { SmsPage } from "./pages/Sms";
 import { StaffPage } from "./pages/Staff";
 import { BlocklistPage } from "./pages/Blocklist";
+import { StaffProfilePage, WorkspacePage } from "./pages/Workspace";
 
 function NoAccess() {
   const { section } = useCan();
@@ -58,6 +59,8 @@ function Page({ section, recordId }: { section: string; recordId?: string }) {
   if (!allowed(section)) return <NoAccess />;
   const editing = section === "products" && recordId;
   const pages: Record<string, () => React.ReactNode> = {
+    workspace: () => <WorkspacePage />,
+    profile: () => <StaffProfilePage />,
     overview: () => <OverviewPage />,
     reports: () => <ReportsPage description={description} />,
     products: () => (editing ? <ProductEditor id={recordId === "new" ? null : recordId} /> : <ProductsPage description={description} />),

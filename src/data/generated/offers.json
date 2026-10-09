@@ -3,57 +3,57 @@
   {
    "id": "C58DA6DF-A469-4211-95DD-F47876BCE820",
    "slug": "protect-your-phone-up-to-80-off",
-   "name": "🛡️ Protect your phone - Up to 80% OFF 🔥",
-   "description": "Time for a case upgrade! 🛡️ Get your favorite phone cases at up to 80% OFF !! 🔥",
+   "name": "Explore current price reductions",
+   "description": "Compare the listed products and current prices. Review the selected option, availability and final checkout amount before ordering.",
    "image": {
-    "src": "/images/offers/offer-banner-02-074b7c1a-978a-4571-a29b-ac3eada3b43d.webp",
-    "width": 828,
-    "height": 389
+    "src": "/images/brand/guide.svg",
+    "width": 1000,
+    "height": 600
    },
-   "startsAt": "2026-09-17T00:00:00",
-   "endsAt": "2026-12-31T00:00:00",
+   "startsAt": "",
+   "endsAt": "",
    "active": true
   },
   {
    "id": "684BE6BB-3036-412C-83C2-805E439F92B8",
    "slug": "latest-earbuds-up-to-50-off",
-   "name": "🔥 Latest Earbuds - Up to 50% OFF 🔥",
-   "description": "Upgrade your sound with the latest earbuds! 🎧 Enjoy great sound, stylish designs & amazing deals at up to 50% OFF.",
+   "name": "Build your Apple shortlist",
+   "description": "Compare the listed products and current prices. Review the selected option, availability and final checkout amount before ordering.",
    "image": {
-    "src": "/images/offers/offer-banner-03-64e9dfa1-f3f8-43ac-ac1d-1bd84a453faa.webp",
-    "width": 828,
-    "height": 389
+    "src": "/images/brand/guide.svg",
+    "width": 1000,
+    "height": 600
    },
-   "startsAt": "2026-09-17T00:00:00",
-   "endsAt": "2026-12-31T00:00:00",
+   "startsAt": "",
+   "endsAt": "",
    "active": true
   },
   {
    "id": "DFA1DC50-ED09-4E8B-A335-197F4293ACFE",
    "slug": "all-latest-smartwatches-up-to-30-off",
-   "name": "🔥 All Latest Smartwatches - Up to 30% OFF 🔥",
-   "description": "🔥 Upgrade your style with the latest smartwatches at up to 30% OFF! 🔥  Shop now at Dazzle and grab your favourite one! ⌚",
+   "name": "Compare online picks",
+   "description": "Compare the listed products and current prices. Review the selected option, availability and final checkout amount before ordering.",
    "image": {
-    "src": "/images/offers/offer-banner-04-924a1b72-4296-43e8-9b3a-09ba54e4b679.webp",
-    "width": 828,
-    "height": 389
+    "src": "/images/brand/guide.svg",
+    "width": 1000,
+    "height": 600
    },
-   "startsAt": "2026-09-17T00:00:00",
-   "endsAt": "2026-12-31T00:00:00",
+   "startsAt": "",
+   "endsAt": "",
    "active": true
   },
   {
    "id": "B7801774-CBE7-40D8-BC64-ECED6C061516",
    "slug": "online-exclusive-up-to-50-off",
-   "name": "🔥 Online Exclusive - Up to 50% OFF 🔥",
-   "description": "Buy Smartphones, Home Appliance, Gadgets & Accessories - Enjoy up-to 50% OFF !!",
+   "name": "Explore current price reductions",
+   "description": "Compare the listed products and current prices. Review the selected option, availability and final checkout amount before ordering.",
    "image": {
-    "src": "/images/offers/offer-banner-08-ca89c1d9-1e96-4c8c-a23b-4842591cd57a.webp",
-    "width": 828,
-    "height": 389
+    "src": "/images/brand/guide.svg",
+    "width": 1000,
+    "height": 600
    },
-   "startsAt": "2026-09-17T00:00:00",
-   "endsAt": "2026-12-31T00:00:00",
+   "startsAt": "",
+   "endsAt": "",
    "active": true
   }
  ],
@@ -61,8 +61,12 @@
   "latest-apple-release-pre-order-campaign": {
    "slug": "latest-apple-release-pre-order-campaign",
    "name": "Latest Apple Release Pre Order Campaign",
-   "description": "",
-   "image": null,
+   "description": "Explore the products in this collection, compare current prices and review the details before placing your order.",
+   "image": {
+    "src": "/images/brand/guide.svg",
+    "width": 1000,
+    "height": 600
+   },
    "endsAt": null,
    "productSlugs": [
     "iphone-18-pro-max-price-in-bangladesh",

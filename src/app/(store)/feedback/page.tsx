@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function FeedbackPage() {
   return (
-    <FormPage crumb="Feedback" title="Send Your Feedback">
+    <FormPage crumb="Feedback" title="Help us make your next visit better">
       <ContactForm
         kind="feedback"
         fields={[

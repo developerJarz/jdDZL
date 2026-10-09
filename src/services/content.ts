@@ -4,6 +4,7 @@ import { blogs, offers, pageMeta, policies, posts, stores } from "@/data/catalog
 import type { BlogPost, Campaign, CampaignDetail, HomeContent, SiteSettings, Store, StoreDistrict } from "@/types";
 import { liveHome, livePages, livePosts, liveSettings } from "@/server/catalog";
 import type { HomeSection } from "@/lib/home-sections";
+import { policyContent } from "@/data/content/policies";
 
 // API (reference frontend): GET site-settings, GET news-scroll, GET /pages/:endpoint,
 // GET /stores?district_id=, POST newsletter-subscribe.
@@ -89,12 +90,7 @@ export async function getPolicyPages() {
   return policies;
 }
 
-/**
- * Policy text is served by the CMS (`GET /pages/:endpoint`) and was not part of the snapshot,
- * so the mock returns null and the page renders an explicit "unavailable offline" notice.
- */
+/** Original shopping information; a published dashboard page takes priority. */
 export async function getPolicyContent(endpoint: string): Promise<string | null> {
-  // API: GET /pages/${endpoint}
-  void endpoint;
-  return null;
+  return policyContent[endpoint] ?? null;
 }

@@ -71,7 +71,7 @@ async function Post({ params }: { params: PageProps<"/blogs/[slug]">["params"] }
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
           ) : (
-            <p className="text-sm text-gray-600 dark:text-gray-300">The full article wasn&apos;t part of the offline snapshot. It will be shown here once the blog API is connected.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">More details will be added to this guide when available. Use Support to ask about a particular model.</p>
           )}
         </div>
       </div>

@@ -5,7 +5,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { searchCatalog } from "@/services/search";
 
 export const metadata: Metadata = {
-  title: "Search | Dazzle",
+  title: "Search | dazzle.bd",
   robots: { index: false, follow: true },
 };
 

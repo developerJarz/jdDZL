@@ -19,7 +19,7 @@ export function AuthShell({
         <div className="flex flex-col items-center text-center mb-8">
           <Img
             asset={logo}
-            alt="Dazzle logo"
+            alt="dazzle.bd logo"
             width={200}
             height={41}
             priority

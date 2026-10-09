@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./admin.css";
 export const metadata: Metadata = {
-  title: "Dazzle | Store administration",
+  title: "dazzle.bd | Store administration",
   robots: { index: false, follow: false },
 };
 // Applies the administrator's saved light/dark preference before first paint.

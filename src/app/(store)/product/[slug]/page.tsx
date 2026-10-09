@@ -9,7 +9,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ProductSkeleton } from "@/components/ui/Skeletons";
 import { buildMetadata, SITE_URL } from "@/lib/seo";
 import { getSiteSettings } from "@/services/content";
-import { deliveryInfo, getCarePlans, viewersFor } from "@/services/productServices";
+import { deliveryInfo, getCarePlans } from "@/services/productServices";
 import { getAllProductSlugs, getProduct, getProductDetail, getRelatedProducts } from "@/services/products";
 
 export async function generateStaticParams() {
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps<"/product/[slug]">)
   if (!product) return {};
   return buildMetadata({
     title: detail?.seo.title || `${product.name} Price in Bangladesh`,
-    description: detail?.seo.description || `${product.name} price in Bangladesh. Buy the authentic device from Dazzle.`,
+    description: detail?.seo.description || `Explore ${product.name} at dazzle.bd. Compare the listed price in Bangladesh, selected options and availability.`,
     keywords: detail?.seo.keywords,
     path: `/product/${slug}`,
     image: product.image?.src,
@@ -44,7 +44,7 @@ async function ProductContent({ params }: { params: PageProps<"/product/[slug]">
   const [product, detail, site] = await Promise.all([getProduct(slug), getProductDetail(slug), getSiteSettings()]);
   if (!product) notFound();
   const related = await getRelatedProducts(product, 10);
-  const phoneIntl = site.phone.replace(/^0/, "880");
+  const phoneIntl = site.social.whatsapp?.replace(/^0/, "880");
   const facebookPage = site.social.facebook?.split("/").filter(Boolean).pop();
 
   const jsonLd = {
@@ -81,11 +81,10 @@ async function ProductContent({ params }: { params: PageProps<"/product/[slug]">
           product={product}
           detail={detail}
           carePlans={getCarePlans(product)}
-          viewers={viewersFor(product.slug)}
           contact={{
             phone: site.phone,
-            whatsapp: `https://wa.me/${phoneIntl}`,
-            messenger: facebookPage ? `https://m.me/${facebookPage}` : site.social.facebook ?? "#",
+            whatsapp: phoneIntl ? `https://wa.me/${phoneIntl}` : "",
+            messenger: site.social.messenger || (facebookPage ? `https://m.me/${facebookPage}` : ""),
           }}
           delivery={deliveryInfo}
           icons={{ delivery: site.assets.deliveryIcon, points: site.assets.pointsIcon, booking: site.assets.bookingIcon }}

@@ -1,12 +1,14 @@
 import type { Document } from "mongodb";
 import type { BlogPost, Brand, Category, HomeContent, Product, SiteSettings } from "@/types";
 import { db } from "./db";
-import { brands, categories, home, products, site } from "@/data/catalog";
+import { blogs, brands, categories, home, products, site } from "@/data/catalog";
 import { resolveHomeSections, type HomeSection } from "@/lib/home-sections";
 import { cache } from "react";
+import { sanitizeProductImages } from "@/lib/product-images";
+import { cleanHomeContent, cleanStoreIdentity, importedCategoryNames, isImportedBadge, isImportedPost } from "./content-brand";
 
 export const liveProducts = cache(async (): Promise<Product[]> => {
-  if (!process.env.MONGODB_URI) return products;
+  if (!process.env.MONGODB_URI) return products.map(sanitizeProductImages);
   const rows = await (
     await db()
   )
@@ -26,7 +28,12 @@ export const liveProducts = cache(async (): Promise<Product[]> => {
       },
     )
     .toArray();
-  return rows as unknown as Product[];
+  return (rows as unknown as Product[]).filter(p => p.brandSlug !== "dazzle").map(p => sanitizeProductImages({
+    ...p,
+    badge: isImportedBadge(p.slug, "badge", p.badge) ? "" : p.badge,
+    recognitionBadge: isImportedBadge(p.slug, "recognitionBadge", p.recognitionBadge)
+      ? products.find(seed => seed.slug === p.slug)?.recognitionBadge || "" : p.recognitionBadge,
+  }));
 });
 
 /**
@@ -41,7 +48,10 @@ export const liveCategories = cache(async (): Promise<Category[]> => {
     .sort({ sortOrder: 1, name: 1 })
     .toArray();
   if (!rows.length) return categories;
-  return rows.filter((c) => c.active !== false) as unknown as Category[];
+  return (rows.filter((c) => c.active !== false) as unknown as Category[]).map(c => ({
+    ...c, name: c.name === importedCategoryNames[c.slug] ? categories.find(seed => seed.slug === c.slug)?.name || c.name : c.name,
+    brands: c.brands.filter(slug => slug !== "dazzle"),
+  }));
 });
 
 export const liveBrands = cache(async (): Promise<Brand[]> => {
@@ -52,7 +62,7 @@ export const liveBrands = cache(async (): Promise<Brand[]> => {
     .sort({ name: 1 })
     .toArray();
   if (!rows.length) return brands;
-  return rows.filter((b) => b.active !== false) as unknown as Brand[];
+  return rows.filter((b) => b.active !== false && b.slug !== "dazzle") as unknown as Brand[];
 });
 
 export const liveHome = cache(
@@ -65,7 +75,9 @@ export const liveHome = cache(
     void _id;
     void key;
     void updatedAt;
-    const merged = { ...home, ...rest } as HomeContent & { sections?: HomeSection[] };
+    // Untouched imported fields use the new copy immediately, even on an existing database.
+    // Dashboard changes to product selections and original new content still take priority.
+    const merged = cleanHomeContent(home, rest) as HomeContent & { sections?: HomeSection[] };
     return { ...merged, sections: resolveHomeSections(merged.sections) };
   },
 );
@@ -79,12 +91,7 @@ export const liveSettings = cache(async (): Promise<SiteSettings> => {
     .findOne({ key: "store" });
   return {
     ...site,
-    name: settings?.name ?? site.name,
-    phone: settings?.phone ?? site.phone,
-    email: settings?.email ?? site.email,
-    address: settings?.address ?? site.address,
-    // Links set in the dashboard replace the imported ones; empty fields hide that network.
-    social: settings?.social ? Object.fromEntries(Object.entries(settings.social).filter(([, v]) => v)) : site.social,
+    ...cleanStoreIdentity(settings ?? site),
   };
 });
 
@@ -93,11 +100,15 @@ export const livePosts = cache(async (): Promise<BlogPost[] | null> => {
   if (!process.env.MONGODB_URI) return null;
   const rows = await (await db())
     .collection("posts")
-    .find({ active: { $ne: false } }, { projection: { _id: 0, content: 0, createdAt: 0, updatedAt: 0 } })
+    .find({}, { projection: { _id: 0, content: 0, createdAt: 0, updatedAt: 0 } })
     .sort({ date: -1 })
     .toArray();
-  if (!rows.length && !(await (await db()).collection("posts").estimatedDocumentCount())) return null;
-  return rows.map((p) => ({ ...p, date: p.date instanceof Date ? p.date.toISOString().slice(0, 10) : p.date })) as unknown as BlogPost[];
+  const storedSlugs = new Set(rows.map(p => p.slug));
+  const authored = rows.filter(p => p.active !== false && !isImportedPost(p));
+  return [
+    ...authored.map(p => ({ ...p, date: p.date instanceof Date ? p.date.toISOString().slice(0, 10) : p.date })),
+    ...blogs.posts.filter(p => !storedSlugs.has(p.slug)),
+  ] as unknown as BlogPost[];
 });
 
 export interface CmsPage {
@@ -126,5 +137,5 @@ export const liveLanding = cache(async (slug: string) => {
 export const liveMarketing = cache(async () => {
   if (!process.env.MONGODB_URI) return { social: {} as Record<string, string>, tracking: { pixelId: "", gtmId: "" } };
   const s = await (await db()).collection("settings").findOne({ key: "store" }, { projection: { social: 1, tracking: 1 } });
-  return { social: (s?.social ?? {}) as Record<string, string>, tracking: { pixelId: s?.tracking?.pixelId ?? "", gtmId: s?.tracking?.gtmId ?? "" } };
+  return { social: cleanStoreIdentity(s ?? {}).social, tracking: { pixelId: s?.tracking?.pixelId ?? "", gtmId: s?.tracking?.gtmId ?? "" } };
 });

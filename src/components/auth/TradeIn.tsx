@@ -12,8 +12,8 @@ export function TradeIn() {
       <span className="account-eyebrow">GIVE YOUR TECH A NEW CHAPTER</span>
       <h1 className="text-3xl font-bold my-4">Trade in your device</h1>
       <p>
-        Tell us about your device. Our store team will review it and discuss a
-        valuation with you in your account. Final pricing follows inspection.
+        Share your device’s model and condition to ask about a possible trade-in.
+        Eligibility and any valuation need confirmation; an enquiry is not an accepted exchange.
       </p>
       {done ? (
         <div className="account-notice my-6">

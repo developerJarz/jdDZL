@@ -22,8 +22,8 @@ export function SeoCards({ cards }: { cards: { title: string; html: string }[] }
             )}
           >
             {i === 0 ? <h2 className="font-bold dark:text-white">{c.title}</h2> : <h3 className="font-bold dark:text-white">{c.title}</h3>}
-            <p
-              className="my-4 font-[Georgia,serif] text-base leading-[1.38] text-black dark:text-white [&_a]:text-blue-700 [&_a]:underline [&_a]:underline-offset-2 dark:[&_a]:text-[#d4a97a]"
+            <div
+              className="my-4 text-sm leading-relaxed text-black dark:text-white [&_a]:text-blue-700 [&_a]:underline [&_a]:underline-offset-2 dark:[&_a]:text-[#d4a97a]"
               dangerouslySetInnerHTML={{ __html: c.html }}
             />
           </div>

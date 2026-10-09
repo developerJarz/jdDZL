@@ -9,5 +9,5 @@ export async function generateMetadata(): Promise<Metadata> {
 
 // The snapshot's press page was empty ("No Press Coverage found at the moment.").
 export default function PressCoveragePage() {
-  return <PostGridPage crumb="Press Coverage" title="Press Coverage" posts={[]} basePath="/press-coverage" emptyText="No Press Coverage found at the moment." />;
+  return <PostGridPage crumb="Media" title="News and media enquiries" posts={[]} basePath="/press-coverage" emptyText="For a question about dazzle.bd or a media enquiry, contact us through the Support page." />;
 }

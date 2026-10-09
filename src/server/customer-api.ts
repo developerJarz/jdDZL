@@ -11,6 +11,7 @@ import {
 } from "./customer-schemas";
 import { updateOrder } from "./orders";
 import { createHash, randomBytes } from "node:crypto";
+import { customerOrderView } from "@/lib/customer-order";
 
 const oid = (v: string) => {
   if (!/^[a-f0-9]{24}$/i.test(v || ""))
@@ -78,7 +79,7 @@ export async function customerApi(request: Request, path: string[]) {
           phone: current.phone,
           addresses: current.addresses || [],
         },
-        orders,
+        orders: orders.map(customerOrderView),
         tickets,
         wishlist,
       });
@@ -180,13 +181,14 @@ export async function customerApi(request: Request, path: string[]) {
     }
     if (!admin && route[0] === "profile") {
       const profile = z
-        .object({ name: z.string().trim().min(2).max(180), phone: bdPhone })
+        .object({ name: z.string().trim().min(2).max(180), phone: current.role === "customer" ? bdPhone : bdPhone.or(z.literal("")) })
         .parse(input);
       await database
         .collection("users")
         .updateOne(
           { _id: current._id },
-          { $set: { ...profile, updatedAt: new Date() } },
+          profile.phone ? { $set: { ...profile, updatedAt: new Date() } }
+            : { $set: { name: profile.name, updatedAt: new Date() }, $unset: { phone: "" } },
         );
       return json({ ok: true });
     }

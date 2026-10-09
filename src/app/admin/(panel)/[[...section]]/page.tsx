@@ -11,7 +11,9 @@ export default async function AdminPage({
   params: Promise<{ section?: string[] }>;
 }) {
   const { section = [] } = await params;
-  const name = section[0] || "overview";
+  const current = await user();
+  if (!current) redirect("/admin/login");
+  const name = section[0] || (current.role === "staff" ? "workspace" : "overview");
   const recordId = section[1];
   // Only products have a nested route: /admin/products/new and /admin/products/<id>.
   const validRecord =
@@ -20,8 +22,6 @@ export default async function AdminPage({
       section.length === 2 &&
       (recordId === "new" || /^[a-f0-9]{24}$/i.test(recordId)));
   if (section.length > 2 || !SECTIONS.includes(name) || !validRecord) notFound();
-  const current = await user();
-  if (!current) redirect("/admin/login");
   const me = {
     id: current._id.toString(),
     name: current.name ?? "Staff",

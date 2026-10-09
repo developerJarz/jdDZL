@@ -45,8 +45,11 @@ next-env.d.ts
 
 !.env.example
 .admin-credentials.txt
+.dashboard-test-credentials.json
+.test-credentials.txt
 .npm-cache/
 test-results/
 playwright-report/
 .browser-profile/
+.backups/
 admin-*-preview.png

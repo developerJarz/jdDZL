@@ -1,8 +1,10 @@
 "use client";
 import { AdminShortcut } from "./AdminShortcut";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+import { Heart, LayoutDashboard, LifeBuoy, MapPin, Package, RefreshCw, ShieldCheck } from "lucide-react";
+import { Img } from "@/components/ui/Img";
 import { api, date, money, type Order } from "@/components/admin/types";
 import type { AccountData, Address, Ticket } from "./account-types";
 import "./account.css";
@@ -14,17 +16,29 @@ const tabs = [
   "Support & returns",
   "Profile & security",
 ];
+const tabIds = ["overview", "orders", "addresses", "wishlist", "support", "profile"];
+const tabIcons = [LayoutDashboard, Package, MapPin, Heart, LifeBuoy, ShieldCheck];
 export function Account() {
   const router = useRouter();
+  const params = useSearchParams();
+  const tab = tabs[Math.max(0, tabIds.indexOf(params.get("tab") || "overview"))];
+  const setTab = (label: string) => router.push(`/account?tab=${tabIds[tabs.indexOf(label)] || "overview"}`, { scroll: false });
   const [data, setData] = useState<AccountData | null>(null),
-    [tab, setTab] = useState("Overview"),
     [error, setError] = useState(""),
     [notice, setNotice] = useState(""),
     [busy, setBusy] = useState(false),
     [filter, setFilter] = useState("");
+  const [orderStatus, setOrderStatus] = useState("all");
+  const [refreshing, setRefreshing] = useState(false);
   const [address, setAddress] = useState<Address | null>(null),
-    [selected, setSelected] = useState<Ticket | null>(null),
+    [selectedState, setSelected] = useState<Ticket | null>(null),
     [requestOrder, setRequestOrder] = useState("");
+  const refresh = useCallback(async () => {
+    setRefreshing(true);
+    try { const dashboard = await api<AccountData>("account/dashboard"); setData(dashboard); setError(""); }
+    catch (err) { setError((err as Error).message); }
+    finally { setRefreshing(false); }
+  }, []);
   useEffect(() => {
     let alive = true;
     api<{ user: unknown }>("auth/me")
@@ -43,6 +57,12 @@ export function Account() {
       alive = false;
     };
   }, [router]);
+  useEffect(() => {
+    const onFocus = () => { if (!document.hidden) void refresh(); };
+    const timer = setInterval(onFocus, 30_000);
+    window.addEventListener("focus", onFocus);
+    return () => { clearInterval(timer); window.removeEventListener("focus", onFocus); };
+  }, [refresh]);
   async function act(path: string, input: unknown, message: string) {
     setBusy(true);
     setError("");
@@ -71,11 +91,15 @@ export function Account() {
         <p role={error ? "alert" : "status"}>
           {error || "Loading your account…"}
         </p>
+        {error && <button className="account-button" onClick={() => void refresh()}>Retry loading account</button>}
       </div>
     );
   const active = data.orders.filter(
     (o) => !["delivered", "cancelled"].includes(o.status),
   );
+  const selected = selectedState && (data.tickets.find(ticket => ticket._id === selectedState._id) || selectedState);
+  const filteredOrders = data.orders.filter(order =>
+    (orderStatus === "all" || order.status === orderStatus) && `${order.orderNo} ${order.items.map(item => item.name).join(" ")}`.toLowerCase().includes(filter.toLowerCase()));
   const total = data.orders
     .filter((o) => o.status === "delivered")
     .reduce((s, o) => s + o.total - (o.refund?.amount || 0), 0);
@@ -85,7 +109,7 @@ export function Account() {
         <div>
           <strong>{o.orderNo}</strong>
           <p className="account-muted">
-            {date(o.createdAt)} · Cash on delivery
+            {date(o.createdAt)} · {["cod", "cash-on-delivery"].includes(o.paymentMethod || "") ? "Cash on delivery" : o.paymentMethod || "Payment pending"}
           </p>
         </div>
         <span className={`account-badge ${o.status}`}>{o.status}</span>
@@ -239,7 +263,7 @@ export function Account() {
     <div className="account-workspace">
       <header className="account-heading">
         <div>
-          <span className="account-eyebrow">YOUR DAZZLE ACCOUNT</span>
+          <span className="account-eyebrow">YOUR DAZZLE.BD ACCOUNT</span>
           <h1>Hello, {data.profile.name.split(" ")[0]}.</h1>
           <p>Your tech, your orders, your peace of mind.</p>
         </div>
@@ -248,6 +272,7 @@ export function Account() {
           <Link className="account-button" href="/">
             Continue shopping ↗
           </Link>
+          <button className="account-button" disabled={refreshing || busy} onClick={() => void refresh()} aria-label="Refresh account"><RefreshCw size={16} className={refreshing ? "animate-spin" : ""} aria-hidden="true" /> {refreshing ? "Refreshing…" : "Refresh"}</button>
         </div>
       </header>
       <div className="account-layout">
@@ -260,7 +285,7 @@ export function Account() {
             </div>
           </div>
           <nav aria-label="My account">
-            {tabs.map((t, i) => (
+            {tabs.map((t, i) => { const Icon = tabIcons[i]; return (
               <button
                 key={t}
                 aria-current={tab === t ? "page" : undefined}
@@ -270,13 +295,14 @@ export function Account() {
                   setNotice("");
                 }}
               >
-                <span>0{i + 1}</span>
+                <Icon size={18} aria-hidden="true" />
                 {t}
               </button>
-            ))}
+            ); })}
           </nav>
           <button
             className="account-signout"
+            disabled={busy}
             onClick={async () => {
               try {
                 await api("auth/logout", { method: "POST" });
@@ -321,6 +347,7 @@ export function Account() {
                   <span>Total purchases</span>
                   <strong>{money(total)}</strong>
                 </div>
+                <div><span>Saved products</span><strong>{data.wishlist.length}</strong></div>
               </div>
               <div className="account-callout">
                 <div>
@@ -347,6 +374,7 @@ export function Account() {
           )}
           {tab === "Orders" && (
             <>
+              <label className="account-search">Order status<select aria-label="Order status" value={orderStatus} onChange={event => setOrderStatus(event.target.value)}><option value="all">All orders</option>{["pending", "confirmed", "processing", "shipped", "delivered", "cancelled"].map(status => <option key={status} value={status}>{status[0].toUpperCase() + status.slice(1)}</option>)}</select></label>
               <label className="account-search">
                 Find an order
                 <input
@@ -355,15 +383,9 @@ export function Account() {
                   onChange={(e) => setFilter(e.target.value)}
                 />
               </label>
-              {data.orders
-                .filter((o) =>
-                  `${o.orderNo} ${o.items.map((i) => i.name).join(" ")}`
-                    .toLowerCase()
-                    .includes(filter.toLowerCase()),
-                )
-                .map(orderCard)}
-              {!data.orders.length && (
-                <p className="account-empty">No orders yet.</p>
+              {filteredOrders.map(orderCard)}
+              {!filteredOrders.length && (
+                <p className="account-empty">{data.orders.length ? "No orders match your search or status filter." : "No orders yet."}</p>
               )}
             </>
           )}
@@ -405,6 +427,7 @@ export function Account() {
                     </p>
                     <div className="account-actions">
                       <button onClick={() => setAddress(a)}>Edit</button>
+                      {!a.default && <button disabled={busy} onClick={() => void act("account/addresses", { addresses: data.profile.addresses.map(saved => ({ ...saved, default: saved.id === a.id })) }, "Default address updated.")}>Set as default</button>}
                       <button
                         disabled={busy}
                         onClick={() => {
@@ -506,6 +529,7 @@ export function Account() {
               {data.wishlist.length ? (
                 data.wishlist.map((p) => (
                   <article className="account-card account-row" key={p.slug}>
+                    <span className="account-product-thumb"><Img asset={p.image} alt={p.name} width={72} height={72} className="object-contain" /></span>
                     <div>
                       <Link href={`/product/${p.slug}`}>
                         <strong>{p.name}</strong>
@@ -583,7 +607,7 @@ export function Account() {
                           className={m.author === "store" ? "from-store" : ""}
                         >
                           <strong>
-                            {m.author === "store" ? "Dazzle support" : "You"}
+                            {m.author === "store" ? "dazzle.bd support" : "You"}
                           </strong>
                           <p>{m.text}</p>
                           <small>{date(m.at)}</small>

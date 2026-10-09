@@ -104,7 +104,7 @@
 }
 .account-metrics {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
   margin: 4px 0 22px;
 }
@@ -252,6 +252,21 @@
   color: #25342b;
   font-size: 14px;
 }
+.account-search select {
+  min-height: 44px;
+  border: 1px solid #dce3db;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #25342b;
+  max-width: 240px;
+}
+.account-product-thumb { width: 72px; height: 72px; flex-shrink: 0; overflow: hidden; border-radius: 10px; background: #faf7f2; }
+.account-sidebar button:focus-visible, .account-main button:focus-visible, .account-workspace a:focus-visible, .account-workspace input:focus-visible, .account-workspace select:focus-visible, .account-workspace textarea:focus-visible { outline: 2px solid #9b632b; outline-offset: 3px; }
+.account-heading .account-button { gap: 8px; }
+.account-sidebar nav button { min-height: 46px; }
+.account-signout { min-height: 44px; cursor: pointer; }
+.account-main button, .account-button { min-height: 44px; }
 .account-form textarea {
   min-height: 100px;
   resize: vertical;
@@ -396,10 +411,10 @@
   .account-sidebar nav button {
     white-space: nowrap;
   }
-  .account-identity,
-  .account-signout {
+  .account-identity {
     display: none;
   }
+  .account-signout { display: inline-flex; margin: 8px 12px 0; }
   .account-sidebar {
     padding: 8px;
     min-width: 0;
@@ -413,6 +428,7 @@
   }
   .account-metrics {
     gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .account-metrics > div {
     padding: 15px 12px;
@@ -435,3 +451,6 @@
     display: none;
   }
 }
+@media (max-width: 600px) { .account-form input, .account-form textarea, .account-form select, .account-search input, .account-search select { font-size: 16px; } }
+@media (prefers-reduced-motion: reduce) { .account-workspace * { scroll-behavior: auto; transition: none; } }
+.dark .account-search select { color: #e8ece5; background: #293129; border-color: #475147; }

@@ -169,7 +169,12 @@ const href = z
     (v) => v === "#" || (v.startsWith("/") && !v.startsWith("//")) || /^https:\/\/\S+$/.test(v),
     "Use a site path such as /offer, a full https:// address, or # for no link",
   );
-const banner = z.object({ image: imageAsset, href, newTab: z.boolean().default(false) });
+const banner = z.object({
+  image: imageAsset, href, newTab: z.boolean().default(false),
+  headline: z.string().trim().max(160).optional(),
+  text: z.string().trim().max(600).optional(),
+  eyebrow: z.string().trim().max(80).optional(),
+});
 const productTab = z.object({
   label: z.string().trim().min(1).max(40),
   productSlugs: z.array(z.string().max(180)).max(40),

@@ -35,7 +35,6 @@ export interface ProductDetailViewProps {
   product: Product;
   detail: ProductDetail | null;
   carePlans: CarePlan[];
-  viewers: number;
   contact: { phone: string; whatsapp: string; messenger: string };
   delivery: { express: string; standard: string; estimate: string };
   icons: { delivery: ImageAsset; points: ImageAsset; booking: ImageAsset };
@@ -89,20 +88,21 @@ export function ProductDetailView({ product: p, detail, carePlans, contact, deli
 
   const alsoOrderFrom = (
     <div className="space-y-2">
-      <h4 className="text-[20px] font-bold text-[#222222] dark:text-white tracking-wider">Also Order From</h4>
+      <h4 className="text-[20px] font-bold text-[#222222] dark:text-white tracking-wider">Questions about this model?</h4>
+      {!contact.whatsapp && !contact.messenger && !contact.phone && <Link href="/support" className="inline-block rounded-xl bg-[#222] px-5 py-3 text-sm font-semibold text-white">Ask dazzle.bd about this product</Link>}
       <div className="grid grid-cols-3 gap-2">
-        <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-1.5 rounded-2xl transition-colors bg-[#E9CCAE47] py-[30px] hover:opacity-80">
+        {contact.whatsapp && <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-1.5 rounded-2xl transition-colors bg-[#E9CCAE47] py-[30px] hover:opacity-80">
           <WhatsappIcon />
           <span className="text-[14px] font-semibold text-[#222222] dark:text-white">WhatsApp Us</span>
-        </a>
-        <a href={contact.messenger} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-1.5 rounded-2xl transition-colors bg-[#E9CCAE47] py-[30px] hover:opacity-80">
+        </a>}
+        {contact.messenger && <a href={contact.messenger} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-1.5 rounded-2xl transition-colors bg-[#E9CCAE47] py-[30px] hover:opacity-80">
           <MessengerIcon />
           <span className="text-[14px] font-semibold text-[#222222] dark:text-white">Messenger</span>
-        </a>
-        <a href={`tel:${contact.phone}`} className="flex flex-col items-center justify-center gap-1.5 rounded-2xl transition-colors bg-[#E9CCAE47] py-[30px] hover:opacity-80">
+        </a>}
+        {contact.phone && <a href={`tel:${contact.phone}`} className="flex flex-col items-center justify-center gap-1.5 rounded-2xl transition-colors bg-[#E9CCAE47] py-[30px] hover:opacity-80">
           <CallIcon />
           <span className="text-[14px] font-semibold text-[#222222] dark:text-white">Call Us</span>
-        </a>
+        </a>}
       </div>
     </div>
   );
@@ -236,7 +236,7 @@ export function ProductDetailView({ product: p, detail, carePlans, contact, deli
               </div>
             )}
 
-            {/* Dazzle Care add-ons */}
+            {/* dazzle.bd Care add-ons */}
             {carePlans.length > 0 && purchasable && (
               <div className="rounded-2xl bg-[#1d1b19] p-3">
                 <button type="button" aria-expanded={careOpen} onClick={() => setCareOpen((o) => !o)} className="w-full flex items-center justify-between px-2 py-1 text-white">
@@ -244,7 +244,7 @@ export function ProductDetailView({ product: p, detail, carePlans, contact, deli
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F27C2C" strokeWidth="2" aria-hidden="true">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
-                    Dazzle Care (Recommended)
+                    Optional product protection
                   </span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={careOpen ? "" : "rotate-180"} aria-hidden="true">
                     <path d="M18 15l-6-6-6 6" />
@@ -371,13 +371,13 @@ export function ProductDetailView({ product: p, detail, carePlans, contact, deli
                 </div>
                 <div className="bg-[#FFEFDE] rounded-2xl px-3 py-6 flex flex-col items-center text-center gap-1.5">
                   <Img asset={icons.points} alt="" width={24} height={24} className="w-6 h-6" />
-                  <p className="text-[10px] sm:text-xs text-[#222222] font-medium leading-tight">Purchase Point</p>
-                  <p className="text-sm sm:text-base font-extrabold text-gray-800">{detail?.purchasePoints ?? 0}</p>
+                  <p className="text-[10px] sm:text-xs text-[#222222] font-medium leading-tight">Compare your options</p>
+                  <Link href={`/product-compare/${p.slug}`} className="text-sm font-semibold text-gray-800 underline">Build a shortlist</Link>
                 </div>
                 <div className="bg-[#F0F4FF] rounded-2xl px-3 py-6 flex flex-col items-center text-center gap-1.5">
                   <Img asset={icons.booking} alt="" width={24} height={24} className="w-6 h-6" />
-                  <p className="text-[10px] sm:text-xs text-[#222222] font-medium leading-tight">Minimum Booking Amount</p>
-                  <p className="text-sm sm:text-base font-extrabold text-gray-800">৳{formatPlain(detail?.minBookingPrice ?? 0)}</p>
+                  <p className="text-[10px] sm:text-xs text-[#222222] font-medium leading-tight">Product details</p>
+                  <Link href="/support" className="text-sm font-semibold text-gray-800 underline">Ask before ordering</Link>
                 </div>
               </div>
             </div>
@@ -414,7 +414,7 @@ export function ProductDetailView({ product: p, detail, carePlans, contact, deli
               {p.price > 0 && !p.isTba ? (
                 <>
                   <p className="text-xl sm:text-2xl font-bold leading-tight text-gray-900 dark:text-white">{formatPrice(unitPrice * qty)} BDT</p>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-0.5 dark:text-white/90">{formatPlain(monthlyEmi(unitPrice * qty))} for 12 months</p>
+                  <p className="text-xs sm:text-sm text-gray-600 mt-0.5 dark:text-white/90">Review the final amount at checkout</p>
                   <button type="button" onClick={() => setPopup("emi")} className="flex items-center gap-0.5 text-xs sm:text-sm text-[#af7e4a] font-semibold hover:underline mt-0.5 w-fit">
                     Explore financing options
                     <ChevronRightBoldIcon />
@@ -452,7 +452,7 @@ export function ProductDetailView({ product: p, detail, carePlans, contact, deli
           </div>
         </div>
       </div>
-      <a
+      {contact.whatsapp && <a
         href={contact.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
@@ -460,7 +460,7 @@ export function ProductDetailView({ product: p, detail, carePlans, contact, deli
         className="fixed md:bottom-5 bottom-10 mb-24 md:mb-0 right-4 z-[1300] w-12 h-12 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white rounded-full flex items-center justify-center shadow-lg transition-colors duration-150"
       >
         <WhatsappFilledIcon />
-      </a>
+      </a>}
 
       {popup === "emi" && (
         <Dialog title="EMI options" onClose={() => setPopup(null)}>

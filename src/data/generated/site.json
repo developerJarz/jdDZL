@@ -1,67 +1,54 @@
 {
- "name": "Dazzle",
- "phone": "09638001122",
- "email": "admin@dazzle.com.bd",
- "address": "Dazzle, Bangladesh",
- "branchesText": "Branch 1: Shop No. 021C & 021D, North Court, Block - B, 4th floor, Jamuna Future Park, Dhaka.\n\nBranch 2: Shop No 4A-022B, West Court, Level 4, Block A, Jamuna Future Park, Dhaka. \n\nBranch 3: Shop No - 414 & 429, 4th floor, finlay Square, east nasirabad, chittagong. \n\nBranch 4: Shop No 35 to 51, Block C, Level 7 (Gold Floor), Bashundhara City Shopping mall, Dhaka\n\nBranch 5: Shop-88, 89 Level-6, Block D, Bashundhara City Shopping Mall, Dhaka. ( Laptop, Tablet & Gadgets)\n\nBranch 6: Shop No- A19 & A20, 4th Floor, Centre Point Shopping Mall, Beside Dhaka Airport, Dhaka Mymensingh Highway, Uttara, Dhaka\n\nBranch 7: Shop No - 23, Basement 1, Bashundhara City Shopping Mall, Panthopoth, Dhaka (Mobile Phones & Gadgets)\n\nBranch 8: Shop No: 4A-025A2, West Court, Level 4, Block A, Jamuna Future Park, Dhaka 1229\n\nBranch 9: Shop No - 509 & 510, 5th floor, Meridian Kohinoor City (MKC), Chittagong Wasa Circle, 344 Mohammad Ali road,",
- "copyright": "© 2026 Thanks From Dazzle™ Ltd. | All rights reserved",
- "social": {
-  "facebook": "https://www.facebook.com/dazzlebangladesh",
-  "instagram": "https://www.instagram.com/dazzle.com.bd/?hl=en",
-  "linkedin": "https://www.linkedin.com/company/dazzle-ctg/",
-  "youtube": "https://www.youtube.com/@DazzleBD"
- },
+ "name": "dazzle.bd",
+ "phone": "",
+ "email": "",
+ "address": "",
+ "branchesText": "",
+ "copyright": "© dazzle.bd. All rights reserved.",
+ "social": {},
  "marquee": {
   "home": [
    {
-    "label": "🎉 Welcome to Dazzle Commerce",
-    "href": "/"
+    "label": "dazzle.bd — tech that fits your day",
+    "href": "/about-us"
    },
    {
-    "label": "🔥 Mega Sale – Up to 70% OFF on Selected Products",
-    "href": "/offer"
+    "label": "Build a shortlist. Compare your next device.",
+    "href": "/categories"
    },
    {
-    "label": "🚚 Free Delivery on Orders Above ৳999",
-    "href": "/delivery-policy"
+    "label": "Practical buying guides for your everyday setup",
+    "href": "/blogs"
    },
    {
-    "label": "📱 Download the Dazzle Mobile App Today",
-    "href": "/"
-   },
-   {
-    "label": "💳 Secure Payment with bKash, Nagad & Cards",
-    "href": "/"
+    "label": "Questions about a model? Start with Support.",
+    "href": "/support"
    }
   ],
   "product": [
    {
-    "label": "🎉 Welcome to Dazzle Commerce",
-    "href": "/"
+    "label": "dazzle.bd — tech that fits your day",
+    "href": "/about-us"
    },
    {
-    "label": "🔥 Mega Sale – Up to 70% OFF on Selected Products",
-    "href": "/offer"
+    "label": "Build a shortlist. Compare your next device.",
+    "href": "/categories"
    },
    {
-    "label": "🚚 Free Delivery on Orders Above ৳999",
-    "href": "/delivery-policy"
+    "label": "Practical buying guides for your everyday setup",
+    "href": "/blogs"
    },
    {
-    "label": "📱 Download the Dazzle Mobile App Today",
-    "href": "/"
-   },
-   {
-    "label": "💳 Secure Payment with bKash, Nagad & Cards",
-    "href": "/"
+    "label": "Questions about a model? Start with Support.",
+    "href": "/support"
    }
   ]
  },
  "assets": {
   "logo": {
-   "src": "/images/site/logo.png",
-   "width": 147,
-   "height": 30
+   "src": "/images/brand/wordmark.svg",
+   "width": 240,
+   "height": 48
   },
   "headerBg": {
    "src": "/images/site/header-bg.webp",
@@ -74,14 +61,14 @@
    "height": 924
   },
   "noImage": {
-   "src": "/images/site/no-images.png",
-   "width": 1200,
-   "height": 1263
+   "src": "/images/brand/placeholder.svg",
+   "width": 600,
+   "height": 600
   },
   "productPlaceholder": {
-   "src": "/images/site/product.png",
-   "width": 1200,
-   "height": 1263
+   "src": "/images/brand/placeholder.svg",
+   "width": 600,
+   "height": 600
   },
   "deliveryIcon": {
    "src": "/images/site/bk.png",
@@ -100,24 +87,9 @@
   },
   "about": [
    {
-    "src": "/images/about/about-1-0si-ug-4sxzk.png",
-    "width": 1200,
-    "height": 561
-   },
-   {
-    "src": "/images/about/about-2-030-q4-pfzv-0.png",
-    "width": 655,
-    "height": 874
-   },
-   {
-    "src": "/images/about/card-02-0mwrq-n-n37av.jpg",
-    "width": 860,
-    "height": 1147
-   },
-   {
-    "src": "/images/about/card-03-0xr1jn-2ksmg3.jpg",
-    "width": 860,
-    "height": 1147
+    "src": "/images/brand/guide.svg",
+    "width": 1000,
+    "height": 600
    }
   ]
  }

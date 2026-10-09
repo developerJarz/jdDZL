@@ -65,7 +65,7 @@ export function BlogList({ posts, categories }: { posts: BlogPost[]; categories:
         ))}
       </div>
       <div className="flex items-center justify-between py-3">
-        <h1 className="lg:text-[32px] text-[20px] font-bold text-gray-900 dark:text-white">Latest Blogs</h1>
+        <h1 className="lg:text-[32px] text-[20px] font-bold text-gray-900 dark:text-white">Useful questions before your next tech purchase</h1>
         <p className="text-sm text-gray-400">{filtered.length} posts</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">

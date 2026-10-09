@@ -86,9 +86,9 @@ export default async function HomePage() {
   // "Trending Now" tabs load client-side on the reference; the mock uses the showcase lists.
   const bestValue = [...hotDeal].sort((a, b) => b.discount - a.discount);
   const trendingTabs = [
-    { label: "Newest", products: trending?.products ?? [] },
-    { label: "Best Seller", products: bestSeller?.products ?? [] },
-    { label: "Best Value", products: bestValue },
+    { label: "Discover", products: trending?.products ?? [] },
+    { label: "More options", products: bestSeller?.products ?? [] },
+    { label: "Compare savings", products: bestValue },
   ].filter((t) => t.products.length);
 
   const productsByBrand: Record<string, Product[]> = {};
@@ -426,7 +426,7 @@ export default async function HomePage() {
   return (
     <div className="bg-[#fffbf6] dark:bg-[#2e2b28]">
       <h1 className="sr-only">
-        Dazzle — Buy Mobiles, Laptops &amp; Gadgets Online in Bangladesh
+        dazzle.bd — phones, laptops and everyday tech for your next chapter
       </h1>
       {home.sections
         .filter((section) => section.visible)

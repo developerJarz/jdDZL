@@ -80,6 +80,7 @@ export const NAV: { group: string; items: NavItem[] }[] = [
   {
     group: "Workspace",
     items: [
+      { name: "workspace", label: "My workspace", icon: ClipboardList, description: "Your work queues, assigned orders and permitted tools." },
       { name: "overview", label: "Overview", icon: LayoutDashboard, description: "Your store's performance at a glance." },
       { name: "reports", label: "Reports", icon: BarChart3, description: "Sales, profit & loss, stock, purchase, and expense reports by date." },
     ],
@@ -139,6 +140,7 @@ export const NAV: { group: string; items: NavItem[] }[] = [
   {
     group: "Administration",
     items: [
+      { name: "profile", label: "My profile", icon: UserCog, description: "Your contact details and password." },
       { name: "staff", label: "Staff & roles", icon: UserCog, description: "Team accounts and what each person can access." },
       { name: "blocklist", label: "Fraud & blocking", icon: ShieldAlert, description: "Check a customer's delivery history and block spam phones or IPs." },
       { name: "activity", label: "Activity log", icon: History, description: "A record of changes made in your workspace." },
@@ -147,7 +149,7 @@ export const NAV: { group: string; items: NavItem[] }[] = [
   },
 ];
 export const NAV_ITEMS = NAV.flatMap((g) => g.items);
-const href = (name: string) => (name === "overview" ? "/admin" : `/admin/${name}`);
+const href = (name: string) => `/admin/${name}`;
 
 function badgeCount(badges: Badges | null, key?: BadgeKey) {
   if (!badges || !key) return 0;
@@ -180,7 +182,7 @@ function Wordmark({ collapsed }: { collapsed?: boolean }) {
       {!collapsed && (
         <span className="leading-none">
           <span className="block bg-[linear-gradient(90deg,#f3dcc0,#e0a462_60%,#cb843b)] bg-clip-text text-[22px] font-extrabold tracking-tight text-transparent">
-            dazzle<sup className="text-[10px]">®</sup>
+            dazzle.bd
           </span>
           <span className="text-[10px] font-semibold tracking-[0.2em] text-sidebar-foreground/60 uppercase">Commerce admin</span>
         </span>
@@ -258,11 +260,12 @@ function SidebarNav({
 
 function CommandPalette({ open, onOpenChange, toggleTheme }: { open: boolean; onOpenChange: (open: boolean) => void; toggleTheme: () => void }) {
   const router = useRouter();
-  const { section: allowed } = useCan();
+  const { section: allowed, can: permitted } = useCan();
   const [query, setQuery] = useState("");
   const search = open && query.trim().length >= 2 ? encodeURIComponent(query.trim()) : null;
-  const products = useApi<PageResult<AdminProduct>>(search ? `admin/products?limit=6&q=${search}` : null, 220);
-  const orders = useApi<PageResult<Order>>(search ? `admin/orders?limit=5&q=${search}` : null, 220);
+  const productLookup = (["products", "inventory", "orders", "pos", "storefront", "purchases", "coupons"] as const).some(permitted);
+  const products = useApi<PageResult<AdminProduct>>(search && productLookup ? `admin/products?limit=6&q=${search}` : null, 220);
+  const orders = useApi<PageResult<Order>>(search && allowed("orders") ? `admin/orders?limit=5&q=${search}` : null, 220);
   const go = (path: string) => {
     onOpenChange(false);
     setQuery("");
@@ -279,7 +282,7 @@ function CommandPalette({ open, onOpenChange, toggleTheme }: { open: boolean; on
             {search && (products.data?.items.length ?? 0) > 0 && (
               <CommandGroup heading="Products">
                 {products.data!.items.map((p) => (
-                  <CommandItem key={p._id} value={`product ${p.name} ${p.code} ${p.slug}`} onSelect={() => go(`/admin/products/${p._id}`)}>
+                  <CommandItem key={p._id} value={`product ${p.name} ${p.code} ${p.slug}`} onSelect={() => go(allowed("products") ? `/admin/products/${p._id}` : `/product/${p.slug}`)}>
                     <Thumb image={p.image} size={28} />
                     <span className="flex-1 truncate">{p.name}</span>
                     <span className="text-xs text-muted-foreground">{money(p.price)}</span>
@@ -301,18 +304,18 @@ function CommandPalette({ open, onOpenChange, toggleTheme }: { open: boolean; on
               </CommandGroup>
             )}
             <CommandGroup heading="Quick actions">
-              <CommandItem value="new product add upload" onSelect={() => go("/admin/products/new")}>
+              {allowed("products") && <CommandItem value="new product add upload" onSelect={() => go("/admin/products/new")}>
                 <PackagePlus /> Add a product
-              </CommandItem>
-              <CommandItem value="new category create" onSelect={() => go("/admin/categories?new=1")}>
+              </CommandItem>}
+              {allowed("categories") && <CommandItem value="new category create" onSelect={() => go("/admin/categories?new=1")}>
                 <FolderTree /> Create a category
-              </CommandItem>
-              <CommandItem value="new coupon discount" onSelect={() => go("/admin/coupons?new=1")}>
+              </CommandItem>}
+              {allowed("coupons") && <CommandItem value="new coupon discount" onSelect={() => go("/admin/coupons?new=1")}>
                 <Plus /> Create a coupon
-              </CommandItem>
-              <CommandItem value="customize homepage banners" onSelect={() => go("/admin/homepage")}>
+              </CommandItem>}
+              {allowed("homepage") && <CommandItem value="customize homepage banners" onSelect={() => go("/admin/homepage")}>
                 <LayoutTemplate /> Customize homepage
-              </CommandItem>
+              </CommandItem>}
               <CommandItem
                 value="toggle theme dark light mode"
                 onSelect={() => {
@@ -398,7 +401,7 @@ export function AdminShell({ section, title, children }: { section: string; titl
   };
   const b = badges.data;
   const { me, section: allowed } = useCan();
-  const initials = (me?.name ?? "Admin").split(/s+/).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
+  const initials = (me?.name ?? "Admin").split(/\s+/).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
   const alerts = b
     ? [
         { count: b.pendingOrders, label: "orders awaiting confirmation", href: "/admin/orders?status=pending", icon: ShoppingBag },
@@ -471,7 +474,7 @@ export function AdminShell({ section, title, children }: { section: string; titl
                 </Button>
                 <nav aria-label="Breadcrumb" className="hidden min-w-0 items-center gap-2 text-sm sm:flex">
                   <Link href="/admin" className="text-muted-foreground hover:text-foreground">
-                    Dazzle
+                    dazzle.bd
                   </Link>
                   <span className="text-muted-foreground/50">/</span>
                   <span className="truncate font-semibold">{title}</span>
@@ -533,11 +536,13 @@ export function AdminShell({ section, title, children }: { section: string; titl
                       <span className="text-xs font-normal">{me?.staffRole || (me?.role === "admin" ? "Store owner" : "Staff")}</span>
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
+                    <DropdownMenuItem asChild><Link href="/admin/profile"><UserCog /> My profile & security</Link></DropdownMenuItem>
+                    {allowed("settings") &&
                     <DropdownMenuItem asChild>
                       <Link href="/admin/settings">
                         <Settings /> Settings
                       </Link>
-                    </DropdownMenuItem>
+                    </DropdownMenuItem>}
                     <DropdownMenuItem asChild>
                       <Link href="/" target="_blank">
                         <ExternalLink /> View storefront
@@ -554,7 +559,7 @@ export function AdminShell({ section, title, children }: { section: string; titl
                 {children}
               </main>
               <footer className="mx-auto flex w-full max-w-[1480px] justify-between gap-4 px-4 pb-6 text-xs text-muted-foreground md:px-8">
-                <span>© {new Date().getFullYear()} Dazzle Commerce</span>
+                <span>© {new Date().getFullYear()} dazzle.bd Commerce</span>
                 <span>Data is live from your store database.</span>
               </footer>
             </div>

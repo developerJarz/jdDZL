@@ -1,6 +1,7 @@
-# Dazzle storefront and MongoDB administration
+# dazzle.bd storefront and MongoDB administration
 
 The storefront now has a working commerce backend and an administrator dashboard at `/admin`.
+It uses an original dazzle.bd content set with new branding, buying guides, product summaries and shopping information. See [brand and content guidelines](docs/brand-guidelines.md) for editing and deployment notes.
 See [BACKEND.md](BACKEND.md) for setup, initial administrator access, inventory import, API behavior, deployment, and tests.
 For Netlify deployment settings and public-URL secret scanning errors, see [Deploy on Netlify](BACKEND.md#deploy-on-netlify).
 

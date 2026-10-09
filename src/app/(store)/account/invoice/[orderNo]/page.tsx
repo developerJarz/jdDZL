@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import { user } from "@/server/auth";
 import { db } from "@/server/db";
+import { cleanStoreIdentity } from "@/server/content-brand";
 import { can, type StaffUser } from "@/lib/permissions";
 import { PrintInvoice } from "@/components/auth/PrintInvoice";
 import type { Order } from "@/components/admin/types";
@@ -28,15 +29,15 @@ export default async function InvoicePage({
       ...(!can(current as unknown as StaffUser, "orders") ? { userId: current._id.toString() } : {}),
     });
   if (!order) notFound();
-  const settings = await database
+  const settings = cleanStoreIdentity((await database
     .collection("settings")
-    .findOne({ key: "store" });
+    .findOne({ key: "store" })) ?? {});
   const amount = (v: number) => `BDT ${v.toLocaleString("en-BD")}`;
   return (
     <main className="invoice-document">
       <div className="invoice-header">
         <div>
-          <h1>{settings?.name || "Dazzle"}</h1>
+          <h1>{settings?.name || "dazzle.bd"}</h1>
           <p>{settings?.address}</p>
           <p>
             {settings?.phone} · {settings?.email}

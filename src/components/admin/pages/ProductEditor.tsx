@@ -674,7 +674,7 @@ export function ProductEditor({ id }: { id: string | null }) {
   const firstParent = taxonomy.categories.find((c) => c.slug === form.categorySlugs[0]);
   const seoTitle = form.seo.title || `${form.name || "Product"} Price in Bangladesh`;
   const seoDescription =
-    form.seo.description || form.shortDescription || `${form.name || "This product"} price in Bangladesh. Buy the authentic device from Dazzle.`;
+    form.seo.description || form.shortDescription || `Explore ${form.name || "this product"} at dazzle.bd. Compare the listed price in Bangladesh, selected options and availability.`;
 
   const save = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -855,7 +855,7 @@ export function ProductEditor({ id }: { id: string | null }) {
               <Field
                 label="URL slug"
                 htmlFor="p-slug"
-                hint={ordered ? "Locked: this product appears in orders." : `dazzle.com.bd/product/${form.slug || "…"}`}
+                hint={ordered ? "Locked: this product appears in orders." : `dazzle.bd/product/${form.slug || "…"}`}
                 aside={ordered ? <Lock className="size-3.5 text-muted-foreground" /> : null}
               >
                 <Input
@@ -1017,7 +1017,7 @@ export function ProductEditor({ id }: { id: string | null }) {
 
           <Section icon={Globe} title="Search engine listing" description="How this product appears on Google and social shares.">
             <div className="rounded-xl border bg-card p-4">
-              <p className="truncate text-xs text-[#4d5156] dark:text-[#bdc1c6]">dazzle.com.bd › product › {form.slug || "…"}</p>
+              <p className="truncate text-xs text-[#4d5156] dark:text-[#bdc1c6]">dazzle.bd › product › {form.slug || "…"}</p>
               <p className="mt-1 truncate text-lg text-[#1a0dab] dark:text-[#8ab4f8]">{seoTitle}</p>
               <p className="mt-0.5 line-clamp-2 text-sm text-[#4d5156] dark:text-[#bdc1c6]">{seoDescription}</p>
             </div>

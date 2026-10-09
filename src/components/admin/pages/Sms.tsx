@@ -77,7 +77,7 @@ export function SmsPage({ description }: { description: string }) {
               </Field>
             )}
             <Field label="Message" hint={`${message.length}/480 characters · ${segments} SMS per recipient${/[^\x00-\x7F]/.test(message) ? " (Bangla uses 70 characters per SMS)" : ""}`}>
-              <Textarea rows={5} maxLength={480} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Eid offer! Get 10% off with code EID10 — dazzle.com.bd" />
+              <Textarea rows={5} maxLength={480} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Eid offer! Get 10% off with code EID10 — dazzle.bd" />
             </Field>
             <Button
               variant="brand"

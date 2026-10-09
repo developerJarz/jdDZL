@@ -87,9 +87,9 @@ export function PostDetail({ crumbs, post }: { crumbs: { label: string; href?: s
           <h1 className="font-semibold text-[20px] lg:text-[32px] text-[#222] dark:text-white mb-2 leading-snug">{post.title}</h1>
           {post.excerpt && <p className="text-[#222] dark:text-gray-300 text-sm">{post.excerpt}</p>}
         </div>
-        <div className="rounded-2xl bg-[#F7F7F7] dark:bg-[#393430] p-6 text-sm text-gray-600 dark:text-gray-300">
-          The full post wasn&apos;t part of the offline snapshot. It will be shown here once the content API is connected.
-        </div>
+        {post.contentHtml ? (
+          <div className="cms-content rounded-2xl bg-[#F7F7F7] dark:bg-[#393430] p-6 text-sm leading-relaxed text-gray-700 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+        ) : <p className="text-sm text-gray-600 dark:text-gray-300">More details will be added here when available. Contact Support with any questions.</p>}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 /*
- * Dazzle admin design tokens. Components are built with Tailwind + shadcn/ui; the token
+ * dazzle.bd admin design tokens. Components are built with Tailwind + shadcn/ui; the token
  * names are mapped to Tailwind colours in globals.css. Tokens are set on <html> while the
  * dashboard is mounted so Radix portals (dialogs, menus, popovers) inherit them too.
  * Palette follows the storefront: espresso #222, brown #6D3F0E, gold #CB843B, sand #E9CCAE.

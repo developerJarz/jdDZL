@@ -30,7 +30,7 @@ export default async function AboutPage() {
         {hero && (
           <div className="w-full rounded-xl overflow-hidden mb-5 shadow-sm">
             <div className="relative w-full" style={{ paddingBottom: "52%" }}>
-              <Img asset={hero} alt="Dazzle Store Front" fill sizes="(max-width: 768px) 100vw, 900px" className="object-cover" />
+              <Img asset={hero} alt="dazzle.bd Store Front" fill sizes="(max-width: 768px) 100vw, 900px" className="object-cover" />
             </div>
           </div>
         )}
@@ -57,7 +57,7 @@ export default async function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
             {gallery.map((g, i) => (
               <div key={i} className="relative w-full rounded-xl overflow-hidden bg-gray-100 shadow-sm" style={{ paddingBottom: "110%" }}>
-                <Img asset={g} alt="Dazzle Happy Customer" fill sizes="(max-width: 640px) 100vw, 450px" className="object-cover object-top" />
+                <Img asset={g} alt="dazzle.bd Happy Customer" fill sizes="(max-width: 640px) 100vw, 450px" className="object-cover object-top" />
               </div>
             ))}
           </div>

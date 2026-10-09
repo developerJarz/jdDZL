@@ -1,8 +1,9 @@
 import Image, { type ImageProps } from "next/image";
 import type { ImageAsset } from "@/types";
+import { PRODUCT_IMAGE_PLACEHOLDER, resolveImageAsset } from "@/lib/product-images";
 
-/** Shown when the snapshot had no copy of an image (reference used the same artwork). */
-export const NO_IMAGE: ImageAsset = { src: "/images/site/no-images.png", width: 1200, height: 1263 };
+/** Also protects saved carts and order history from referencing retired photos. */
+export const NO_IMAGE = PRODUCT_IMAGE_PLACEHOLDER;
 
 type Props = Omit<ImageProps, "src" | "alt"> & {
   asset: ImageAsset | null | undefined;
@@ -14,7 +15,7 @@ type Props = Omit<ImageProps, "src" | "alt"> & {
  * intrinsic size; pass them to override the rendered box (aspect ratio is kept by CSS).
  */
 export function Img({ asset, alt, fill, width, height, ...rest }: Props) {
-  const a = asset ?? NO_IMAGE;
+  const a = resolveImageAsset(asset) ?? NO_IMAGE;
   if (a.src.startsWith("data:")) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={a.src} alt={alt} className={rest.className} />;

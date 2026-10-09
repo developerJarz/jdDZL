@@ -9,6 +9,7 @@
 // file into `public/images/<bucket>/` and returns its public path + intrinsic size.
 const fs = require('fs');
 const path = require('path');
+const { removedImages, placeholder } = require('../product-image-policy.cjs');
 
 const MAX_WIDTH = { banners: 1920, offers: 1920, blogs: 1920, site: 3840, default: 1200 };
 
@@ -82,6 +83,7 @@ function slugifyName(s) {
 }
 
 function createImageResolver({ snapshotDir, siteDir, htmlFiles, publicDir }) {
+  const retired = removedImages();
   /** original url -> [{file, w}] */
   const variants = new Map();
   const srcsetRe = /(?:^|[\s"',])((?:\.\.\/)*_next\/[^\s"'?]+)\?url=([^&"'\s]+)&(?:amp;)?w=(\d+)/g;
@@ -177,6 +179,10 @@ function createImageResolver({ snapshotDir, siteDir, htmlFiles, publicDir }) {
       n++;
     } while (usedNames.has(rel) && usedNames.get(rel) !== url);
     usedNames.set(rel, url);
+    if (retired.has(`/images/${rel}`)) {
+      cache.set(url, placeholder);
+      return placeholder;
+    }
     const dest = path.join(publicDir, 'images', rel);
     fs.mkdirSync(path.dirname(dest), { recursive: true });
     if (!fs.existsSync(dest)) fs.copyFileSync(file, dest);

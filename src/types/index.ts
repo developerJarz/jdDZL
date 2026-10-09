@@ -105,6 +105,9 @@ export interface Banner {
   image: ImageAsset;
   href: string;
   newTab?: boolean;
+  headline?: string;
+  text?: string;
+  eyebrow?: string;
 }
 
 export interface FilterAttribute {
