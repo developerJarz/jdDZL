@@ -1,4 +1,5 @@
 [build.environment]
   # Public site origins appear in metadata, sitemaps, robots.txt and build output.
+  # MONGODB_DB is a database name, not a connection string or credential.
   # Keep scanning enabled for database credentials, passwords and other secrets.
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL,APP_ORIGIN"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL,APP_ORIGIN,MONGODB_DB"
